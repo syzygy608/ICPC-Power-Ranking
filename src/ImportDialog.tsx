@@ -66,12 +66,17 @@ export default function ImportDialog({
       if (content.length > 5_000_000) throw new Error("檔案需小於 5 MB");
       if (content.trim().startsWith("{")) {
         const json = JSON.parse(content);
-        if (json.version === 1 || json.version === 2 || json.version === 3) {
+        if (
+          json.version === 1 ||
+          json.version === 2 ||
+          json.version === 3 ||
+          json.version === 4
+        ) {
           setBackup(validateDataset(json));
           return;
         }
         const c = validateDataset({
-          version: 3,
+          version: 4,
           contests: [json],
           aliases: {},
           countries: {},

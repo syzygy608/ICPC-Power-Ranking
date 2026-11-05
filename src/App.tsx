@@ -172,7 +172,7 @@ export default function App() {
             <br />
             都是實力的下一個座標。
           </p>
-          <span className="version">COMMUNITY RANKING · v1.1</span>
+          <span className="version">COMMUNITY RANKING · v1.2</span>
         </div>
       </aside>
       <main>
@@ -265,7 +265,7 @@ export default function App() {
                   </span>
                   <h2>實力，不只是一場名次。</h2>
                   <p>
-                    以乾淨解題、跨站穩定與站點難度，
+                    以賽場表現、跨站穩定與站點難度，
                     <br />
                     一起構成你的競賽座標。
                   </p>
@@ -360,7 +360,7 @@ export default function App() {
                     <p className="muted">點選隊伍，查看逐場表現與評分明細。</p>
                   </div>
                   <span className="model-label">
-                    MODEL v1.1 <Icon name="info" size={14} />
+                    MODEL v1.2 <Icon name="info" size={14} />
                   </span>
                 </div>
                 <details className="highlight-list">
@@ -937,7 +937,7 @@ function TeamDetail({
   return (
     <>
       <div className="team-detail-title">
-        <span className="eyebrow">TEAM PROFILE · MODEL v1.1</span>
+        <span className="eyebrow">TEAM PROFILE · MODEL v1.2</span>
         <h2>{team.team}</h2>
         <p className="muted">{team.affiliation}</p>
         <div className="detail-stats">
@@ -956,8 +956,8 @@ function TeamDetail({
         </div>
         <div className="breakdown">
           <span>
-            低 dirty 表現：{team.cleanContribution.toFixed(2)} 分 /{" "}
-            {data.settings.cleanWeight}
+            賽場表現：{team.performanceContribution.toFixed(2)} 分 /{" "}
+            {data.settings.performanceWeight}
           </span>
           <span>
             跨站穩定：{team.stabilityContribution.toFixed(2)} 分 /{" "}
@@ -966,7 +966,10 @@ function TeamDetail({
         </div>
         <p className="muted">
           站點難度貢獻：{team.difficultyContribution.toFixed(2)} /{" "}
-          {100 - data.settings.cleanWeight - data.settings.stabilityWeight} 分。
+          {100 -
+            data.settings.performanceWeight -
+            data.settings.stabilityWeight}{" "}
+          分。
         </p>
         <p className="muted">
           {team.siteCount < 2
@@ -998,7 +1001,6 @@ function TeamDetail({
                 <th>賽站</th>
                 <th>場次</th>
                 <th>競爭水準 Q</th>
-                <th>低 dirty 表現</th>
                 <th>難度表現</th>
               </tr>
             </thead>
@@ -1008,7 +1010,6 @@ function TeamDetail({
                   <td>{s.name}</td>
                   <td>{s.count}</td>
                   <td>{pct(s.level)}</td>
-                  <td>{pct(s.clean)}</td>
                   <td>{pct(s.difficulty)}</td>
                 </tr>
               ))}
@@ -1031,13 +1032,13 @@ function TeamDetail({
             </div>
           </div>
           <div className="breakdown">
-            <span>全場百分位 {pct(h.score.percentile)}</span>
+            <span>全場名次百分位 {pct(h.score.placementPercentile)}</span>
+            <span>同題數微調後 {pct(h.score.percentile)}</span>
             <span>競爭水準 Q {pct(h.score.level)}</span>
             <span>
               Dirty {pct(h.score.dirty)}
               {h.score.dirty === null ? "（計分暫用 50%）" : ""}
             </span>
-            <span>低 dirty 表現 {pct(h.score.clean)}</span>
             <span>
               難度係數 {h.score.difficulty.toFixed(2)}
               {h.contest.difficulty === null ? "（未校準）" : ""}

@@ -26,16 +26,19 @@ export interface Contest {
   results: Result[];
 }
 export interface Settings {
-  cleanWeight: number;
+  performanceWeight: number;
   stabilityWeight: number;
 }
 export interface Dataset {
-  version: 3;
+  version: 4;
   contests: Contest[];
   aliases: Record<string, string>;
   countries: Record<string, Country>;
   settings: Settings;
 }
-export const defaults: Settings = { cleanWeight: 35, stabilityWeight: 40 };
+export const defaults: Settings = {
+  performanceWeight: 65,
+  stabilityWeight: 20,
+};
 export const teamKey = (s: string) =>
   s.normalize("NFKC").trim().replace(/\s+/g, " ");

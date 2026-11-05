@@ -11,16 +11,18 @@ export function validateDataset(input: unknown): Dataset {
   if (!input || typeof input !== "object") fail("無效的 JSON 資料");
   const raw = input as Record<string, unknown>;
   if (
-    ![1, 2, 3].includes(raw.version as number) ||
+    ![1, 2, 3, 4].includes(raw.version as number) ||
     !Array.isArray(raw.contests) ||
     raw.contests.length > 500
   )
     fail("不支援的資料版本或超過 500 場比賽");
   // Migrate legacy backups and browser drafts without discarding scores, aliases or countries.
   const d = {
-    ...raw,
-    version: 3,
-    settings: raw.version !== 3 ? { ...defaults } : raw.settings,
+    ...Object.fromEntries(
+      Object.entries(raw).filter(([key]) => key !== "yunlinTeams"),
+    ),
+    version: 4,
+    settings: raw.version !== 4 ? { ...defaults } : raw.settings,
     contests: (raw.contests as unknown[]).map((c: unknown) => {
       if (!c || typeof c !== "object") fail("比賽資料格式錯誤");
       const { strength, siteStats, weight, ...record } = c as Record<
@@ -32,13 +34,13 @@ export function validateDataset(input: unknown): Dataset {
   } as unknown as Dataset;
   if (
     !d.settings ||
-    !number(d.settings.cleanWeight, 0, 100) ||
+    !number(d.settings.performanceWeight, 0, 100) ||
     !number(d.settings.stabilityWeight, 0, 100) ||
-    d.settings.cleanWeight + d.settings.stabilityWeight > 100
+    d.settings.performanceWeight + d.settings.stabilityWeight > 100
   )
     fail("兩項權重必須介於 0–100，且合計不可超過 100");
   d.settings = {
-    cleanWeight: d.settings.cleanWeight,
+    performanceWeight: d.settings.performanceWeight,
     stabilityWeight: d.settings.stabilityWeight,
   };
   for (const map of [d.aliases, d.countries])

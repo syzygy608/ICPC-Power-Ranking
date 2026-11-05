@@ -28,7 +28,12 @@ export function stationKey(name: string) {
 const mean = (values: number[]) =>
   values.reduce((s, n) => s + n, 0) / values.length;
 const clamp = (v: number) => Math.max(0, Math.min(1, v));
-export function performance(c: Contest, r: Result, knownPercentile?: number) {
+export function performance(
+  c: Contest,
+  r: Result,
+  knownPercentile?: number,
+  knownGroup?: { higher: number; size: number },
+) {
   const better =
     knownPercentile === undefined
       ? c.results.filter(
@@ -43,18 +48,39 @@ export function performance(c: Contest, r: Result, knownPercentile?: number) {
           (t) => t.solved === r.solved && t.penalty === r.penalty,
         ).length
       : 0;
-  const percentile =
+  const placementPercentile =
     knownPercentile ??
     (c.results.length < 2
       ? 0.5
       : 1 - (better + (tied - 1) / 2) / (c.results.length - 1));
-  // Relative strength is a context gate, not another additive score or solve-count bonus.
-  const level = r.solved === 0 ? 0 : clamp(percentile) ** 2;
   const dirty = dirtyRatio(r);
-  const clean = level * (1 - (dirty ?? 0.5));
+  const group = knownGroup ?? {
+    higher: c.results.filter((t) => t.solved > r.solved).length,
+    size: c.results.filter((t) => t.solved === r.solved).length,
+  };
+  // Both positions stay inside the same solve-count band's rank interval.
+  // A 10% cleanliness adjustment can refine peers, never cross a solve-count boundary.
+  const cleanlinessPercentile =
+    c.results.length < 2
+      ? 0.5
+      : 1 -
+        (group.higher + (group.size - 1) * (dirty ?? 0.5)) /
+          (c.results.length - 1);
+  const percentile =
+    group.size > 1 && r.solved > 0
+      ? clamp(0.9 * placementPercentile + 0.1 * cleanlinessPercentile)
+      : placementPercentile;
+  const level = r.solved === 0 ? 0 : clamp(percentile) ** 2;
   const difficulty = c.difficulty ?? 1;
   const difficultyLevel = (level * difficulty) / 2;
-  return { percentile, level, dirty, clean, difficulty, difficultyLevel };
+  return {
+    placementPercentile,
+    percentile,
+    level,
+    dirty,
+    difficulty,
+    difficultyLevel,
+  };
 }
 export function rankTeams(data: Dataset) {
   const teams = new Map<
@@ -73,6 +99,17 @@ export function rankTeams(data: Dataset) {
       (a, b) => b.solved - a.solved || a.penalty - b.penalty,
     );
     const percentiles = new Map<Result, number>();
+    const groups = new Map<number, { higher: number; size: number }>();
+    for (let start = 0; start < ordered.length; ) {
+      let end = start + 1;
+      while (
+        end < ordered.length &&
+        ordered[end].solved === ordered[start].solved
+      )
+        end++;
+      groups.set(ordered[start].solved, { higher: start, size: end - start });
+      start = end;
+    }
     for (let start = 0; start < ordered.length; ) {
       let end = start + 1;
       while (
@@ -94,7 +131,7 @@ export function rankTeams(data: Dataset) {
       team.history.push({
         contest: c,
         result: r,
-        score: performance(c, r, percentiles.get(r)),
+        score: performance(c, r, percentiles.get(r), groups.get(r.solved)),
       });
       teams.set(key, team);
     }
@@ -120,20 +157,20 @@ export function rankTeams(data: Dataset) {
         name: history[0].contest.site,
         count: history.length,
         level: mean(history.map((h) => h.score.level)),
-        clean: mean(history.map((h) => h.score.clean)),
         difficulty: mean(history.map((h) => h.score.difficultyLevel)),
       }));
       const level = mean(stations.map((s) => s.level));
       const spread = Math.sqrt(
         mean(stations.map((s) => (s.level - level) ** 2)),
       );
-      const clean = mean(stations.map((s) => s.clean));
       const stability = stations.length < 2 ? 0 : clamp(level - spread);
-      const cleanContribution = data.settings.cleanWeight * clean;
+      const performanceContribution = data.settings.performanceWeight * level;
       const stabilityContribution = data.settings.stabilityWeight * stability;
       const difficultyScore = mean(stations.map((s) => s.difficulty));
       const difficultyContribution =
-        (100 - data.settings.cleanWeight - data.settings.stabilityWeight) *
+        (100 -
+          data.settings.performanceWeight -
+          data.settings.stabilityWeight) *
         difficultyScore;
       const known = t.history.filter((h) => h.score.dirty !== null);
       const dirty = known.length
@@ -147,16 +184,17 @@ export function rankTeams(data: Dataset) {
           ? data.countries[t.team]
           : latest.country,
         rating:
-          cleanContribution + stabilityContribution + difficultyContribution,
+          performanceContribution +
+          stabilityContribution +
+          difficultyContribution,
         dirty,
         count: t.history.length,
         siteCount: stations.length,
         stations,
         level,
         spread,
-        clean,
         stability,
-        cleanContribution,
+        performanceContribution,
         stabilityContribution,
         difficultyScore,
         difficultyContribution,

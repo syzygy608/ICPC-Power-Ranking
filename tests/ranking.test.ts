@@ -26,14 +26,12 @@ const row = (
   affiliation: "School",
   country: "TW",
   rank: 1,
-  problems: [
-    {
-      label: "A",
-      solved: solved > 0,
-      attempts: solved ? attempts : 0,
-      time: solved ? 10 : null,
-    },
-  ],
+  problems: Array.from({ length: Math.max(1, solved) }, (_, i) => ({
+    label: String.fromCharCode(65 + i),
+    solved: solved > 0,
+    attempts: solved ? attempts : 0,
+    time: solved ? 10 : null,
+  })),
 });
 const contest = (results: Result[], extra: Partial<Contest> = {}): Contest => ({
   id: "a",
@@ -47,7 +45,7 @@ const contest = (results: Result[], extra: Partial<Contest> = {}): Contest => ({
   ...extra,
 });
 const dataset = (contests: Contest[]): Dataset => ({
-  version: 3,
+  version: 4,
   contests,
   aliases: {},
   countries: {},
@@ -64,26 +62,28 @@ test("relative level uses full-field ICPC placement, squared; ties share midrank
   const a = row("a"),
     b = row("b"),
     c = contest([a, b]);
-  expect(performance(c, a).percentile).toBe(0.5);
-  expect(performance(c, a).level).toBe(0.25);
-  expect(performance(c, b).level).toBe(0.25);
+  expect(performance(c, a).placementPercentile).toBe(0.5);
+  expect(performance(c, a).percentile).toBeCloseTo(0.55);
+  expect(performance(c, a).level).toBeCloseTo(0.55 ** 2);
+  expect(performance(c, b).level).toBeCloseTo(0.55 ** 2);
   const foreign = { ...row("foreign", 1, 1), country: "OTHER" as const };
-  expect(performance(contest([a, foreign]), a).level).toBe(0);
+  expect(performance(contest([a, foreign]), a).placementPercentile).toBe(0);
+  expect(performance(contest([a, foreign]), a).level).toBeCloseTo(0.01);
 });
 test("zero solves never gain clean performance, even in an all-zero contest", () => {
   const a = row("a", 0),
     b = row("b", 0),
     c = contest([a, b]);
   expect(performance(c, a).level).toBe(0);
-  expect(performance(c, a).clean).toBe(0);
+  expect(performance(c, a).difficultyLevel).toBe(0);
   expect(rankTeams(dataset([c]))[0].rating).toBe(0);
 });
 test("unknown dirty uses neutral 50%, never a perfect clean score", () => {
   const a = row("known"),
     b = row("unknown", 1, 10, null);
   const c = contest([a, b]);
-  expect(performance(c, b).clean).toBe(performance(c, b).level * 0.5);
-  expect(performance(c, a).clean).toBeGreaterThan(performance(c, b).clean);
+  expect(performance(c, b).percentile).toBeCloseTo(0.5);
+  expect(performance(c, a).level).toBeGreaterThan(performance(c, b).level);
   const t = rankTeams(dataset([c])).find((t) => t.team === "unknown")!;
   expect(t.knownDirtyCount).toBe(0);
   expect(t.confidence).toBe(0);
@@ -94,21 +94,66 @@ test("lower dirty improves score at equal competitive level", () => {
   expect(ranked[0].team).toBe("clean");
   expect(ranked[0].rating).toBeGreaterThan(ranked[1].rating);
 });
+test("dirty cannot reverse different solve counts, even against many clean peers", () => {
+  const rows = [
+    row("more", 3, 9999, 3),
+    ...Array.from({ length: 100 }, (_, i) => row(`less-${i}`, 2, i, 1)),
+  ];
+  const c = contest(rows, { problemCount: 3 });
+  const more = performance(c, rows[0]);
+  for (const r of rows.slice(1))
+    expect(more.level).toBeGreaterThan(performance(c, r).level);
+  // No same-solve peer means no cleanliness adjustment at all.
+  expect(more.percentile).toBe(more.placementPercentile);
+});
+test("the dirty adjustment remains within each solve band's percentile interval", () => {
+  const rows = Array.from({ length: 30 }, (_, i) =>
+    row(`team-${i}`, 1 + Math.floor(i / 6), i % 3, i % 2 ? 3 : 1),
+  );
+  const c = contest(rows, { problemCount: 5 });
+  const d = dataset([c]);
+  for (const a of rows) {
+    const score = performance(c, a);
+    const higher = rows.filter((b) => b.solved > a.solved).length;
+    const count = rows.filter((b) => b.solved === a.solved).length;
+    expect(score.percentile).toBeGreaterThanOrEqual(
+      1 - (higher + count - 1) / (rows.length - 1),
+    );
+    expect(score.percentile).toBeLessThanOrEqual(
+      1 - higher / (rows.length - 1),
+    );
+    // Optimized whole-ranking path must agree with the standalone calculation.
+    expect(
+      rankTeams(d).find((t) => t.team === a.team)!.history[0].score,
+    ).toEqual(score);
+    for (const b of rows.filter((b) => b.solved < a.solved))
+      expect(score.level).toBeGreaterThan(performance(c, b).level);
+  }
+});
+test("dirty has no effect when every positive solve count is unique", () => {
+  const rows = [row("top", 3), row("middle", 2), row("last", 1)];
+  const c = contest(rows, { problemCount: 3 });
+  const before = rankTeams(dataset([c]));
+  const changed = structuredClone(c);
+  for (const r of changed.results) r.problems = [];
+  const after = rankTeams(dataset([changed]));
+  expect(after.map((t) => t.rating)).toEqual(before.map((t) => t.rating));
+});
 test("a single station gains no cross-station stability points", () => {
   const t = rankTeams(dataset([contest([row("a"), row("b", 1, 20)])]))[0];
   expect(t.siteCount).toBe(1);
   expect(t.stability).toBe(0);
   expect(t.stabilityContribution).toBe(0);
-  expect(t.rating).toBe(47.5);
+  expect(t.rating).toBe(72.5);
 });
-test("two consistent top finishes receive 35/40/25 contributions with neutral difficulty", () => {
+test("two consistent top finishes receive 65/20/15 contributions with neutral difficulty", () => {
   const a = contest([row("a"), row("b", 1, 20)]);
   const b = { ...structuredClone(a), id: "b", site: "Site B" };
   const t = rankTeams(dataset([a, b]))[0];
-  expect(t.cleanContribution).toBe(35);
-  expect(t.stabilityContribution).toBe(40);
-  expect(t.difficultyContribution).toBe(12.5);
-  expect(t.rating).toBe(87.5);
+  expect(t.performanceContribution).toBe(65);
+  expect(t.stabilityContribution).toBe(20);
+  expect(t.difficultyContribution).toBe(7.5);
+  expect(t.rating).toBe(92.5);
 });
 test("with two stations, stability equals the weaker station level", () => {
   const a = contest([
@@ -139,7 +184,7 @@ test("with two stations, stability equals the weaker station level", () => {
   );
 });
 test("being consistently last does not count as strong stability", () => {
-  const a = contest([row("top"), row("last", 1, 20)]);
+  const a = contest([row("top"), row("last", 1, 20, 3)]);
   const b = { ...structuredClone(a), id: "b", site: "Site B" };
   const t = rankTeams(dataset([a, b])).find((t) => t.team === "last")!;
   expect(t.stability).toBe(0);
@@ -150,7 +195,7 @@ test("a low-ranked clean team cannot beat a strong multi-station team solely on 
   const b = { ...structuredClone(a), id: "b", site: "Site B" };
   const t = rankTeams(dataset([a, b]));
   expect(t[0].team).toBe("strong");
-  expect(t[0].rating).toBe(52.5);
+  expect(t[0].rating).toBeCloseTo(74.925);
 });
 test("repeating one station does not add station votes or unlock cross-station points", () => {
   const a = contest([row("a"), row("b", 1, 20)]);
@@ -169,16 +214,16 @@ test("stations have equal influence regardless of their contest counts", () => {
   const before = rankTeams(d).find((t) => t.team === "a")!;
   d.contests.push({ ...structuredClone(a), id: "repeat" });
   const after = rankTeams(d).find((t) => t.team === "a")!;
-  expect(after.clean).toBe(before.clean);
+  expect(after.level).toBe(before.level);
   expect(after.stability).toBe(before.stability);
   expect(after.rating).toBe(before.rating);
 });
 test("changing core weights changes only their complementary contribution", () => {
   const d = dataset([contest([row("a"), row("b", 1, 20)])]);
-  d.settings.cleanWeight = 70;
+  d.settings.performanceWeight = 70;
   d.settings.stabilityWeight = 20;
   expect(rankTeams(d)[0].rating).toBe(75);
-  d.settings.cleanWeight = 0;
+  d.settings.performanceWeight = 0;
   expect(rankTeams(d)[0].rating).toBe(40);
 });
 test("dates and old scale, weight and prior fields no longer affect scores", () => {
@@ -196,8 +241,11 @@ test("dates and old scale, weight and prior fields no longer affect scores", () 
   };
   const migrated = validateDataset(raw);
   expect(rankTeams(migrated)[0].rating).toBe(expected);
-  expect(migrated.version).toBe(3);
-  expect(migrated.settings).toEqual({ cleanWeight: 35, stabilityWeight: 40 });
+  expect(migrated.version).toBe(4);
+  expect(migrated.settings).toEqual({
+    performanceWeight: 65,
+    stabilityWeight: 20,
+  });
   expect(migrated.contests[0]).not.toHaveProperty("siteStats");
   expect(migrated.contests[0]).not.toHaveProperty("weight");
 });
@@ -244,7 +292,7 @@ test("invalid settings and dates fail before replacing data", () => {
   d.contests[0].date = "2026-02-30";
   expect(() => validateDataset(d)).toThrow("日期");
   d.contests[0].date = "2026-11-05";
-  d.settings.cleanWeight = NaN;
+  d.settings.performanceWeight = NaN;
   expect(() => validateDataset(d)).toThrow("權重");
 });
 describe("published data integrity", () => {
@@ -314,9 +362,9 @@ test("a harder station improves scores at equal percentile, dirty and consistenc
   const normal = dataset([contest([row("a"), row("b", 1, 20)])]);
   const hard = structuredClone(normal);
   hard.contests[0].difficulty = 2;
-  expect(rankTeams(hard)[0].rating - rankTeams(normal)[0].rating).toBe(12.5);
-  expect(rankTeams(hard)[0].clean).toBe(rankTeams(normal)[0].clean);
-  expect(rankTeams(hard)[0].difficultyContribution).toBe(25);
+  expect(rankTeams(hard)[0].rating - rankTeams(normal)[0].rating).toBe(7.5);
+  expect(rankTeams(hard)[0].level).toBe(rankTeams(normal)[0].level);
+  expect(rankTeams(hard)[0].difficultyContribution).toBe(15);
 });
 test("difficulty alone cannot reward zero solves or last-place performance", () => {
   const d = dataset([contest([row("top"), row("zero", 0)], { difficulty: 2 })]);
@@ -334,7 +382,7 @@ test("difficulty and total weighting ranges are validated", () => {
   const d = dataset([contest([row("a")], { difficulty: 3 })]);
   expect(() => validateDataset(d)).toThrow("難度");
   d.contests[0].difficulty = null;
-  d.settings.cleanWeight = 70;
+  d.settings.performanceWeight = 70;
   d.settings.stabilityWeight = 40;
   expect(() => validateDataset(d)).toThrow("權重");
 });
@@ -342,11 +390,31 @@ test("difficulty and total weighting ranges are validated", () => {
 test("v2 drafts migrate to three-factor weights and retain contest history", () => {
   const raw = JSON.parse(JSON.stringify(dataset([contest([row("a")])])));
   raw.version = 2;
-  raw.settings = { cleanWeight: 55 };
+  raw.settings = { performanceWeight: 55 };
   delete raw.contests[0].difficulty;
   const migrated = validateDataset(raw);
-  expect(migrated.version).toBe(3);
-  expect(migrated.settings).toEqual({ cleanWeight: 35, stabilityWeight: 40 });
+  expect(migrated.version).toBe(4);
+  expect(migrated.settings).toEqual({
+    performanceWeight: 65,
+    stabilityWeight: 20,
+  });
   expect(migrated.contests[0].difficulty).toBeNull();
   expect(migrated.contests[0].results).toEqual(raw.contests[0].results);
+});
+
+test("v3 drafts adopt performance-first settings and discard retired roster data", () => {
+  const raw = {
+    ...structuredClone(seed),
+    version: 3,
+    settings: { cleanWeight: 35, stabilityWeight: 40 },
+    yunlinTeams: ["old roster"],
+  };
+  const next = validateDataset(raw);
+  expect(next.version).toBe(4);
+  expect(next.settings).toEqual(defaults);
+  expect(next).not.toHaveProperty("yunlinTeams");
+  expect(next.contests).toEqual(raw.contests);
+  expect(next.aliases).toEqual(raw.aliases);
+  expect(next.countries).toEqual(raw.countries);
+  expect(raw).toHaveProperty("yunlinTeams");
 });

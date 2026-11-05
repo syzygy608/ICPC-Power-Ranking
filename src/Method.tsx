@@ -7,36 +7,39 @@ export default function Method({
   data: Dataset;
   onChange: (d: Dataset) => void;
 }) {
-  const { cleanWeight, stabilityWeight } = data.settings;
-  const difficultyWeight = 100 - cleanWeight - stabilityWeight;
+  const { performanceWeight, stabilityWeight } = data.settings;
+  const difficultyWeight = 100 - performanceWeight - stabilityWeight;
   return (
     <>
       <section className="panel method">
         <span className="eyebrow">
-          CLEAN · CONSISTENT · CHALLENGING / MODEL v1.1
+          PERFORMANCE · CONSISTENCY · DIFFICULTY / MODEL v1.2
         </span>
-        <h2>乾淨解題，跨站迎戰。</h2>
+        <h2>賽場表現優先，跨站實力驗證。</h2>
         <p>
-          隊伍戰力為 0–100 分，綜合低 dirty
-          表現、跨站穩定度與站點難度。三項權重合計
+          隊伍戰力為 0–100 分，綜合賽場表現、跨站穩定度與站點難度。三項權重合計
           100%；各站內先平均各場，再讓各站等權。
         </p>
         <div className="formula">
-          戰力 = 100 × [{cleanWeight}% × Clean
+          戰力 = 100 × [{performanceWeight}% × Performance
           <br />+ {stabilityWeight}% × Stable
           <br />+ {difficultyWeight}% × Difficulty]
         </div>
-        <h3>競爭水準與低 dirty 表現</h3>
+        <h3>賽場表現與同題數比較</h3>
         <p>
-          依全場 ICPC 解題數與罰時排序，取得百分位 P（第一名 1、最後一名
-          0，同分同罰時用平均位置），以 Q = P² 代表相對競爭水準。零解時 Q =
-          0，單隊比賽 P = 0.5。外國隊伍也參與全場比較。
+          先依全場 ICPC 解題數與罰時取得名次百分位 P₀（第一名 1、最後一名
+          0，同分同罰時取平均位置）。 同解題數有多隊時，僅在這組的名次區間內，以
+          90% 罰時名次與 10% 解題乾淨程度微調成 P，再以 Q = P² 計分。
+          同場多解一題必定有更高的 Q，dirty
+          不會跨越題數差距。外國隊伍也參與全場比較。
         </p>
         <p>
-          D = 曾答錯才 AC 的題數 / AC 題數；單場低 dirty 表現為 Q × (1 −
-          D)。解得乾淨也要有競爭力，僅解少數簡單題不會自動排前面。缺少嘗試次數時，D
-          顯示未知，計分暫用 0.5。表格 Dirty 總覽依已知 AC
-          題數加權；評分先逐場再逐站平均。
+          D = 曾答錯才 AC 的題數 / AC 題數。若全場 N 隊、有 H
+          隊解得更多、同題數共 M 隊， 乾淨程度對應百分位 P_D = 1 − [H + (M − 1)
+          × D] / (N − 1)， P = 0.9 × P₀ + 0.1 ×
+          P_D。同題數只有一隊時不調整；單隊比賽 P = 0.5；零解 Q = 0。
+          缺少嘗試次數時 D 顯示未知，同題數微調暫用 0.5。Dirty 總覽仍依已知 AC
+          題數加權。
         </p>
         <h3>跨站穩定表現</h3>
         <p>
@@ -58,7 +61,7 @@ export default function Method({
           1.0，標示「未校準」。同一站不同屆可有不同難度，仍先站內平均。原始榜單無法單獨證明跨站題目難度，請依題目與共同參賽隊伍等資料校準。
         </p>
         <div className="formula">
-          Clean = mean_站(mean_場[Q × (1 − D)])
+          Performance = mean_站(mean_場[Q])
           <br />
           Stable = 多站時 max(0, mean(Q_s) − std(Q_s))
           <br />
@@ -82,26 +85,26 @@ export default function Method({
       <section className="panel settings">
         <h2>三項核心權重</h2>
         <label>
-          低 dirty 表現
+          賽場表現
           <div className="range-input">
             <input
-              aria-label="低 dirty 表現權重"
+              aria-label="賽場表現權重"
               type="range"
               min="0"
               max={100 - stabilityWeight}
               step="5"
-              value={cleanWeight}
+              value={performanceWeight}
               onChange={(e) =>
                 onChange({
                   ...data,
                   settings: {
                     ...data.settings,
-                    cleanWeight: Number(e.target.value),
+                    performanceWeight: Number(e.target.value),
                   },
                 })
               }
             />
-            <output>{cleanWeight}%</output>
+            <output>{performanceWeight}%</output>
           </div>
         </label>
         <label>
@@ -111,7 +114,7 @@ export default function Method({
               aria-label="跨站穩定權重"
               type="range"
               min="0"
-              max={100 - cleanWeight}
+              max={100 - performanceWeight}
               step="5"
               value={stabilityWeight}
               onChange={(e) =>
@@ -138,7 +141,7 @@ export default function Method({
         <button
           onClick={() => onChange({ ...data, settings: { ...defaults } })}
         >
-          還原 35% / 40% / 25%
+          還原 65% / 20% / 15%
         </button>
       </section>
     </>

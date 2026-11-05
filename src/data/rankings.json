@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "contests": [
     {
       "id": "ncpc-2026-final",
@@ -10727,7 +10727,7 @@
         }
       ],
       "status": "final",
-      "difficulty": 1.1
+      "difficulty": 1.25
     },
     {
       "id": "topc-2026",
@@ -25355,7 +25355,7 @@
   },
   "countries": {},
   "settings": {
-    "cleanWeight": 35,
-    "stabilityWeight": 40
+    "performanceWeight": 65,
+    "stabilityWeight": 20
   }
 }
