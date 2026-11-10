@@ -14,6 +14,26 @@ const rawText = (n: Node): string =>
         .map(rawText)
         .join(" ");
 const txt = (n: Node) => rawText(n).replace(/\s+/g, " ").trim();
+const countryAliases: Record<string, string> = {
+  taiwan: "TW", "chinese taipei": "TW", twn: "TW", tw: "TW",
+  japan: "JP", japanese: "JP", jpn: "JP", jp: "JP",
+  korea: "KR", "south korea": "KR", kor: "KR", kr: "KR",
+  china: "CN", chn: "CN", cn: "CN", hongkong: "HK", "hong kong": "HK", hk: "HK",
+  singapore: "SG", sgp: "SG", sg: "SG", malaysia: "MY", mys: "MY", my: "MY",
+  vietnam: "VN", vnm: "VN", vn: "VN", thailand: "TH", tha: "TH", th: "TH",
+  indonesia: "ID", idn: "ID", id: "ID", india: "IN", ind: "IN", in: "IN",
+  usa: "US", "united states": "US", us: "US", canada: "CA", can: "CA", ca: "CA",
+  uk: "GB", "united kingdom": "GB", england: "GB", gb: "GB",
+};
+function parseCountry(flag: string, affiliation: string): Country {
+  const tokens = flag.toLocaleLowerCase("en-US").match(/[a-z]{2,}/g) ?? [];
+  for (const token of tokens) if (countryAliases[token]) return countryAliases[token];
+  const normalized = flag.toLocaleLowerCase("en-US").replace(/[^a-z]+/g, " ");
+  for (const [name, code] of Object.entries(countryAliases))
+    if (normalized.includes(name)) return code;
+  if (/國立(?:臺灣|台灣|成功|中正|中興|清華|陽明交通|中央|中山|嘉義|高雄|臺北|雲林|虎尾|暨南)|臺北市立|銘傳|逢甲|輔仁|靜宜|大同|康寧|淡江|元智/.test(affiliation)) return "TW";
+  return flag ? "OTHER" : "UNKNOWN";
+}
 function all(n: Node, predicate: (n: Node) => boolean): Node[] {
   return [
     ...(predicate(n) ? [n] : []),
@@ -116,22 +136,7 @@ export function parseScoreboard(html: string): {
     const flag = images
       .map((n) => `${attr(n, "src")} ${attr(n, "title")} ${attr(n, "alt")}`)
       .join(" ");
-    const hasFlag = /flags?\//i.test(flag);
-    const taiwanFlag =
-      /(?:\/|\b)(?:twn|tw)(?:\.|\b)|Taiwan|Chinese Taipei|臺灣|台灣/i.test(
-        flag,
-      );
-    const taiwanSchool =
-      /國立(?:臺灣|台灣|成功|中正|中興|清華|陽明交通|中央|中山|嘉義|高雄|臺北|雲林|虎尾|暨南)|臺北市立|銘傳|逢甲|輔仁|靜宜|大同|康寧|淡江|元智/.test(
-        affiliation,
-      );
-    const country: Country = taiwanFlag
-      ? "TW"
-      : hasFlag
-        ? "OTHER"
-        : taiwanSchool
-          ? "TW"
-          : "UNKNOWN";
+    const country = parseCountry(flag, affiliation);
     const problems: Problem[] = scoreCells.map((cell, i) => {
       const text = txt(cell);
       const classes = all(cell, () => true)

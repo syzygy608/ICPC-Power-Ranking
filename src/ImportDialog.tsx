@@ -20,15 +20,13 @@ export function CountrySelect({
   onChange: (v: Country) => void;
 }) {
   return (
-    <select
+    <input
       aria-label="國別"
+      list="country-codes"
+      title="輸入 ISO 兩碼國別，例如 DE、FR；也可選待確認"
       value={value}
-      onChange={(e) => onChange(e.target.value as Country)}
-    >
-      <option value="TW">台灣</option>
-      <option value="OTHER">外國</option>
-      <option value="UNKNOWN">待確認</option>
-    </select>
+      onChange={(e) => onChange(e.target.value.trim().toUpperCase() as Country)}
+    />
   );
 }
 export default function ImportDialog({
@@ -139,6 +137,13 @@ export default function ImportDialog({
         aria-modal="true"
         aria-labelledby="import-title"
       >
+        <datalist id="country-codes">
+          <option value="TW">台灣</option><option value="JP">日本</option>
+          <option value="KR">韓國</option><option value="CN">中國</option>
+          <option value="HK">香港</option><option value="SG">新加坡</option>
+          <option value="US">美國</option><option value="OTHER">其他國家</option>
+          <option value="UNKNOWN">待確認</option>
+        </datalist>
         <header>
           <div>
             <span className="eyebrow">ADD A SCOREBOARD</span>

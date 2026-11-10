@@ -112,7 +112,7 @@ test("better highest, average or lowest scores improve a school index", () => {
   expect(make([90, 80, 75, 60, 50, 40])).toBeGreaterThan(baseline);
   expect(make([90, 80, 70, 60, 50, 45])).toBeGreaterThan(baseline);
 });
-test("school rankings exclude foreign and missing school records and merge normalized schools", () => {
+test("school rankings include foreign schools separately and merge normalized school names", () => {
   const base = rankTeams(validateDataset(seed)).slice(0, 4);
   const teams = base.map((t, i) => ({
     ...t,
@@ -120,8 +120,9 @@ test("school rankings exclude foreign and missing school records and merge norma
     country: i === 2 ? ("OTHER" as const) : ("TW" as const),
   }));
   const schools = rankSchools(teams);
-  expect(schools).toHaveLength(1);
-  expect(schools[0].teams).toHaveLength(2);
+  expect(schools).toHaveLength(2);
+  expect(schools.find((s) => s.country === "TW")!.teams).toHaveLength(2);
+  expect(schools.find((s) => s.country === "OTHER")!.school).toBe("Foreign");
 });
 test("school rankings update with changed team ratings", () => {
   const teams = rankTeams(validateDataset(seed));

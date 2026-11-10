@@ -8,6 +8,7 @@ import {
 } from "../shared/types";
 import {
   canonical,
+  canonicalResult,
   dirtyRatio,
   performance,
   rankTeams,
@@ -280,6 +281,20 @@ test("aliases merge histories and same-contest duplicates are rejected", () => {
   d.contests[0].results.push(row("new"));
   expect(() => validateDataset(d)).toThrow("重複隊名");
 });
+test("identical display names from different schools or countries stay separate", () => {
+  const taiwan = { ...row("Phoenix"), affiliation: "National Taiwan University", country: "TW" } as Result;
+  const japan = { ...row("Phoenix", 1, 20), affiliation: "University of Tokyo", country: "JP" } as Result;
+  const ranked = rankTeams(dataset([contest([taiwan, japan])]));
+  expect(ranked).toHaveLength(2);
+  expect(new Set(ranked.map((t) => t.id)).size).toBe(2);
+  expect(canonicalResult(taiwan, {})).not.toBe(canonicalResult(japan, {}));
+});
+test("single-country legacy imports upgrade generic foreign labels", () => {
+  const d = dataset([contest([{ ...row("Seoul"), country: "OTHER" }], {
+    name: "ICPC Korea Preliminary", site: "Korea", source: "https://icpckorea.net/scoreboard",
+  })]);
+  expect(validateDataset(d).contests[0].results[0].country).toBe("KR");
+});
 test("alias cycles and inherited keys are handled safely", () => {
   expect(() => canonical("a", { a: "b", b: "a" })).toThrow("循環");
   expect(canonical("constructor", {})).toBe("constructor");
@@ -413,7 +428,9 @@ test("v3 drafts adopt performance-first settings and discard retired roster data
   expect(next.version).toBe(4);
   expect(next.settings).toEqual(defaults);
   expect(next).not.toHaveProperty("yunlinTeams");
-  expect(next.contests).toEqual(raw.contests);
+  expect(next.contests).toHaveLength(raw.contests.length);
+  expect(next.contests[0]).toEqual(raw.contests[0]);
+  expect(next.contests.at(-1)!.results.every((r) => r.country === "KR")).toBe(true);
   expect(next.aliases).toEqual(raw.aliases);
   expect(next.countries).toEqual(raw.countries);
   expect(raw).toHaveProperty("yunlinTeams");

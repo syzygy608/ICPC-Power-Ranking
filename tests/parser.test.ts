@@ -32,12 +32,12 @@ test("legacy DOMjudge strips category and school without damaging team punctuati
     country: "TW",
   });
 });
-test("foreign flag takes priority over school heuristics", () => {
+test("foreign flag takes priority over school heuristics and retains its country", () => {
   const html = modern
     .replace("/flags/4x3/tw.svg", "/flags/4x3/jp.svg")
     .replace('title="Taiwan" alt="TWN"', 'title="Japan" alt="JPN"')
     .replaceAll("National Taiwan University", "國立成功大學");
-  expect(parseScoreboard(html).results[0].country).toBe("OTHER");
+  expect(parseScoreboard(html).results[0].country).toBe("JP");
 });
 test("malformed scoreboards fail rather than silently dropping teams", () => {
   expect(() => parseScoreboard("<h1>Not a scoreboard</h1>")).toThrow("找不到");

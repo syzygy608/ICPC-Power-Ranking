@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { rankSchools } from "../shared/schools";
 import type { RankedTeam } from "../shared/ranking";
+import { countryLabel } from "../shared/types";
 import Icon from "./Icons";
 export default function Schools({
   teams,
@@ -10,9 +11,15 @@ export default function Schools({
   onSelect: (team: string) => void;
 }) {
   const [query, setQuery] = useState("");
+  const [country, setCountry] = useState("ALL");
   const schools = useMemo(() => rankSchools(teams), [teams]);
-  const filtered = schools.filter((s) =>
-    s.school.toLowerCase().includes(query.toLowerCase()),
+  const filtered = schools.filter(
+    (s) =>
+      s.school.toLowerCase().includes(query.toLowerCase()) &&
+      (country === "ALL" ||
+        (country === "OTHER"
+          ? s.country !== "TW" && s.country !== "UNKNOWN"
+          : s.country === country)),
   );
   return (
     <section className="panel school-ranking">
@@ -22,7 +29,7 @@ export default function Schools({
             學校戰力指數排名 <span className="count">{schools.length}</span>
           </h2>
           <p className="muted">
-            各校最強六隊 · 平均 70% + 最高 20% + 最低 10% · 0–100 分
+            各國學校分開計算；各校最強六隊 · 平均 70% + 最高 20% + 最低 10% · 0–100 分
           </p>
         </div>
         <Icon name="users" />
@@ -37,10 +44,22 @@ export default function Schools({
             onChange={(e) => setQuery(e.target.value)}
           />
         </label>
+        <select
+          aria-label="篩選學校國別"
+          value={country}
+          onChange={(e) => setCountry(e.target.value)}
+        >
+          <option value="ALL">所有國家</option>
+          <option value="TW">台灣</option>
+          <option value="KR">韓國</option>
+          <option value="JP">日本</option>
+          <option value="OTHER">其他國家</option>
+          <option value="UNKNOWN">待確認</option>
+        </select>
         <button
           className="clear-filters"
-          disabled={!query}
-          onClick={() => setQuery("")}
+          disabled={!query && country === "ALL"}
+          onClick={() => { setQuery(""); setCountry("ALL"); }}
         >
           清除篩選
         </button>
@@ -60,12 +79,13 @@ export default function Schools({
           </thead>
           <tbody>
             {filtered.map((s) => (
-              <tr key={s.school}>
+              <tr key={`${s.country}-${s.school}`} className="country-tint" data-country={s.country}>
                 <td className="rank-number">
                   {String(s.rank).padStart(2, "0")}
                 </td>
                 <td>
                   <strong>{s.school}</strong>
+                  <small>{countryLabel(s.country)}</small>
                   {s.scoringTeams.length < 6 && (
                     <small>
                       計分 {s.scoringTeams.length} / 6 隊，資料未滿六隊
@@ -86,10 +106,10 @@ export default function Schools({
                     <summary>查看 {s.scoringTeams.length} 隊</summary>
                     <div className="school-teams">
                       {s.scoringTeams.map((t) => (
-                        <div key={t.team}>
+                        <div key={t.id}>
                           <button
                             className="team-button"
-                            onClick={() => onSelect(t.team)}
+                            onClick={() => onSelect(t.id)}
                           >
                             {t.team}
                           </button>
@@ -110,10 +130,10 @@ export default function Schools({
         {!filtered.length && (
           <div className="empty">
             <h3>
-              {schools.length ? "沒有符合條件的學校" : "尚無可排名的台灣學校"}
+              {schools.length ? "沒有符合條件的學校" : "尚無可排名的學校"}
             </h3>
-            <p>需要隊伍國別與學校資料，才會納入學校戰力榜。</p>
-            {query && <button onClick={() => setQuery("")}>清除篩選</button>}
+            <p>需要學校資料，才會納入學校戰力榜。</p>
+            {(query || country !== "ALL") && <button onClick={() => { setQuery(""); setCountry("ALL"); }}>清除篩選</button>}
           </div>
         )}
       </div>

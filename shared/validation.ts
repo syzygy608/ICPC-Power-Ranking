@@ -1,5 +1,5 @@
-import { canonical } from "./ranking";
-import { teamKey, defaults, type Dataset } from "./types";
+import { canonical, canonicalResult } from "./ranking";
+import { teamKey, defaults, isKnownCountry, type Dataset } from "./types";
 const fail = (message: string): never => {
   throw new Error(message);
 };
@@ -7,11 +7,18 @@ const number = (x: unknown, min: number, max: number) =>
   typeof x === "number" && Number.isFinite(x) && x >= min && x <= max;
 const text = (x: unknown, max = 300): x is string =>
   typeof x === "string" && x.length > 0 && x.length <= max;
+const contestCountry = (contest: Record<string, unknown>) => {
+  const context = `${contest.name ?? ""} ${contest.site ?? ""} ${contest.source ?? ""}`.toLocaleLowerCase("en-US");
+  if (/icpckorea|\bkorea\b|韓國/.test(context)) return "KR";
+  if (/icpcjapan|\bjapan\b|日本/.test(context)) return "JP";
+  if (/\bsingapore\b|新加坡/.test(context)) return "SG";
+  return null;
+};
 export function validateDataset(input: unknown): Dataset {
   if (!input || typeof input !== "object") fail("無效的 JSON 資料");
   const raw = input as Record<string, unknown>;
   if (
-    ![1, 2, 3, 4].includes(raw.version as number) ||
+    ![1, 2, 3, 4, 5].includes(raw.version as number) ||
     !Array.isArray(raw.contests) ||
     raw.contests.length > 500
   )
@@ -22,14 +29,28 @@ export function validateDataset(input: unknown): Dataset {
       Object.entries(raw).filter(([key]) => key !== "yunlinTeams"),
     ),
     version: 4,
-    settings: raw.version !== 4 ? { ...defaults } : raw.settings,
+    settings: raw.version !== 4 && raw.version !== 5 ? { ...defaults } : raw.settings,
     contests: (raw.contests as unknown[]).map((c: unknown) => {
       if (!c || typeof c !== "object") fail("比賽資料格式錯誤");
       const { strength, siteStats, weight, ...record } = c as Record<
         string,
         unknown
       >;
-      return { ...record, difficulty: record.difficulty ?? null };
+      const inferredCountry = contestCountry(record);
+      return {
+        ...record,
+        difficulty: record.difficulty ?? null,
+        // Some legacy DOMjudge exports only say "foreign" per row.  For a
+        // clearly single-country contest, retain the useful country context.
+        results: Array.isArray(record.results) && inferredCountry
+          ? record.results.map((result) =>
+              result && typeof result === "object" &&
+              (result as Record<string, unknown>).country === "OTHER"
+                ? { ...(result as Record<string, unknown>), country: inferredCountry }
+                : result,
+            )
+          : record.results,
+      };
     }),
   } as unknown as Dataset;
   if (
@@ -58,7 +79,7 @@ export function validateDataset(input: unknown): Dataset {
     canonical(k, d.aliases);
   }
   for (const [k, v] of Object.entries(d.countries))
-    if (!text(k) || !["TW", "OTHER", "UNKNOWN"].includes(v))
+    if (!text(k) || typeof v !== "string" || !isKnownCountry(v))
       fail("國別格式錯誤");
   const ids = new Set<string>();
   for (const c of d.contests) {
@@ -95,10 +116,10 @@ export function validateDataset(input: unknown): Dataset {
         !text(r.team) ||
         r.team !== teamKey(r.team) ||
         typeof r.affiliation !== "string" ||
-        !["TW", "OTHER", "UNKNOWN"].includes(r.country)
+        !isKnownCountry(r.country)
       )
         fail("隊伍資訊格式錯誤");
-      const key = canonical(r.team, d.aliases);
+      const key = canonicalResult(r, d.aliases);
       if (names.has(key)) fail(`同場比賽出現重複隊名：${key}`);
       names.add(key);
       if (

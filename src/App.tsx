@@ -1,6 +1,6 @@
 import { useMemo, useState, type ReactNode } from "react";
-import { canonical, rankTeams, type RankedTeam } from "../shared/ranking";
-import { teamKey, type Contest, type Dataset } from "../shared/types";
+import { canonicalResult, rankTeams, type RankedTeam } from "../shared/ranking";
+import { countryLabel, teamKey, type Contest, type Dataset } from "../shared/types";
 import { validateDataset } from "../shared/validation";
 import { download, loadData, persist, published, reset } from "./store";
 import ImportDialog, { CountrySelect, pct } from "./ImportDialog";
@@ -75,9 +75,15 @@ export default function App() {
   const [aliasTo, setAliasTo] = useState("");
   const ranked = useMemo(() => rankTeams(data), [data]);
   const highlights = useMemo(() => selectTaiwanHighlights(ranked), [ranked]);
-  const highlightOrder = new Map(highlights.map((t, i) => [t.team, i + 1]));
+  const highlightOrder = new Map(highlights.map((t, i) => [t.id, i + 1]));
   const regional = ranked
-    .filter((t) => region === "ALL" || t.country === region)
+    .filter(
+      (t) =>
+        region === "ALL" ||
+        (region === "OTHER"
+          ? t.country !== "TW" && t.country !== "UNKNOWN"
+          : t.country === region),
+    )
     .map((t, i) => ({ ...t, rank: i + 1 }));
   const schools = [...new Set(regional.map((t) => t.affiliation))]
     .filter(Boolean)
@@ -87,7 +93,7 @@ export default function App() {
       (!school || t.affiliation === school) &&
       `${t.team} ${t.affiliation}`.toLowerCase().includes(query.toLowerCase()),
   );
-  const team = ranked.find((t) => t.team === selected);
+  const team = ranked.find((t) => t.id === selected);
   const totalTW = ranked.filter((t) => t.country === "TW").length;
   const latest = data.contests
     .map((c) => c.date)
@@ -321,9 +327,10 @@ export default function App() {
               <div className="leaders">
                 {regional.slice(0, 3).map((t, i) => (
                   <button
-                    key={t.team}
-                    className={`leader leader-${i}`}
-                    onClick={() => setSelected(t.team)}
+                    key={t.id}
+                    className={`leader leader-${i} country-tint`}
+                    data-country={t.country}
+                    onClick={() => setSelected(t.id)}
                   >
                     <div className="leader-top">
                       <span className="medal">0{i + 1}</span>
@@ -373,10 +380,10 @@ export default function App() {
                   </p>
                   <ol>
                     {highlights.map((t) => (
-                      <li key={t.team}>
+                      <li key={t.id}>
                         <button
                           className="team-button"
-                          onClick={() => setSelected(t.team)}
+                          onClick={() => setSelected(t.id)}
                         >
                           {t.team}
                         </button>
@@ -451,12 +458,13 @@ export default function App() {
                     <tbody>
                       {filtered.slice(0, limit).map((t) => (
                         <tr
-                          key={t.team}
+                          key={t.id}
                           className={
-                            highlightOrder.has(t.team)
-                              ? "highlighted-team"
-                              : undefined
+                            highlightOrder.has(t.id)
+                              ? "highlighted-team country-tint"
+                              : "country-tint"
                           }
+                          data-country={t.country}
                         >
                           <td className="rank-number">
                             {String(t.rank).padStart(2, "0")}
@@ -464,16 +472,16 @@ export default function App() {
                           <td>
                             <button
                               className="team-button"
-                              onClick={() => setSelected(t.team)}
+                              onClick={() => setSelected(t.id)}
                             >
                               {t.team}
                             </button>
-                            {highlightOrder.has(t.team) && (
+                            {highlightOrder.has(t.id) && (
                               <span className="highlight-badge">
-                                高機率晉級 #{highlightOrder.get(t.team)}
+                                高機率晉級 #{highlightOrder.get(t.id)}
                               </span>
                             )}
-                            <small>{t.affiliation || "未提供學校"}</small>
+                            <small>{t.affiliation || "未提供學校"} · {countryLabel(t.country)}</small>
                           </td>
                           <td>
                             <b className="rating">{fmt(t.rating)}</b>
@@ -510,7 +518,7 @@ export default function App() {
                             <button
                               className="icon-button"
                               aria-label={`查看 ${t.team}`}
-                              onClick={() => setSelected(t.team)}
+                              onClick={() => setSelected(t.id)}
                             >
                               <Icon name="arrow" size={17} />
                             </button>
@@ -619,14 +627,14 @@ export default function App() {
                                   b.solved - a.solved || a.penalty - b.penalty,
                               )
                               .map((r, i) => (
-                                <tr key={r.team}>
+                                <tr key={`${r.team}-${r.affiliation}-${r.country}`} className="country-tint" data-country={r.country}>
                                   <td>{r.rank}</td>
                                   <td>
                                     <button
                                       className="team-button"
                                       onClick={() =>
                                         setSelected(
-                                          canonical(r.team, data.aliases),
+                                          canonicalResult(r, data.aliases),
                                         )
                                       }
                                     >
@@ -985,7 +993,7 @@ function TeamDetail({
             onChange={(country) =>
               onChange({
                 ...data,
-                countries: { ...data.countries, [team.team]: country },
+                countries: { ...data.countries, [team.id]: country },
               })
             }
           />

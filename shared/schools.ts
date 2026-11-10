@@ -3,8 +3,9 @@ import { schoolKey } from "./highlights";
 export function rankSchools(teams: RankedTeam[]) {
   const schools = new Map<string, { school: string; teams: RankedTeam[] }>();
   for (const t of teams) {
-    const key = schoolKey(t.affiliation);
-    if (t.country !== "TW" || !key) continue;
+    const normalizedSchool = schoolKey(t.affiliation);
+    if (!normalizedSchool) continue;
+    const key = `${t.country}\u001f${normalizedSchool}`;
     const school = schools.get(key) ?? { school: t.affiliation, teams: [] };
     school.teams.push(t);
     schools.set(key, school);
@@ -22,6 +23,7 @@ export function rankSchools(teams: RankedTeam[]) {
       const minimum = scoringTeams[scoringTeams.length - 1].rating;
       return {
         ...s,
+        country: s.teams[0].country,
         scoringTeams,
         average,
         maximum,

@@ -1,4 +1,10 @@
-import { teamKey, type Dataset, type Contest, type Result } from "./types";
+import {
+  teamIdentity,
+  teamKey,
+  type Dataset,
+  type Contest,
+  type Result,
+} from "./types";
 export function dirtyRatio(r: Result): number | null {
   const solved = r.problems.filter((p) => p.solved);
   if (
@@ -21,6 +27,14 @@ export function canonical(
     key = teamKey(aliases[key]);
   }
   return key;
+}
+export function canonicalResult(r: Result, aliases: Record<string, string>) {
+  const identity = teamIdentity(r.team, r.affiliation, r.country);
+  // Identity aliases are precise. Name-only aliases remain supported for v1–v4
+  // backups, but only rewrite the display-name part before identity is formed.
+  if (Object.hasOwn(aliases, identity)) return canonical(identity, aliases);
+  const name = canonical(r.team, aliases);
+  return teamIdentity(name, r.affiliation, r.country);
 }
 export function stationKey(name: string) {
   return teamKey(name).toLocaleLowerCase("en-US");
@@ -126,7 +140,7 @@ export function rankTeams(data: Dataset) {
       start = end;
     }
     for (const r of c.results) {
-      const key = canonical(r.team, data.aliases);
+      const key = canonicalResult(r, data.aliases);
       const team = teams.get(key) ?? { team: key, history: [] };
       team.history.push({
         contest: c,
@@ -179,9 +193,13 @@ export function rankTeams(data: Dataset) {
         : null;
       return {
         ...t,
+        id: t.team,
+        team: latest.team,
         affiliation: latest.affiliation,
         country: Object.hasOwn(data.countries, t.team)
           ? data.countries[t.team]
+          : Object.hasOwn(data.countries, latest.team)
+            ? data.countries[latest.team]
           : latest.country,
         rating:
           performanceContribution +
