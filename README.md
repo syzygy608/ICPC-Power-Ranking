@@ -23,10 +23,13 @@ npm run preview
 
 ## 已收錄比賽
 
-| 比賽                                                                                                 | 日期       | 隊數 | 題數 | 狀態 |
-| ---------------------------------------------------------------------------------------------------- | ---------- | ---- | ---- | ---- |
-| [NCPC 2026 決賽](https://ncpc.ntnu.edu.tw/ncpc2026php/NCPC_scorboard/ncpc2026_scoreboard_final.html) | 2026-10-19 | 114  | 14   | 最終 |
-| [TOPC 2026](https://web.archive.org/web/20260919040206/https://judge.icpc.tw/public)                 | 2026-09-19 | 178  | 12   | 最終 |
+| 比賽                                                                                                      | 日期       | 隊數 | 題數 | 狀態 |
+| --------------------------------------------------------------------------------------------------------- | ---------- | ---- | ---- | ---- |
+| [NCPC 2026 決賽](https://ncpc.ntnu.edu.tw/ncpc2026php/NCPC_scorboard/ncpc2026_scoreboard_final.html)      | 2026-10-19 | 114  | 14   | 最終 |
+| [TOPC 2026](https://web.archive.org/web/20260919040206/https://judge.icpc.tw/public)                      | 2026-09-19 | 178  | 12   | 最終 |
+| [2026 ICPC 韓國初賽](https://static.icpckorea.net/2026/preliminary/scoreboard/)                           | 2026-10-17 | 213  | 11   | 最終 |
+| [2026 ICPC 日本初賽](https://icpcsec.firebaseapp.com/standings/)                                          | 2026-07-03 | 353  | 10   | 最終 |
+| [2026 ICPC 越南國家初賽（University）](https://icpc.vnoi.info/contest/icpc26_na/ranking/?tags=University) | 2026-11-08 | 265  | 13   | 最終 |
 
 TOPC 採用指定的 Wayback 快照；雖然來源頁面仍顯示 preliminary，依專案擁有者指定視為最終成績。保留完整 178 隊、逐題 AC / 嘗試次數 / 時間，AC 總數為 635；每題 AC 數和所有隊伍的 20 分鐘罰時均已核對。學校英譯統一為中文，不自行合併標點或拼法不同的隊名。
 
@@ -35,7 +38,7 @@ TOPC 採用指定的 Wayback 快照；雖然來源頁面仍顯示 preliminary，
 1. 開啟網站的「匯入記分板」，選擇完整 DOMjudge HTML、單場 Contest JSON，或完整 `rankings.json`。
 2. 在預覽確認隊名、國別、比賽 ID、日期與賽站名稱。
 3. 相同 ID 會取代該場比賽，避免重複計分。不同賽站或不同屆比賽請使用不同 ID。
-4. 匯出 `rankings.json`，取代 `src/data/rankings.json`，提交並推送到 Git。
+4. 匯出完整 `rankings.json`，執行 `bun run publish-data ./rankings.json`，提交並推送到 Git。
 5. Vercel 重新部署後，所有訪客就會看到新的正式資料。
 
 匯入、國別、別名與參數修改只會存成目前瀏覽器的 localStorage 草稿，不會自動寫回 Git 或發布。草稿頁面會顯示提示；正式資料改版時，也會提醒本機草稿來自舊版。清除瀏覽器資料前，務必匯出備份。「回到正式資料」可清除草稿。多人後台或雲端自動發布需要另加儲存與認證，這版刻意保持靜態架構。
@@ -52,7 +55,27 @@ bun run import-scoreboard ./topc.html \
   --source 'https://web.archive.org/web/20260919040206/https://judge.icpc.tw/public'
 ```
 
-腳本在驗證成功後才以原子方式取代 JSON。可用 `--output` 指向另一份既有資料。網址只作為來源註記，不會透過網路抓取。
+腳本先驗證完整資料，再以原子方式寫入各個 JSON；支援拆檔清單與傳統完整備份。可用 `--output` 指向另一份既有資料。網址只作為來源註記，不會透過網路抓取。
+
+## 正式資料拆檔
+
+目前共 5 場、1123 筆隊伍成績。正式資料按比賽存放在 `src/data/contests/`，避免每次更新都編輯大型的單一 JSON。`src/data/rankings.json` 僅保存共用設定、別名、國別及 `contestFiles` 清單；`index.ts` 由指令自動產生，供網站與測試共用。這是原始資料的組織方式調整，仍在網站啟動時載入全部比賽，不是按需下載。
+
+瀏覽器的匯入／匯出格式仍是單一完整 Dataset JSON，不受拆檔影響。**請勿直接以匯出的備份覆蓋拆檔清單**，改用：
+
+```sh
+bun run publish-data ./rankings.json
+```
+
+指令會驗證備份、依比賽 ID 更新各場 JSON，並重新產生清單和匯入入口；同 ID 不重複新增。單場更新也可以直接編輯既有 `src/data/contests/<id>.json`。新增／移除比賽請使用指令同步清單與入口。舊檔案不自動刪除；不在清單內的檔案不會載入。
+
+日本初賽使用官方 LiveSite 的公開 `feeds`，保存全部 353 隊、86 校、10 題，包含 7 隊零解；逐題 AC、嘗試次數、AC 時間與官方名次皆保留。總 AC 1237，各題 AC 數 `[345, 304, 223, 138, 141, 26, 38, 15, 5, 2]`，所有隊伍的 20 分鐘罰時均已核對。國別使用 `JP`；既有以隊名、學校與國別形成的身分 key 會避免跨校同名隊伍誤合併。站點難度可在比賽參數中人工校準，不因人數多自動加分。
+
+越南國家初賽依使用者提供的 HTML 中 `window.RANKING_DATA`，只取 `University` 群組，排除高中組、虛擬、ghost 與取消資格的紀錄。保留該頁顯示的大學組名次與完整 265 隊、60 校、13 題，總 AC 938；以 AC 秒數向下取整至分鐘，逐隊核對 20 分鐘罰時。主辦公告列 263 隊大學隊伍，而 HTML 大學組列 265 隊，其中 7 隊零解、2 隊無提交；依指定榜單保留全部紀錄，不自行刪除零提交隊伍。可交叉核對[公開封存榜單](https://icpcvn.github.io/2026/national/scoreboard.html)。新匯入的越南站難度為未校準。
+
+## 排行榜分頁
+
+隊伍戰力榜和學校戰力榜每頁 25 筆，提供頁碼、上一頁與下一頁，並顯示目前資料範圍。搜尋、切換國別／學校與清除篩選會回到第一頁；資料量縮減時頁碼自動調整至有效範圍。分頁只影響顯示，全體排名、學校最強六隊計分與台灣晉級看好名單仍以完整資料計算。學校的計分隊伍明細維持預設收合。
 
 ## 部署到 Vercel
 
@@ -68,9 +91,9 @@ bun run import-scoreboard ./topc.html \
 
 `vercel.json` 已設定 framework、build 與輸出目錄。此版沒有伺服器端功能，不依賴本機可寫磁碟。本次只完成本機專案與部署設定，未建立 Vercel deployment。
 
-## 評分模型 v1.2：賽場表現優先
+## 評分模型 v1.3：賽場表現優先
 
-隊伍戰力為 0–100 分，預設 **65% 賽場表現 + 20% 跨站穩定度 + 15% 站點難度**。介面可調整前兩項，難度取剩餘比例。Dirty 不再是獨立得分項，只用於同題數隊伍的微調。
+隊伍戰力為 0–100 分，預設 **80% 賽場表現 + 5% 跨站穩定度 + 15% 站點難度**。跨站穩定度獨立顯示，最多只占 5%。難度取剩餘比例。單站隊伍不因缺少多站紀錄而少拿戰力分。Dirty 不再是獨立得分項，只用於同題數隊伍的微調。
 
 ### 1. 賽場表現與 Dirty
 
@@ -115,11 +138,13 @@ Difficulty = mean_站(mean_場[Q × difficulty / 2])
 ### 4. 綜合戰力
 
 ```text
-α = settings.performanceWeight / 100，預設 0.65
-β = settings.stabilityWeight / 100，預設 0.20
+α = settings.performanceWeight / 100，預設 0.80
+β = settings.stabilityWeight / 100，預設 0.05
 γ = 1 - α - β，預設 0.15
 戰力 = 100 × [α × Performance + β × Stable + γ × Difficulty]
 ```
+
+只有一站時，若啟用 β，會改用 α′ = α + β、β′ = 0；難度權重不變。因此單站與同樣水準、難度的穩定多站隊伍得分相同。穩定度仍顯示「待驗證」，不會冒充已驗證的跨站表現。
 
 隊伍明細顯示各項貢獻、原始名次百分位、微調後百分位與逐場資料。資料條仍為 `min(站數 / 3, 1) × dirty 資料完整場次 / 總場次`，是資料覆蓋指標，不是機率。
 
@@ -139,7 +164,7 @@ Difficulty = mean_站(mean_場[Q × difficulty / 2])
 
 ### 舊備份與草稿
 
-正式資料為 `version: 4`，`settings` 包含 `performanceWeight` 與 `stabilityWeight`。讀入 v1 / v2 / v3 備份與舊草稿時保留比賽成績、別名、國別與站點難度，套用新的 65% / 20% / 15% 權重。移除舊評分參數與已停用的名單欄位；匯出使用 v4 格式。
+正式資料為 `version: 6`，`settings` 包含 `performanceWeight` 與 `stabilityWeight`。讀入 v1 / v2 / v3 / v4 / v5 備份與舊草稿時保留比賽成績、別名、國別與站點難度，套用新的 80% / 5% / 15% 權重。移除舊評分參數與已停用的名單欄位；匯出使用 v6 格式。
 
 ## 隊伍身分
 
@@ -149,7 +174,7 @@ Difficulty = mean_站(mean_場[Q × difficulty / 2])
 
 ## 資料格式
 
-正式資料為 `Dataset`（`version: 4`、`contests`、`aliases`、`countries`、`settings`）。單場匯入可直接使用 `Contest`：
+正式資料為 `Dataset`（`version: 6`、`contests`、`aliases`、`countries`、`settings`）。單場匯入可直接使用 `Contest`：
 
 ```json
 {
@@ -184,7 +209,9 @@ Difficulty = mean_站(mean_場[Q × difficulty / 2])
 - `src/App.tsx`：排行、逐題記分板、設定與隊伍明細。
 - `src/ImportDialog.tsx`：上傳、解析預覽與同場取代。
 - `src/store.ts`：正式資料、本機草稿、備份匯出。
-- `src/data/rankings.json`：正式比賽資料，後續更新此檔即可。
+- `src/data/rankings.json`：共用設定、別名、國別與比賽檔案清單。
+- `src/data/contests/*.json`：每場完整成績各存一檔。
+- `src/data/index.ts`：由 `publish-data` 產生的靜態匯入入口。
 - `shared/parser.ts`：DOMjudge HTML 解析，兼容 `scoretn/scorenc/scorett` 與舊版 class。
 - `shared/ranking.ts`：賽場表現、多站穩定度、站點難度與隊伍戰力。
 - `shared/schools.ts`：各校最強六隊、平均與極值加權及學校排名。

@@ -3,6 +3,7 @@ import { rankSchools } from "../shared/schools";
 import type { RankedTeam } from "../shared/ranking";
 import { countryLabel } from "../shared/types";
 import Icon from "./Icons";
+import Pagination, { usePagination } from "./Pagination";
 export default function Schools({
   teams,
   onSelect,
@@ -18,9 +19,10 @@ export default function Schools({
       s.school.toLowerCase().includes(query.toLowerCase()) &&
       (country === "ALL" ||
         (country === "OTHER"
-          ? s.country !== "TW" && s.country !== "UNKNOWN"
+          ? s.country !== "TW" && s.country !== "JP" && s.country !== "KR" && s.country !== "VN"
           : s.country === country)),
   );
+  const pagination = usePagination(filtered.length);
   return (
     <section className="panel school-ranking">
       <div className="panel-heading">
@@ -29,7 +31,8 @@ export default function Schools({
             學校戰力指數排名 <span className="count">{schools.length}</span>
           </h2>
           <p className="muted">
-            各國學校分開計算；各校最強六隊 · 平均 70% + 最高 20% + 最低 10% · 0–100 分
+            各國學校分開計算；各校最強六隊 · 平均 70% + 最高 20% + 最低 10% ·
+            0–100 分
           </p>
         </div>
         <Icon name="users" />
@@ -41,25 +44,36 @@ export default function Schools({
             aria-label="搜尋學校戰力榜"
             placeholder="搜尋學校…"
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e) => {
+              setQuery(e.target.value);
+              pagination.setPage(1);
+            }}
           />
         </label>
         <select
           aria-label="篩選學校國別"
           value={country}
-          onChange={(e) => setCountry(e.target.value)}
+          onChange={(e) => {
+            setCountry(e.target.value);
+            pagination.setPage(1);
+          }}
         >
           <option value="ALL">所有國家</option>
           <option value="TW">台灣</option>
           <option value="KR">韓國</option>
           <option value="JP">日本</option>
+          <option value="VN">越南</option>
           <option value="OTHER">其他國家</option>
-          <option value="UNKNOWN">待確認</option>
+          {/*<option value="UNKNOWN">待確認</option>*/}
         </select>
         <button
           className="clear-filters"
           disabled={!query && country === "ALL"}
-          onClick={() => { setQuery(""); setCountry("ALL"); }}
+          onClick={() => {
+            setQuery("");
+            setCountry("ALL");
+            pagination.setPage(1);
+          }}
         >
           清除篩選
         </button>
@@ -78,8 +92,12 @@ export default function Schools({
             </tr>
           </thead>
           <tbody>
-            {filtered.map((s) => (
-              <tr key={`${s.country}-${s.school}`} className="country-tint" data-country={s.country}>
+            {filtered.slice(pagination.start, pagination.end).map((s) => (
+              <tr
+                key={`${s.country}-${s.school}`}
+                className="country-tint"
+                data-country={s.country}
+              >
                 <td className="rank-number">
                   {String(s.rank).padStart(2, "0")}
                 </td>
@@ -133,14 +151,21 @@ export default function Schools({
               {schools.length ? "沒有符合條件的學校" : "尚無可排名的學校"}
             </h3>
             <p>需要學校資料，才會納入學校戰力榜。</p>
-            {(query || country !== "ALL") && <button onClick={() => { setQuery(""); setCountry("ALL"); }}>清除篩選</button>}
+            {(query || country !== "ALL") && (
+              <button
+                onClick={() => {
+                  setQuery("");
+                  setCountry("ALL");
+                  pagination.setPage(1);
+                }}
+              >
+                清除篩選
+              </button>
+            )}
           </div>
         )}
       </div>
-      <div className="table-footer">
-        <span>{filtered.length} 所學校</span>
-        <span>不足六隊時按現有隊伍計算，不以零分補齊</span>
-      </div>
+      <Pagination pagination={pagination} label="學校戰力榜" unit="所學校" />
     </section>
   );
 }

@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import seed from "../src/data/rankings.json";
+import seed from "../src/data";
 import {
   defaults,
   type Contest,
@@ -46,7 +46,7 @@ const contest = (results: Result[], extra: Partial<Contest> = {}): Contest => ({
   ...extra,
 });
 const dataset = (contests: Contest[]): Dataset => ({
-  version: 4,
+  version: 6,
   contests,
   aliases: {},
   countries: {},
@@ -145,16 +145,65 @@ test("a single station gains no cross-station stability points", () => {
   expect(t.siteCount).toBe(1);
   expect(t.stability).toBe(0);
   expect(t.stabilityContribution).toBe(0);
-  expect(t.rating).toBe(72.5);
+  expect(t.rating).toBe(92.5);
 });
-test("two consistent top finishes receive 65/20/15 contributions with neutral difficulty", () => {
+test("two consistent top finishes receive 80/5/15 contributions with neutral difficulty", () => {
   const a = contest([row("a"), row("b", 1, 20)]);
   const b = { ...structuredClone(a), id: "b", site: "Site B" };
   const t = rankTeams(dataset([a, b]))[0];
-  expect(t.performanceContribution).toBe(65);
-  expect(t.stabilityContribution).toBe(20);
+  expect(t.performanceContribution).toBe(80);
+  expect(t.stabilityContribution).toBe(5);
   expect(t.difficultyContribution).toBe(7.5);
   expect(t.rating).toBe(92.5);
+});
+test("a single station and identical stable multi-station results have equal strength", () => {
+  const c = contest([row("top"), row("other", 1, 20)]);
+  for (const difficulty of [0.5, 1, 1.45, 2]) {
+    c.difficulty = difficulty;
+    const single = rankTeams(dataset([c]))[0];
+    const multi = rankTeams(
+      dataset([c, { ...structuredClone(c), id: "b", site: "Site B" }]),
+    )[0];
+    expect(single.rating).toBe(multi.rating);
+    expect(single.stability).toBe(0);
+    expect(multi.stability).toBe(1);
+    expect(single.rating).toBeCloseTo(85 + (15 * difficulty) / 2);
+  }
+});
+test("optional stability weights stay small and move to performance for single-site teams", () => {
+  const c = contest([row("top"), row("other", 1, 20)]);
+  const d = dataset([c]);
+  d.settings = { performanceWeight: 80, stabilityWeight: 5 };
+  const single = rankTeams(d)[0];
+  d.contests.push({ ...structuredClone(c), id: "b", site: "Site B" });
+  const multi = rankTeams(d)[0];
+  expect(single.rating).toBe(multi.rating);
+  expect(single.performanceWeightApplied).toBe(85);
+  expect(single.stabilityWeightApplied).toBe(0);
+  expect(multi.performanceWeightApplied).toBe(80);
+  expect(multi.stabilityWeightApplied).toBe(5);
+  expect(() =>
+    validateDataset({
+      ...d,
+      settings: { performanceWeight: 80, stabilityWeight: 6 },
+    }),
+  ).toThrow("權重");
+});
+test("existing v4 drafts migrate without losing scores or site difficulty settings", () => {
+  const raw = {
+    ...structuredClone(seed),
+    version: 4,
+    settings: { performanceWeight: 65, stabilityWeight: 20 },
+  };
+  const migrated = validateDataset(raw);
+  expect(migrated.version).toBe(6);
+  expect(migrated.settings).toEqual({
+    performanceWeight: 80,
+    stabilityWeight: 5,
+  });
+  expect(migrated.contests).toEqual(raw.contests);
+  expect(migrated.aliases).toEqual(raw.aliases);
+  expect(raw.settings.stabilityWeight).toBe(20);
 });
 test("with two stations, stability equals the weaker station level", () => {
   const a = contest([
@@ -222,10 +271,10 @@ test("stations have equal influence regardless of their contest counts", () => {
 test("changing core weights changes only their complementary contribution", () => {
   const d = dataset([contest([row("a"), row("b", 1, 20)])]);
   d.settings.performanceWeight = 70;
-  d.settings.stabilityWeight = 20;
-  expect(rankTeams(d)[0].rating).toBe(75);
+  d.settings.stabilityWeight = 5;
+  expect(rankTeams(d)[0].rating).toBe(87.5);
   d.settings.performanceWeight = 0;
-  expect(rankTeams(d)[0].rating).toBe(40);
+  expect(rankTeams(d)[0].rating).toBe(52.5);
 });
 test("dates and old scale, weight and prior fields no longer affect scores", () => {
   const d = dataset([contest([row("a"), row("b", 1, 20)])]);
@@ -242,10 +291,10 @@ test("dates and old scale, weight and prior fields no longer affect scores", () 
   };
   const migrated = validateDataset(raw);
   expect(rankTeams(migrated)[0].rating).toBe(expected);
-  expect(migrated.version).toBe(4);
+  expect(migrated.version).toBe(6);
   expect(migrated.settings).toEqual({
-    performanceWeight: 65,
-    stabilityWeight: 20,
+    performanceWeight: 80,
+    stabilityWeight: 5,
   });
   expect(migrated.contests[0]).not.toHaveProperty("siteStats");
   expect(migrated.contests[0]).not.toHaveProperty("weight");
@@ -282,17 +331,29 @@ test("aliases merge histories and same-contest duplicates are rejected", () => {
   expect(() => validateDataset(d)).toThrow("重複隊名");
 });
 test("identical display names from different schools or countries stay separate", () => {
-  const taiwan = { ...row("Phoenix"), affiliation: "National Taiwan University", country: "TW" } as Result;
-  const japan = { ...row("Phoenix", 1, 20), affiliation: "University of Tokyo", country: "JP" } as Result;
+  const taiwan = {
+    ...row("Phoenix"),
+    affiliation: "National Taiwan University",
+    country: "TW",
+  } as Result;
+  const japan = {
+    ...row("Phoenix", 1, 20),
+    affiliation: "University of Tokyo",
+    country: "JP",
+  } as Result;
   const ranked = rankTeams(dataset([contest([taiwan, japan])]));
   expect(ranked).toHaveLength(2);
   expect(new Set(ranked.map((t) => t.id)).size).toBe(2);
   expect(canonicalResult(taiwan, {})).not.toBe(canonicalResult(japan, {}));
 });
 test("single-country legacy imports upgrade generic foreign labels", () => {
-  const d = dataset([contest([{ ...row("Seoul"), country: "OTHER" }], {
-    name: "ICPC Korea Preliminary", site: "Korea", source: "https://icpckorea.net/scoreboard",
-  })]);
+  const d = dataset([
+    contest([{ ...row("Seoul"), country: "OTHER" }], {
+      name: "ICPC Korea Preliminary",
+      site: "Korea",
+      source: "https://icpckorea.net/scoreboard",
+    }),
+  ]);
   expect(validateDataset(d).contests[0].results[0].country).toBe("KR");
 });
 test("alias cycles and inherited keys are handled safely", () => {
@@ -312,6 +373,63 @@ test("invalid settings and dates fail before replacing data", () => {
 });
 describe("published data integrity", () => {
   const d = validateDataset(seed);
+  test("Vietnam imports only the complete University group from the supplied HTML", () => {
+    const matches = d.contests.filter(
+      (c) => c.id === "vietnam-preliminary-2026",
+    );
+    expect(matches).toHaveLength(1);
+    const c = matches[0];
+    expect(c.date).toBe("2026-11-08");
+    expect(c.source).toContain("tags=University");
+    expect(c.status).toBe("final");
+    expect(c.problemCount).toBe(13);
+    expect(c.results).toHaveLength(265);
+    expect(new Set(c.results.map((r) => r.affiliation)).size).toBe(60);
+    expect(c.results.every((r) => r.country === "VN")).toBe(true);
+    expect(c.results.some((r) => r.team === "Monday")).toBe(false);
+    expect(c.results.reduce((sum, r) => sum + r.solved, 0)).toBe(938);
+    expect(
+      Array.from(
+        { length: 13 },
+        (_, i) => c.results.filter((r) => r.problems[i].solved).length,
+      ),
+    ).toEqual([7, 0, 26, 89, 258, 1, 222, 12, 0, 1, 204, 1, 117]);
+    expect(c.results.filter((r) => r.solved === 0)).toHaveLength(7);
+    expect(
+      c.results.filter((r) => r.problems.every((p) => p.attempts === 0)),
+    ).toHaveLength(2);
+    expect(c.results[0]).toMatchObject({
+      team: "HCMUS-NoMercy",
+      rank: 1,
+      solved: 8,
+      penalty: 939,
+    });
+  });
+  test("Japan preliminary retains all 353 teams, 86 institutions and official solve totals", () => {
+    const matches = d.contests.filter((c) => c.id === "japan-preliminary-2026");
+    expect(matches).toHaveLength(1);
+    const c = matches[0];
+    expect(c.date).toBe("2026-07-03");
+    expect(c.status).toBe("final");
+    expect(c.results).toHaveLength(353);
+    expect(new Set(c.results.map((r) => r.affiliation)).size).toBe(86);
+    expect(c.results.every((r) => r.country === "JP")).toBe(true);
+    expect(c.problemCount).toBe(10);
+    expect(c.results.reduce((sum, r) => sum + r.solved, 0)).toBe(1237);
+    expect(
+      Array.from(
+        { length: 10 },
+        (_, i) => c.results.filter((r) => r.problems[i].solved).length,
+      ),
+    ).toEqual([345, 304, 223, 138, 141, 26, 38, 15, 5, 2]);
+    expect(c.results.filter((r) => r.solved === 0)).toHaveLength(7);
+    expect(c.results[0]).toMatchObject({
+      team: "yawn at the top",
+      solved: 10,
+      penalty: 809,
+      rank: 1,
+    });
+  });
   test("TOPC is imported once as final, with all teams", () => {
     const matches = d.contests.filter((c) => c.id === "topc-2026");
     expect(matches).toHaveLength(1);
@@ -408,10 +526,10 @@ test("v2 drafts migrate to three-factor weights and retain contest history", () 
   raw.settings = { performanceWeight: 55 };
   delete raw.contests[0].difficulty;
   const migrated = validateDataset(raw);
-  expect(migrated.version).toBe(4);
+  expect(migrated.version).toBe(6);
   expect(migrated.settings).toEqual({
-    performanceWeight: 65,
-    stabilityWeight: 20,
+    performanceWeight: 80,
+    stabilityWeight: 5,
   });
   expect(migrated.contests[0].difficulty).toBeNull();
   expect(migrated.contests[0].results).toEqual(raw.contests[0].results);
@@ -425,12 +543,16 @@ test("v3 drafts adopt performance-first settings and discard retired roster data
     yunlinTeams: ["old roster"],
   };
   const next = validateDataset(raw);
-  expect(next.version).toBe(4);
+  expect(next.version).toBe(6);
   expect(next.settings).toEqual(defaults);
   expect(next).not.toHaveProperty("yunlinTeams");
   expect(next.contests).toHaveLength(raw.contests.length);
   expect(next.contests[0]).toEqual(raw.contests[0]);
-  expect(next.contests.at(-1)!.results.every((r) => r.country === "KR")).toBe(true);
+  expect(
+    next.contests
+      .find((c) => c.id === "korea-preliminary-2026")!
+      .results.every((r) => r.country === "KR"),
+  ).toBe(true);
   expect(next.aliases).toEqual(raw.aliases);
   expect(next.countries).toEqual(raw.countries);
   expect(raw).toHaveProperty("yunlinTeams");

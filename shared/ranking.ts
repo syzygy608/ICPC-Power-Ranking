@@ -178,8 +178,14 @@ export function rankTeams(data: Dataset) {
         mean(stations.map((s) => (s.level - level) ** 2)),
       );
       const stability = stations.length < 2 ? 0 : clamp(level - spread);
-      const performanceContribution = data.settings.performanceWeight * level;
-      const stabilityContribution = data.settings.stabilityWeight * stability;
+      // An unobserved stability score must not cost a single-station team points.
+      const stabilityWeightApplied =
+        stations.length < 2 ? 0 : data.settings.stabilityWeight;
+      const performanceWeightApplied =
+        data.settings.performanceWeight +
+        (stations.length < 2 ? data.settings.stabilityWeight : 0);
+      const performanceContribution = performanceWeightApplied * level;
+      const stabilityContribution = stabilityWeightApplied * stability;
       const difficultyScore = mean(stations.map((s) => s.difficulty));
       const difficultyContribution =
         (100 -
@@ -200,7 +206,7 @@ export function rankTeams(data: Dataset) {
           ? data.countries[t.team]
           : Object.hasOwn(data.countries, latest.team)
             ? data.countries[latest.team]
-          : latest.country,
+            : latest.country,
         rating:
           performanceContribution +
           stabilityContribution +
@@ -212,6 +218,8 @@ export function rankTeams(data: Dataset) {
         level,
         spread,
         stability,
+        performanceWeightApplied,
+        stabilityWeightApplied,
         performanceContribution,
         stabilityContribution,
         difficultyScore,

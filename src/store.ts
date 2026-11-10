@@ -1,4 +1,4 @@
-import seed from "./data/rankings.json";
+import seed from "./data";
 import { validateDataset } from "../shared/validation";
 import type { Dataset } from "../shared/types";
 export const published = validateDataset(seed);

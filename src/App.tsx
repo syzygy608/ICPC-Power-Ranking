@@ -1,12 +1,18 @@
 import { useMemo, useState, type ReactNode } from "react";
 import { canonicalResult, rankTeams, type RankedTeam } from "../shared/ranking";
-import { countryLabel, teamKey, type Contest, type Dataset } from "../shared/types";
+import {
+  countryLabel,
+  teamKey,
+  type Contest,
+  type Dataset,
+} from "../shared/types";
 import { validateDataset } from "../shared/validation";
 import { download, loadData, persist, published, reset } from "./store";
 import ImportDialog, { CountrySelect, pct } from "./ImportDialog";
 import Icon from "./Icons";
 import Method from "./Method";
 import Schools from "./Schools";
+import Pagination, { usePagination } from "./Pagination";
 import { selectTaiwanHighlights } from "../shared/highlights";
 import { useDialogFocus } from "./useDialogFocus";
 const initial = loadData();
@@ -63,13 +69,12 @@ export default function App() {
   const [query, setQuery] = useState("");
   const [region, setRegion] = useState("TW");
   const [school, setSchool] = useState("");
-  const [limit, setLimit] = useState(25);
   const hasFilters = query !== "" || region !== "TW" || school !== "";
   function clearFilters() {
     setQuery("");
     setRegion("TW");
     setSchool("");
-    setLimit(25);
+    pagination.setPage(1);
   }
   const [aliasFrom, setAliasFrom] = useState("");
   const [aliasTo, setAliasTo] = useState("");
@@ -93,6 +98,7 @@ export default function App() {
       (!school || t.affiliation === school) &&
       `${t.team} ${t.affiliation}`.toLowerCase().includes(query.toLowerCase()),
   );
+  const pagination = usePagination(filtered.length);
   const team = ranked.find((t) => t.id === selected);
   const totalTW = ranked.filter((t) => t.country === "TW").length;
   const latest = data.contests
@@ -178,7 +184,7 @@ export default function App() {
             <br />
             都是實力的下一個座標。
           </p>
-          <span className="version">COMMUNITY RANKING · v1.2</span>
+          <span className="version">COMMUNITY RANKING · v1.3</span>
         </div>
       </aside>
       <main>
@@ -251,7 +257,8 @@ export default function App() {
                 {stale
                   ? "正式資料已更新；目前仍顯示你保存的舊草稿。"
                   : "目前為本機草稿，僅此瀏覽器可見。"}{" "}
-                匯出 rankings.json 放回專案並部署，即可更新公開排行。
+                匯出 rankings.json，執行專案的 publish-data
+                指令後部署，即可更新公開排行。
               </span>
               <button
                 className="text-button"
@@ -367,7 +374,7 @@ export default function App() {
                     <p className="muted">點選隊伍，查看逐場表現與評分明細。</p>
                   </div>
                   <span className="model-label">
-                    MODEL v1.2 <Icon name="info" size={14} />
+                    MODEL v1.3 <Icon name="info" size={14} />
                   </span>
                 </div>
                 <details className="highlight-list">
@@ -401,7 +408,7 @@ export default function App() {
                       value={query}
                       onChange={(e) => {
                         setQuery(e.target.value);
-                        setLimit(25);
+                        pagination.setPage(1);
                       }}
                     />
                   </label>
@@ -411,7 +418,7 @@ export default function App() {
                     onChange={(e) => {
                       setRegion(e.target.value);
                       setSchool("");
-                      setLimit(25);
+                      pagination.setPage(1);
                     }}
                   >
                     <option value="TW">台灣隊伍</option>
@@ -424,7 +431,7 @@ export default function App() {
                     value={school}
                     onChange={(e) => {
                       setSchool(e.target.value);
-                      setLimit(25);
+                      pagination.setPage(1);
                     }}
                   >
                     <option value="">所有學校</option>
@@ -456,75 +463,80 @@ export default function App() {
                       </tr>
                     </thead>
                     <tbody>
-                      {filtered.slice(0, limit).map((t) => (
-                        <tr
-                          key={t.id}
-                          className={
-                            highlightOrder.has(t.id)
-                              ? "highlighted-team country-tint"
-                              : "country-tint"
-                          }
-                          data-country={t.country}
-                        >
-                          <td className="rank-number">
-                            {String(t.rank).padStart(2, "0")}
-                          </td>
-                          <td>
-                            <button
-                              className="team-button"
-                              onClick={() => setSelected(t.id)}
-                            >
-                              {t.team}
-                            </button>
-                            {highlightOrder.has(t.id) && (
-                              <span className="highlight-badge">
-                                高機率晉級 #{highlightOrder.get(t.id)}
-                              </span>
-                            )}
-                            <small>{t.affiliation || "未提供學校"} · {countryLabel(t.country)}</small>
-                          </td>
-                          <td>
-                            <b className="rating">{fmt(t.rating)}</b>
-                          </td>
-                          <td>
-                            <span
-                              className={`dirty-pill ${t.dirty !== null && t.dirty < 0.3 ? "clean" : ""}`}
-                            >
-                              {pct(t.dirty)}
-                            </span>
-                          </td>
-                          <td className="numeric">
-                            {t.siteCount < 2 ? "待驗證" : pct(t.stability)}
-                            <small>
-                              {t.siteCount < 2
-                                ? "僅單站資料"
-                                : `站間波動 ${pct(t.spread)}`}
-                            </small>
-                          </td>
-                          <td>
-                            <div className="confidence">
+                      {filtered
+                        .slice(pagination.start, pagination.end)
+                        .map((t) => (
+                          <tr
+                            key={t.id}
+                            className={
+                              highlightOrder.has(t.id)
+                                ? "highlighted-team country-tint"
+                                : "country-tint"
+                            }
+                            data-country={t.country}
+                          >
+                            <td className="rank-number">
+                              {String(t.rank).padStart(2, "0")}
+                            </td>
+                            <td>
+                              <button
+                                className="team-button"
+                                onClick={() => setSelected(t.id)}
+                              >
+                                {t.team}
+                              </button>
+                              {highlightOrder.has(t.id) && (
+                                <span className="highlight-badge">
+                                  高機率晉級 #{highlightOrder.get(t.id)}
+                                </span>
+                              )}
+                              <small>
+                                {t.affiliation || "未提供學校"} ·{" "}
+                                {countryLabel(t.country)}
+                              </small>
+                            </td>
+                            <td>
+                              <b className="rating">{fmt(t.rating)}</b>
+                            </td>
+                            <td>
                               <span
-                                style={{ width: `${t.confidence * 100}%` }}
-                              />
-                            </div>
-                            <small>
-                              {t.siteCount} 站 · {t.count} 場
-                            </small>
-                            <small>
-                              Dirty 資料 {t.knownDirtyCount}/{t.count} 場
-                            </small>
-                          </td>
-                          <td>
-                            <button
-                              className="icon-button"
-                              aria-label={`查看 ${t.team}`}
-                              onClick={() => setSelected(t.id)}
-                            >
-                              <Icon name="arrow" size={17} />
-                            </button>
-                          </td>
-                        </tr>
-                      ))}
+                                className={`dirty-pill ${t.dirty !== null && t.dirty < 0.3 ? "clean" : ""}`}
+                              >
+                                {pct(t.dirty)}
+                              </span>
+                            </td>
+                            <td className="numeric">
+                              {t.siteCount < 2 ? "待驗證" : pct(t.stability)}
+                              <small>
+                                {t.siteCount < 2
+                                  ? "僅單站資料"
+                                  : `站間波動 ${pct(t.spread)}`}
+                              </small>
+                            </td>
+                            <td>
+                              <div className="confidence">
+                                <span
+                                  style={{ width: `${t.confidence * 100}%` }}
+                                />
+                              </div>
+                              <small>
+                                {t.siteCount} 站 · {t.count} 場
+                              </small>
+                              <small>
+                                Dirty 資料 {t.knownDirtyCount}/{t.count} 場
+                              </small>
+                            </td>
+                            <td>
+                              <button
+                                className="icon-button"
+                                aria-label={`查看 ${t.team}`}
+                                onClick={() => setSelected(t.id)}
+                              >
+                                <Icon name="arrow" size={17} />
+                              </button>
+                            </td>
+                          </tr>
+                        ))}
                     </tbody>
                   </table>
                   {!filtered.length && (
@@ -538,18 +550,11 @@ export default function App() {
                     </div>
                   )}
                 </div>
-                <div className="table-footer">
-                  <span>
-                    顯示 {Math.min(limit, filtered.length)} / {filtered.length}{" "}
-                    隊
-                  </span>
-                  {filtered.length > limit && (
-                    <button onClick={() => setLimit(limit + 25)}>
-                      顯示更多
-                    </button>
-                  )}
-                  <span>非官方排名 · 少量紀錄僅供參考</span>
-                </div>
+                <Pagination
+                  pagination={pagination}
+                  label="隊伍戰力榜"
+                  unit="隊"
+                />
               </section>
             </>
           )}
@@ -627,7 +632,11 @@ export default function App() {
                                   b.solved - a.solved || a.penalty - b.penalty,
                               )
                               .map((r, i) => (
-                                <tr key={`${r.team}-${r.affiliation}-${r.country}`} className="country-tint" data-country={r.country}>
+                                <tr
+                                  key={`${r.team}-${r.affiliation}-${r.country}`}
+                                  className="country-tint"
+                                  data-country={r.country}
+                                >
                                   <td>{r.rank}</td>
                                   <td>
                                     <button
@@ -751,8 +760,8 @@ export default function App() {
                 <ol>
                   <li>匯入新榜單，確認隊名、國別、日期與賽站名稱。</li>
                   <li>
-                    匯出 <code>rankings.json</code>，取代{" "}
-                    <code>src/data/rankings.json</code>。
+                    匯出 <code>rankings.json</code>，在專案執行{" "}
+                    <code>bun run publish-data ./rankings.json</code>。
                   </li>
                   <li>
                     推送專案至 Git；Vercel 重新部署後，所有訪客都能看到更新。
@@ -945,7 +954,7 @@ function TeamDetail({
   return (
     <>
       <div className="team-detail-title">
-        <span className="eyebrow">TEAM PROFILE · MODEL v1.2</span>
+        <span className="eyebrow">TEAM PROFILE · MODEL v1.3</span>
         <h2>{team.team}</h2>
         <p className="muted">{team.affiliation}</p>
         <div className="detail-stats">
@@ -965,12 +974,17 @@ function TeamDetail({
         <div className="breakdown">
           <span>
             賽場表現：{team.performanceContribution.toFixed(2)} 分 /{" "}
-            {data.settings.performanceWeight}
+            {team.performanceWeightApplied}
           </span>
-          <span>
-            跨站穩定：{team.stabilityContribution.toFixed(2)} 分 /{" "}
-            {data.settings.stabilityWeight}
-          </span>
+          {data.settings.stabilityWeight > 0 ? (
+            <span>
+              {team.siteCount < 2
+                ? "穩定度權重已移回賽場表現"
+                : `跨站穩定：${team.stabilityContribution.toFixed(2)} 分 / ${team.stabilityWeightApplied}`}
+            </span>
+          ) : (
+            <span>穩定度僅供參考，不計入戰力</span>
+          )}
         </div>
         <p className="muted">
           站點難度貢獻：{team.difficultyContribution.toFixed(2)} /{" "}

@@ -8,7 +8,8 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --host 127.0.0.1",
     "test": "bun test",
-    "import-scoreboard": "bun scripts/import-scoreboard.ts"
+    "import-scoreboard": "bun scripts/import-scoreboard.ts",
+    "publish-data": "bun scripts/publish-data.ts"
   },
   "dependencies": {
     "react": "19.2.7",

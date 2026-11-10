@@ -68,13 +68,15 @@ export default function ImportDialog({
           json.version === 1 ||
           json.version === 2 ||
           json.version === 3 ||
-          json.version === 4
+          json.version === 4 ||
+          json.version === 5 ||
+          json.version === 6
         ) {
           setBackup(validateDataset(json));
           return;
         }
         const c = validateDataset({
-          version: 4,
+          version: 6,
           contests: [json],
           aliases: {},
           countries: {},
@@ -138,10 +140,14 @@ export default function ImportDialog({
         aria-labelledby="import-title"
       >
         <datalist id="country-codes">
-          <option value="TW">台灣</option><option value="JP">日本</option>
-          <option value="KR">韓國</option><option value="CN">中國</option>
-          <option value="HK">香港</option><option value="SG">新加坡</option>
-          <option value="US">美國</option><option value="OTHER">其他國家</option>
+          <option value="TW">台灣</option>
+          <option value="JP">日本</option>
+          <option value="KR">韓國</option>
+          <option value="CN">中國</option>
+          <option value="HK">香港</option>
+          <option value="SG">新加坡</option>
+          <option value="US">美國</option>
+          <option value="OTHER">其他國家</option>
           <option value="UNKNOWN">待確認</option>
         </datalist>
         <header>

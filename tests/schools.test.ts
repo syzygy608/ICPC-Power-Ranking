@@ -1,9 +1,9 @@
 import { expect, test } from "bun:test";
 import { selectTaiwanHighlights, schoolKey } from "../shared/highlights";
 import { rankSchools } from "../shared/schools";
-import { rankTeams, canonical } from "../shared/ranking";
+import { rankTeams, canonicalResult } from "../shared/ranking";
 import { validateDataset } from "../shared/validation";
-import seed from "../src/data/rankings.json";
+import seed from "../src/data";
 const team = (name: string, school: string, country = "TW") => ({
   team: name,
   affiliation: school,
@@ -54,7 +54,7 @@ test("published watchlist selects ten without altering the full ranking", () => 
   expect(ranked.length).toBe(
     new Set(
       d.contests.flatMap((c) =>
-        c.results.map((r) => canonical(r.team, d.aliases)),
+        c.results.map((r) => canonicalResult(r, d.aliases)),
       ),
     ).size,
   );

@@ -13,18 +13,24 @@ export default function Method({
     <>
       <section className="panel method">
         <span className="eyebrow">
-          PERFORMANCE · CONSISTENCY · DIFFICULTY / MODEL v1.2
+          PERFORMANCE · CONSISTENCY · DIFFICULTY / MODEL v1.3
         </span>
         <h2>賽場表現優先，跨站實力驗證。</h2>
         <p>
-          隊伍戰力為 0–100 分，綜合賽場表現、跨站穩定度與站點難度。三項權重合計
-          100%；各站內先平均各場，再讓各站等權。
+          隊伍戰力為 0–100 分，預設以 80% 賽場表現、5% 跨站穩定度與 15%
+          站點難度計分。 穩定度獨立顯示且最多只占
+          5%；單站也能充分反映實力。各站內先平均各場，再讓各站等權。
         </p>
         <div className="formula">
           戰力 = 100 × [{performanceWeight}% × Performance
           <br />+ {stabilityWeight}% × Stable
           <br />+ {difficultyWeight}% × Difficulty]
         </div>
+        <p className="muted">
+          若啟用穩定度權重（最多
+          5%），只有單站時會把該權重移回賽場表現，避免因缺少跨站紀錄而扣分。
+          同樣水準且難度相同時，單站與多站穩定表現的戰力相等。
+        </p>
         <h3>賽場表現與同題數比較</h3>
         <p>
           先依全場 ICPC 解題數與罰時取得名次百分位 P₀（第一名 1、最後一名
@@ -45,7 +51,8 @@ export default function Method({
         <p>
           先將同站各場 Q 取平均，穩定度為 max(0, 各站 Q 平均 − 各站 Q
           的母體標準差)。持續在前段才有高分；只有一站時穩定分為
-          0，顯示「待驗證」。兩站時穩定度就是較弱一站的 Q。
+          0，顯示「待驗證」，不代表實力為零。兩站時穩定度就是較弱一站的
+          Q；只以小權重影響戰力。
         </p>
         <p>
           賽站以「賽站」欄位識別，同站跨屆請使用相同名稱。同站重複參賽不增加站數或該站票數；未參賽不當成敗場。
@@ -83,7 +90,7 @@ export default function Method({
         </p>
       </section>
       <section className="panel settings">
-        <h2>三項核心權重</h2>
+        <h2>戰力與輔助指標權重</h2>
         <label>
           賽場表現
           <div className="range-input">
@@ -108,14 +115,14 @@ export default function Method({
           </div>
         </label>
         <label>
-          跨站穩定表現
+          跨站穩定度（最多 5%）
           <div className="range-input">
             <input
               aria-label="跨站穩定權重"
               type="range"
               min="0"
-              max={100 - performanceWeight}
-              step="5"
+              max={Math.min(5, 100 - performanceWeight)}
+              step="1"
               value={stabilityWeight}
               onChange={(e) =>
                 onChange({
@@ -141,7 +148,7 @@ export default function Method({
         <button
           onClick={() => onChange({ ...data, settings: { ...defaults } })}
         >
-          還原 65% / 20% / 15%
+          還原 80% / 5% / 15%
         </button>
       </section>
     </>

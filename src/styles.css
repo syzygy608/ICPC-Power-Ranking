@@ -132,12 +132,12 @@ button.primary:hover {
   color: #95a198;
   margin: 49px 12px 15px;
 }
-nav {
+.sidebar nav {
   display: flex;
   flex-direction: column;
   gap: 7px;
 }
-nav button {
+.sidebar nav button {
   justify-content: flex-start;
   border: 0;
   padding: 13px 12px;
@@ -145,7 +145,7 @@ nav button {
   font-size: 14px;
   gap: 12px;
 }
-nav button.active {
+.sidebar nav button.active {
   background: #eaf3ee;
   color: var(--green);
 }
@@ -608,18 +608,52 @@ tbody tr:hover {
 }
 /* Country is part of a team's identity.  A quiet row tint makes mixed
    international fields scannable without turning the table into flags. */
-.country-tint[data-country="TW"] { --country-tint: #e8f4ed; --country-edge: #69a982; }
-.country-tint[data-country="JP"] { --country-tint: #fff0f1; --country-edge: #df7e88; }
-.country-tint[data-country="KR"] { --country-tint: #edf2ff; --country-edge: #7d99d8; }
-.country-tint[data-country="CN"] { --country-tint: #fff1e7; --country-edge: #e49a64; }
-.country-tint[data-country="HK"] { --country-tint: #fcecf3; --country-edge: #d77aab; }
-.country-tint[data-country="SG"] { --country-tint: #f4edff; --country-edge: #a184d4; }
-.country-tint[data-country="US"], .country-tint[data-country="CA"] { --country-tint: #edf6ff; --country-edge: #78a7cc; }
-.country-tint[data-country="UNKNOWN"], .country-tint[data-country="OTHER"] { --country-tint: #f4f4f1; --country-edge: #abb1a9; }
-.country-tint { background: var(--country-tint, #f5f4ff); }
-tbody .country-tint:hover { background: color-mix(in srgb, var(--country-tint, #f5f4ff) 78%, white); }
-.country-tint td:first-child { box-shadow: inset 3px 0 var(--country-edge, #a58bc8); }
-.leader.country-tint { border-color: var(--country-edge, #a58bc8); }
+.country-tint[data-country="TW"] {
+  --country-tint: #e8f4ed;
+  --country-edge: #69a982;
+}
+.country-tint[data-country="JP"] {
+  --country-tint: #fff0f1;
+  --country-edge: #df7e88;
+}
+.country-tint[data-country="KR"] {
+  --country-tint: #edf2ff;
+  --country-edge: #7d99d8;
+}
+.country-tint[data-country="CN"] {
+  --country-tint: #fff1e7;
+  --country-edge: #e49a64;
+}
+.country-tint[data-country="HK"] {
+  --country-tint: #fcecf3;
+  --country-edge: #d77aab;
+}
+.country-tint[data-country="SG"] {
+  --country-tint: #f4edff;
+  --country-edge: #a184d4;
+}
+.country-tint[data-country="US"],
+.country-tint[data-country="CA"] {
+  --country-tint: #edf6ff;
+  --country-edge: #78a7cc;
+}
+.country-tint[data-country="UNKNOWN"],
+.country-tint[data-country="OTHER"] {
+  --country-tint: #f4f4f1;
+  --country-edge: #abb1a9;
+}
+.country-tint {
+  background: var(--country-tint, #f5f4ff);
+}
+tbody .country-tint:hover {
+  background: color-mix(in srgb, var(--country-tint, #f5f4ff) 78%, white);
+}
+.country-tint td:first-child {
+  box-shadow: inset 3px 0 var(--country-edge, #a58bc8);
+}
+.leader.country-tint {
+  border-color: var(--country-edge, #a58bc8);
+}
 td small {
   display: block;
   color: #98a194;
@@ -720,6 +754,56 @@ td small {
 .table-footer button {
   font-size: 13px;
   padding: 7px 13px;
+}
+.pagination-footer {
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.pagination {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.pagination button {
+  flex: 0 0 auto;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1.25;
+  white-space: nowrap;
+  min-width: 42px;
+  padding: 8px 12px;
+}
+.pagination button[aria-current="page"] {
+  background: var(--green);
+  border-color: var(--green);
+  color: white;
+}
+.pagination button[aria-current="page"]:hover {
+  background: var(--green);
+  color: white;
+}
+.pagination > span {
+  padding: 0 4px;
+}
+@media (max-width: 650px) {
+  .pagination-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .pagination {
+    gap: 4px;
+  }
+  .pagination button {
+    min-width: 36px;
+    padding: 8px 10px;
+  }
+}
+.country-tint[data-country="VN"] {
+  --country-tint: #fff7e8;
+  --country-edge: #cca649;
 }
 .site-footer {
   display: flex;
@@ -1270,15 +1354,15 @@ label > select {
   .nav-count {
     display: none;
   }
-  nav {
+  .sidebar nav {
     margin-top: 40px;
   }
-  nav button {
+  .sidebar nav button {
     font-size: 0;
     justify-content: center;
     padding: 12px;
   }
-  nav button svg {
+  .sidebar nav button svg {
     width: 21px;
     height: 21px;
     flex-shrink: 0;
