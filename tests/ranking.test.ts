@@ -373,6 +373,77 @@ test("invalid settings and dates fail before replacing data", () => {
 });
 describe("published data integrity", () => {
   const d = validateDataset(seed);
+  test("Seoul regional retains all 81 teams, countries and official problem totals", () => {
+    const matches = d.contests.filter((c) => c.id === "seoul-regional-2026");
+    expect(matches).toHaveLength(1);
+    const c = matches[0];
+    expect(c.date).toBe("2026-11-14");
+    expect(c.status).toBe("final");
+    expect(c.problemCount).toBe(13);
+    expect(c.results).toHaveLength(81);
+    expect(new Set(c.results.map((r) => r.affiliation)).size).toBe(50);
+    expect(
+      Object.fromEntries(
+        ["KR", "JP", "TW", "SG", "TH"].map((country) => [
+          country,
+          c.results.filter((r) => r.country === country).length,
+        ]),
+      ),
+    ).toEqual({ KR: 74, JP: 3, TW: 2, SG: 1, TH: 1 });
+    expect(c.results.reduce((sum, r) => sum + r.solved, 0)).toBe(339);
+    expect(
+      Array.from(
+        { length: 13 },
+        (_, i) => c.results.filter((r) => r.problems[i].solved).length,
+      ),
+    ).toEqual([9, 46, 26, 55, 38, 1, 54, 0, 18, 0, 78, 11, 3]);
+    expect(c.results.filter((r) => r.solved === 0)).toHaveLength(3);
+    expect(c.results[0]).toMatchObject({
+      team: "floorsum",
+      rank: 1,
+      solved: 10,
+      penalty: 1511,
+    });
+    // The official raw submission count includes one non-penalty submission here.
+    expect(c.results[0].problems.find((p) => p.label === "E")!.attempts).toBe(
+      4,
+    );
+  });
+  test("Seoul team histories join preliminaries and Taiwanese records by school and country", () => {
+    const ranked = rankTeams(d);
+    for (const name of ["Tideology", "NYCU_FriedRice"]) {
+      const teams = ranked.filter((t) => t.team === name && t.country === "TW");
+      expect(teams).toHaveLength(1);
+      expect(new Set(teams[0].history.map((h) => h.contest.id))).toEqual(
+        new Set(["seoul-regional-2026", "ncpc-2026-final", "topc-2026"]),
+      );
+    }
+    const korea = ranked.filter(
+      (t) =>
+        t.country === "KR" &&
+        t.history.some((h) => h.contest.id === "seoul-regional-2026"),
+    );
+    expect(korea).toHaveLength(74);
+    expect(
+      korea.every((t) =>
+        t.history.some((h) => h.contest.id === "korea-preliminary-2026"),
+      ),
+    ).toBe(true);
+    const hanbat = korea.find((t) => t.team === "dlepan")!;
+    expect(hanbat.affiliation).toBe("Hanbat National University");
+    expect(hanbat.history).toHaveLength(2);
+    expect(
+      ranked
+        .filter(
+          (t) =>
+            t.country === "JP" &&
+            t.history.some((h) => h.contest.id === "seoul-regional-2026"),
+        )
+        .every((t) =>
+          t.history.some((h) => h.contest.id === "japan-preliminary-2026"),
+        ),
+    ).toBe(true);
+  });
   test("Vietnam imports only the complete University group from the supplied HTML", () => {
     const matches = d.contests.filter(
       (c) => c.id === "vietnam-preliminary-2026",

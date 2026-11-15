@@ -5,8 +5,9 @@ import contest1 from "./contests/topc-2026.json";
 import contest2 from "./contests/korea-preliminary-2026.json";
 import contest3 from "./contests/japan-preliminary-2026.json";
 import contest4 from "./contests/vietnam-preliminary-2026.json";
+import contest5 from "./contests/seoul-regional-2026.json";
 const { contestFiles, ...config } = manifest;
 export default {
   ...config,
-  contests: [contest0, contest1, contest2, contest3, contest4],
+  contests: [contest0, contest1, contest2, contest3, contest4, contest5],
 };

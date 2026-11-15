@@ -30,6 +30,7 @@ npm run preview
 | [2026 ICPC 韓國初賽](https://static.icpckorea.net/2026/preliminary/scoreboard/)                           | 2026-10-17 | 213  | 11   | 最終 |
 | [2026 ICPC 日本初賽](https://icpcsec.firebaseapp.com/standings/)                                          | 2026-07-03 | 353  | 10   | 最終 |
 | [2026 ICPC 越南國家初賽（University）](https://icpc.vnoi.info/contest/icpc26_na/ranking/?tags=University) | 2026-11-08 | 265  | 13   | 最終 |
+| [2026 ICPC 首爾區域賽](https://static.icpckorea.net/2026/regional/scoreboard/)                            | 2026-11-14 | 81   | 13   | 最終 |
 
 TOPC 採用指定的 Wayback 快照；雖然來源頁面仍顯示 preliminary，依專案擁有者指定視為最終成績。保留完整 178 隊、逐題 AC / 嘗試次數 / 時間，AC 總數為 635；每題 AC 數和所有隊伍的 20 分鐘罰時均已核對。學校英譯統一為中文，不自行合併標點或拼法不同的隊名。
 
@@ -59,7 +60,7 @@ bun run import-scoreboard ./topc.html \
 
 ## 正式資料拆檔
 
-目前共 5 場、1123 筆隊伍成績。正式資料按比賽存放在 `src/data/contests/`，避免每次更新都編輯大型的單一 JSON。`src/data/rankings.json` 僅保存共用設定、別名、國別及 `contestFiles` 清單；`index.ts` 由指令自動產生，供網站與測試共用。這是原始資料的組織方式調整，仍在網站啟動時載入全部比賽，不是按需下載。
+目前共 6 場、1204 筆隊伍成績。正式資料按比賽存放在 `src/data/contests/`，避免每次更新都編輯大型的單一 JSON。`src/data/rankings.json` 僅保存共用設定、別名、國別及 `contestFiles` 清單；`index.ts` 由指令自動產生，供網站與測試共用。這是原始資料的組織方式調整，仍在網站啟動時載入全部比賽，不是按需下載。
 
 瀏覽器的匯入／匯出格式仍是單一完整 Dataset JSON，不受拆檔影響。**請勿直接以匯出的備份覆蓋拆檔清單**，改用：
 
@@ -72,6 +73,10 @@ bun run publish-data ./rankings.json
 日本初賽使用官方 LiveSite 的公開 `feeds`，保存全部 353 隊、86 校、10 題，包含 7 隊零解；逐題 AC、嘗試次數、AC 時間與官方名次皆保留。總 AC 1237，各題 AC 數 `[345, 304, 223, 138, 141, 26, 38, 15, 5, 2]`，所有隊伍的 20 分鐘罰時均已核對。國別使用 `JP`；既有以隊名、學校與國別形成的身分 key 會避免跨校同名隊伍誤合併。站點難度可在比賽參數中人工校準，不因人數多自動加分。
 
 越南國家初賽依使用者提供的 HTML 中 `window.RANKING_DATA`，只取 `University` 群組，排除高中組、虛擬、ghost 與取消資格的紀錄。保留該頁顯示的大學組名次與完整 265 隊、60 校、13 題，總 AC 938；以 AC 秒數向下取整至分鐘，逐隊核對 20 分鐘罰時。主辦公告列 263 隊大學隊伍，而 HTML 大學組列 265 隊，其中 7 隊零解、2 隊無提交；依指定榜單保留全部紀錄，不自行刪除零提交隊伍。可交叉核對[公開封存榜單](https://icpcvn.github.io/2026/national/scoreboard.html)。新匯入的越南站難度為未校準。
+
+首爾區域賽使用官方公開 HTML 的 `publish-data` 快照（產生時間 2026-11-15），收錄完整 81 隊、50 校、13 題：韓國 74、日本 3、台灣 2、新加坡 1、泰國 1。原始總提交數保存在 `totalAttempts`，計分用 `attempts` 採計罰失敗次數加上 AC 那次，避免把不計罰提交算入 dirty。總 AC 339，各題 AC 數 `[9, 46, 26, 55, 38, 1, 54, 0, 18, 0, 78, 11, 3]`；所有罰時均核對。
+
+首爾區域賽以「韓國 · 首爾」獨立收錄，不取代「韓國 · 國內初賽」。台大、陽明交大的學校名稱沿用既有中文名稱；來源的 `Hanbat National Unversity` 修正為 `Hanbat National University`，以銜接相同隊伍與學校。兩支台灣隊與 74 支韓國隊均可銜接既有成績，未猜測合併其他不同隊名。首爾站難度先留 `null`（未校準）；既有比賽難度不變。
 
 ## 排行榜分頁
 

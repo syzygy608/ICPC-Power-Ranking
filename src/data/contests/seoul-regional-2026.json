@@ -1,0 +1,8193 @@
+{
+  "id": "seoul-regional-2026",
+  "name": "2026 ICPC 首爾區域賽",
+  "date": "2026-11-14",
+  "site": "韓國 · 首爾",
+  "difficulty": 1.55,
+  "problemCount": 13,
+  "source": "https://static.icpckorea.net/2026/regional/scoreboard/",
+  "status": "final",
+  "results": [
+    {
+      "team": "floorsum",
+      "affiliation": "Seoul National University",
+      "country": "KR",
+      "rank": 1,
+      "solved": 10,
+      "penalty": 1511,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 2,
+          "time": 200,
+          "totalAttempts": 2
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 106,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": true,
+          "attempts": 1,
+          "time": 96,
+          "totalAttempts": 1
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 67,
+          "totalAttempts": 2
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 4,
+          "time": 150,
+          "totalAttempts": 5
+        },
+        {
+          "label": "F",
+          "solved": true,
+          "attempts": 3,
+          "time": 286,
+          "totalAttempts": 3
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 49,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 1,
+          "time": 208,
+          "totalAttempts": 1
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 24,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 185,
+          "totalAttempts": 1
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 18,
+          "time": null,
+          "totalAttempts": 18
+        }
+      ]
+    },
+    {
+      "team": "Phantasm",
+      "affiliation": "Institute of Science Tokyo",
+      "country": "JP",
+      "rank": 2,
+      "solved": 9,
+      "penalty": 928,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 5,
+          "time": 86,
+          "totalAttempts": 5
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 64,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": true,
+          "attempts": 1,
+          "time": 114,
+          "totalAttempts": 1
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 71,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 1,
+          "time": 119,
+          "totalAttempts": 1
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 4,
+          "time": null,
+          "totalAttempts": 4
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 30,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 2,
+          "time": 163,
+          "totalAttempts": 2
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 12,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 169,
+          "totalAttempts": 1
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "TrickcalCrabQuomo",
+      "affiliation": "Seoul National University",
+      "country": "KR",
+      "rank": 3,
+      "solved": 9,
+      "penalty": 995,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 129,
+          "totalAttempts": 1
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 68,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": true,
+          "attempts": 1,
+          "time": 271,
+          "totalAttempts": 1
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 58,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 1,
+          "time": 106,
+          "totalAttempts": 1
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 43,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 2,
+          "time": 131,
+          "totalAttempts": 2
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 13,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 156,
+          "totalAttempts": 1
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 2,
+          "time": null,
+          "totalAttempts": 2
+        }
+      ]
+    },
+    {
+      "team": "Reboot Ssal Game",
+      "affiliation": "Yonsei University",
+      "country": "KR",
+      "rank": 4,
+      "solved": 9,
+      "penalty": 1366,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 241,
+          "totalAttempts": 1
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 69,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": true,
+          "attempts": 2,
+          "time": 187,
+          "totalAttempts": 2
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 46,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 4,
+          "time": 263,
+          "totalAttempts": 4
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 77,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 1,
+          "time": 260,
+          "totalAttempts": 1
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 10,
+          "time": null,
+          "totalAttempts": 10
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 6,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 2,
+          "time": 117,
+          "totalAttempts": 2
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "u_u ..zZZ",
+      "affiliation": "The University of Tokyo",
+      "country": "JP",
+      "rank": 5,
+      "solved": 9,
+      "penalty": 1374,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 3,
+          "time": 187,
+          "totalAttempts": 3
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 48,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": true,
+          "attempts": 2,
+          "time": 129,
+          "totalAttempts": 2
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 6,
+          "time": 96,
+          "totalAttempts": 6
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 1,
+          "time": 114,
+          "totalAttempts": 1
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 2,
+          "time": 37,
+          "totalAttempts": 2
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 1,
+          "time": 279,
+          "totalAttempts": 1
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 12,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 2,
+          "time": 272,
+          "totalAttempts": 2
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "JourneytoTBA",
+      "affiliation": "Seoul National University",
+      "country": "KR",
+      "rank": 6,
+      "solved": 8,
+      "penalty": 941,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 2,
+          "time": null,
+          "totalAttempts": 2
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 37,
+          "totalAttempts": 2
+        },
+        {
+          "label": "C",
+          "solved": true,
+          "attempts": 2,
+          "time": 134,
+          "totalAttempts": 2
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 46,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 2,
+          "time": 143,
+          "totalAttempts": 2
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 7,
+          "time": null,
+          "totalAttempts": 7
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 51,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 1,
+          "time": 239,
+          "totalAttempts": 1
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 6,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "M",
+          "solved": true,
+          "attempts": 1,
+          "time": 225,
+          "totalAttempts": 1
+        }
+      ]
+    },
+    {
+      "team": "1 MiB",
+      "affiliation": "KAIST",
+      "country": "KR",
+      "rank": 7,
+      "solved": 8,
+      "penalty": 1069,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 2,
+          "time": 280,
+          "totalAttempts": 2
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 59,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": true,
+          "attempts": 1,
+          "time": 182,
+          "totalAttempts": 1
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 97,
+          "totalAttempts": 2
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 1,
+          "time": 128,
+          "totalAttempts": 1
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 36,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 1,
+          "time": 234,
+          "totalAttempts": 1
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 13,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "Tideology",
+      "affiliation": "國立臺灣大學",
+      "country": "TW",
+      "rank": 8,
+      "solved": 8,
+      "penalty": 1089,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 6,
+          "time": null,
+          "totalAttempts": 6
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 62,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": true,
+          "attempts": 2,
+          "time": 280,
+          "totalAttempts": 2
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 71,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 2,
+          "time": 138,
+          "totalAttempts": 2
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 50,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 2,
+          "time": 241,
+          "totalAttempts": 2
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 16,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 171,
+          "totalAttempts": 1
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "012",
+      "affiliation": "KAIST",
+      "country": "KR",
+      "rank": 9,
+      "solved": 8,
+      "penalty": 1298,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 216,
+          "totalAttempts": 1
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 64,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": true,
+          "attempts": 2,
+          "time": 253,
+          "totalAttempts": 2
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 3,
+          "time": 89,
+          "totalAttempts": 3
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 1,
+          "time": 200,
+          "totalAttempts": 1
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 70,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 3,
+          "time": 265,
+          "totalAttempts": 3
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 41,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "Graduation party!",
+      "affiliation": "National University of Singapore",
+      "country": "SG",
+      "rank": 10,
+      "solved": 7,
+      "penalty": 675,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 2,
+          "time": null,
+          "totalAttempts": 2
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 40,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": true,
+          "attempts": 1,
+          "time": 102,
+          "totalAttempts": 1
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 54,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 1,
+          "time": 109,
+          "totalAttempts": 1
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 3,
+          "time": null,
+          "totalAttempts": 3
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 35,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 28,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 7,
+          "time": null,
+          "totalAttempts": 7
+        },
+        {
+          "label": "M",
+          "solved": true,
+          "attempts": 3,
+          "time": 267,
+          "totalAttempts": 3
+        }
+      ]
+    },
+    {
+      "team": "Afterlife",
+      "affiliation": "Pohang University of Science and Technology",
+      "country": "KR",
+      "rank": 11,
+      "solved": 7,
+      "penalty": 741,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 85,
+          "totalAttempts": 2
+        },
+        {
+          "label": "C",
+          "solved": true,
+          "attempts": 2,
+          "time": 210,
+          "totalAttempts": 2
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 64,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 2,
+          "time": 116,
+          "totalAttempts": 2
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 29,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 2,
+          "time": 134,
+          "totalAttempts": 2
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 23,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "Kokiri is cute",
+      "affiliation": "KAIST",
+      "country": "KR",
+      "rank": 12,
+      "solved": 7,
+      "penalty": 807,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 4,
+          "time": 284,
+          "totalAttempts": 4
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 47,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": true,
+          "attempts": 2,
+          "time": 205,
+          "totalAttempts": 2
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 68,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 1,
+          "time": 73,
+          "totalAttempts": 1
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 36,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 14,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 2,
+          "time": null,
+          "totalAttempts": 2
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "cppython",
+      "affiliation": "Kyung Hee University",
+      "country": "KR",
+      "rank": 13,
+      "solved": 7,
+      "penalty": 853,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 3,
+          "time": null,
+          "totalAttempts": 3
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 86,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": true,
+          "attempts": 1,
+          "time": 124,
+          "totalAttempts": 1
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 78,
+          "totalAttempts": 2
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 2,
+          "time": 195,
+          "totalAttempts": 2
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 35,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 2,
+          "time": 244,
+          "totalAttempts": 2
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 31,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "LCAaww",
+      "affiliation": "KAIST",
+      "country": "KR",
+      "rank": 14,
+      "solved": 7,
+      "penalty": 864,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 72,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": true,
+          "attempts": 4,
+          "time": 172,
+          "totalAttempts": 4
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 58,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 3,
+          "time": 147,
+          "totalAttempts": 3
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 46,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 1,
+          "time": 247,
+          "totalAttempts": 1
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 22,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "Jank",
+      "affiliation": "Seoul National University",
+      "country": "KR",
+      "rank": 15,
+      "solved": 7,
+      "penalty": 882,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 2,
+          "time": null,
+          "totalAttempts": 2
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 50,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 58,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 1,
+          "time": 216,
+          "totalAttempts": 1
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 5,
+          "time": null,
+          "totalAttempts": 5
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 23,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 3,
+          "time": 231,
+          "totalAttempts": 4
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 16,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 248,
+          "totalAttempts": 1
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "FAAH",
+      "affiliation": "KAIST",
+      "country": "KR",
+      "rank": 16,
+      "solved": 7,
+      "penalty": 897,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 48,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": true,
+          "attempts": 3,
+          "time": 189,
+          "totalAttempts": 3
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 4,
+          "time": 104,
+          "totalAttempts": 4
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 1,
+          "time": 123,
+          "totalAttempts": 1
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 25,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 3,
+          "time": null,
+          "totalAttempts": 3
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 31,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 277,
+          "totalAttempts": 1
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "Fluke from 99",
+      "affiliation": "Pohang University of Science and Technology",
+      "country": "KR",
+      "rank": 17,
+      "solved": 7,
+      "penalty": 917,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 129,
+          "totalAttempts": 2
+        },
+        {
+          "label": "C",
+          "solved": true,
+          "attempts": 1,
+          "time": 184,
+          "totalAttempts": 1
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 88,
+          "totalAttempts": 2
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 1,
+          "time": 172,
+          "totalAttempts": 1
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 53,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 1,
+          "time": 226,
+          "totalAttempts": 1
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 25,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 4,
+          "time": null,
+          "totalAttempts": 4
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "GENGFaker",
+      "affiliation": "Seoul National University",
+      "country": "KR",
+      "rank": 18,
+      "solved": 7,
+      "penalty": 926,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 4,
+          "time": 87,
+          "totalAttempts": 4
+        },
+        {
+          "label": "C",
+          "solved": true,
+          "attempts": 1,
+          "time": 289,
+          "totalAttempts": 1
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 46,
+          "totalAttempts": 2
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 1,
+          "time": 94,
+          "totalAttempts": 1
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 32,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 16,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 3,
+          "time": 242,
+          "totalAttempts": 3
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "ICPCTTALKAK",
+      "affiliation": "Seoul National University",
+      "country": "KR",
+      "rank": 19,
+      "solved": 7,
+      "penalty": 933,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 3,
+          "time": 272,
+          "totalAttempts": 3
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 91,
+          "totalAttempts": 2
+        },
+        {
+          "label": "C",
+          "solved": true,
+          "attempts": 3,
+          "time": 50,
+          "totalAttempts": 3
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 109,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 3,
+          "time": 177,
+          "totalAttempts": 3
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 69,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 25,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "NYCU_FriedRice",
+      "affiliation": "國立陽明交通大學",
+      "country": "TW",
+      "rank": 20,
+      "solved": 7,
+      "penalty": 1086,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 95,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": true,
+          "attempts": 3,
+          "time": 132,
+          "totalAttempts": 3
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 78,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 5,
+          "time": 209,
+          "totalAttempts": 5
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 60,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 53,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 5,
+          "time": 259,
+          "totalAttempts": 5
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "singlemalt",
+      "affiliation": "Hanyang University",
+      "country": "KR",
+      "rank": 21,
+      "solved": 6,
+      "penalty": 449,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 53,
+          "totalAttempts": 2
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 40,
+          "totalAttempts": 2
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 1,
+          "time": 94,
+          "totalAttempts": 1
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 17,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 1,
+          "time": 196,
+          "totalAttempts": 1
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 9,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        }
+      ]
+    },
+    {
+      "team": "cutie et al",
+      "affiliation": "KAIST",
+      "country": "KR",
+      "rank": 22,
+      "solved": 6,
+      "penalty": 562,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 82,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": true,
+          "attempts": 1,
+          "time": 193,
+          "totalAttempts": 1
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 102,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 1,
+          "time": 124,
+          "totalAttempts": 1
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 24,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 37,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 4,
+          "time": null,
+          "totalAttempts": 4
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "hyunjaeLover",
+      "affiliation": "SungKyunKwan University",
+      "country": "KR",
+      "rank": 23,
+      "solved": 6,
+      "penalty": 594,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 46,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": true,
+          "attempts": 2,
+          "time": 213,
+          "totalAttempts": 2
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 79,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 2,
+          "time": 151,
+          "totalAttempts": 2
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 34,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 5,
+          "time": null,
+          "totalAttempts": 5
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 31,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 3,
+          "time": null,
+          "totalAttempts": 3
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "Endfield",
+      "affiliation": "Korea University",
+      "country": "KR",
+      "rank": 24,
+      "solved": 6,
+      "penalty": 706,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 86,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": true,
+          "attempts": 2,
+          "time": 226,
+          "totalAttempts": 2
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 39,
+          "totalAttempts": 2
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 10,
+          "time": null,
+          "totalAttempts": 11
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 26,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 20,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": true,
+          "attempts": 2,
+          "time": 249,
+          "totalAttempts": 2
+        }
+      ]
+    },
+    {
+      "team": "Good Bye PS",
+      "affiliation": "Seoul National University",
+      "country": "KR",
+      "rank": 25,
+      "solved": 6,
+      "penalty": 717,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 60,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": true,
+          "attempts": 3,
+          "time": 299,
+          "totalAttempts": 3
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 91,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 1,
+          "time": 165,
+          "totalAttempts": 1
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 35,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 27,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "CodingNewbie",
+      "affiliation": "Korea University",
+      "country": "KR",
+      "rank": 26,
+      "solved": 6,
+      "penalty": 992,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 215,
+          "totalAttempts": 2
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 39,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 2,
+          "time": 212,
+          "totalAttempts": 2
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 117,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 3,
+          "time": 279,
+          "totalAttempts": 3
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 50,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "temporary_teamname",
+      "affiliation": "Yonsei University",
+      "country": "KR",
+      "rank": 27,
+      "solved": 6,
+      "penalty": 993,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 98,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 68,
+          "totalAttempts": 2
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 3,
+          "time": 112,
+          "totalAttempts": 3
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 3,
+          "time": 240,
+          "totalAttempts": 3
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 27,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 5,
+          "time": 268,
+          "totalAttempts": 5
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "Toureast",
+      "affiliation": "Yonsei University",
+      "country": "KR",
+      "rank": 28,
+      "solved": 6,
+      "penalty": 1011,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 163,
+          "totalAttempts": 2
+        },
+        {
+          "label": "C",
+          "solved": true,
+          "attempts": 1,
+          "time": 236,
+          "totalAttempts": 1
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 105,
+          "totalAttempts": 2
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 2,
+          "time": 148,
+          "totalAttempts": 2
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 280,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 19,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "HyeonWooJin",
+      "affiliation": "Hanyang University",
+      "country": "KR",
+      "rank": 29,
+      "solved": 6,
+      "penalty": 1066,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 135,
+          "totalAttempts": 2
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 3,
+          "time": 151,
+          "totalAttempts": 3
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 4,
+          "time": 247,
+          "totalAttempts": 4
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 58,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 3,
+          "time": 276,
+          "totalAttempts": 3
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 39,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "teamname",
+      "affiliation": "Kookmin University",
+      "country": "KR",
+      "rank": 30,
+      "solved": 5,
+      "penalty": 397,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 91,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 64,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 1,
+          "time": 174,
+          "totalAttempts": 1
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 40,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 28,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 8,
+          "time": null,
+          "totalAttempts": 8
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "Ganjanggyeranbap",
+      "affiliation": "Ajou University",
+      "country": "KR",
+      "rank": 31,
+      "solved": 5,
+      "penalty": 534,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 2,
+          "time": null,
+          "totalAttempts": 2
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 78,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 85,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 3,
+          "time": 190,
+          "totalAttempts": 3
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 23,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 2,
+          "time": null,
+          "totalAttempts": 2
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 118,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 6,
+          "time": null,
+          "totalAttempts": 6
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "Fluffy Fuzzy Transform",
+      "affiliation": "Korea University",
+      "country": "KR",
+      "rank": 32,
+      "solved": 5,
+      "penalty": 557,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 2,
+          "time": null,
+          "totalAttempts": 2
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 4,
+          "time": 169,
+          "totalAttempts": 4
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 81,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 2,
+          "time": 182,
+          "totalAttempts": 2
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 36,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 9,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "NoGameNoGain",
+      "affiliation": "KAIST",
+      "country": "KR",
+      "rank": 33,
+      "solved": 5,
+      "penalty": 559,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 3,
+          "time": null,
+          "totalAttempts": 3
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 73,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 3,
+          "time": null,
+          "totalAttempts": 3
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 110,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 4,
+          "time": 251,
+          "totalAttempts": 4
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 43,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 22,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "Sportsmen",
+      "affiliation": "KAIST",
+      "country": "KR",
+      "rank": 34,
+      "solved": 5,
+      "penalty": 717,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 137,
+          "totalAttempts": 2
+        },
+        {
+          "label": "C",
+          "solved": true,
+          "attempts": 2,
+          "time": 229,
+          "totalAttempts": 2
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 176,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 3,
+          "time": null,
+          "totalAttempts": 3
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 87,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 48,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "WorksOnMyMachine",
+      "affiliation": "Pohang University of Science and Technology",
+      "country": "KR",
+      "rank": 35,
+      "solved": 5,
+      "penalty": 1088,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 3,
+          "time": 216,
+          "totalAttempts": 3
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 182,
+          "totalAttempts": 2
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 10,
+          "time": 262,
+          "totalAttempts": 10
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 2,
+          "time": 161,
+          "totalAttempts": 2
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 7,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "high5lander",
+      "affiliation": "Kookmin University",
+      "country": "KR",
+      "rank": 36,
+      "solved": 4,
+      "penalty": 389,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 112,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 86,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 8,
+          "time": null,
+          "totalAttempts": 8
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 2,
+          "time": 104,
+          "totalAttempts": 2
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 2,
+          "time": 47,
+          "totalAttempts": 2
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "no sleep 0 guy",
+      "affiliation": "Chonnam National University",
+      "country": "KR",
+      "rank": 37,
+      "solved": 4,
+      "penalty": 425,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 106,
+          "totalAttempts": 2
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 163,
+          "totalAttempts": 2
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 2,
+          "time": null,
+          "totalAttempts": 2
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 2,
+          "time": 79,
+          "totalAttempts": 2
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 2,
+          "time": null,
+          "totalAttempts": 2
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 17,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "water polo 2013",
+      "affiliation": "Ulsan National Institute of Science and Technology",
+      "country": "KR",
+      "rank": 38,
+      "solved": 4,
+      "penalty": 435,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 3,
+          "time": null,
+          "totalAttempts": 3
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 88,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 120,
+          "totalAttempts": 2
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 4,
+          "time": null,
+          "totalAttempts": 4
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 3,
+          "time": 152,
+          "totalAttempts": 3
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 15,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "Nokia Iphone Fold 13 in.",
+      "affiliation": "Kookmin University",
+      "country": "KR",
+      "rank": 39,
+      "solved": 4,
+      "penalty": 559,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 4,
+          "time": 273,
+          "totalAttempts": 4
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 107,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 6,
+          "time": null,
+          "totalAttempts": 6
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 58,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 61,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "CENSORED!!",
+      "affiliation": "Daegu Gyeongbuk Institute of Science & Technology",
+      "country": "KR",
+      "rank": 40,
+      "solved": 4,
+      "penalty": 568,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 108,
+          "totalAttempts": 2
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 190,
+          "totalAttempts": 2
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 212,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 18,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "Straight to Tokyo",
+      "affiliation": "Ulsan National Institute of Science and Technology",
+      "country": "KR",
+      "rank": 41,
+      "solved": 4,
+      "penalty": 657,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 155,
+          "totalAttempts": 2
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 139,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 3,
+          "time": 272,
+          "totalAttempts": 3
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 31,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "matwaeTLE",
+      "affiliation": "Korea University",
+      "country": "KR",
+      "rank": 42,
+      "solved": 4,
+      "penalty": 697,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 19,
+          "time": null,
+          "totalAttempts": 19
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 107,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 6,
+          "time": 279,
+          "totalAttempts": 6
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 2,
+          "time": 163,
+          "totalAttempts": 2
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 28,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "ttait",
+      "affiliation": "Pusan National University",
+      "country": "KR",
+      "rank": 43,
+      "solved": 4,
+      "penalty": 748,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 3,
+          "time": 205,
+          "totalAttempts": 3
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 109,
+          "totalAttempts": 2
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 3,
+          "time": null,
+          "totalAttempts": 3
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 7,
+          "time": 242,
+          "totalAttempts": 7
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 12,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "ANDORXOR",
+      "affiliation": "Sejong University",
+      "country": "KR",
+      "rank": 44,
+      "solved": 4,
+      "penalty": 764,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 6,
+          "time": null,
+          "totalAttempts": 6
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 3,
+          "time": 197,
+          "totalAttempts": 3
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 3,
+          "time": 247,
+          "totalAttempts": 3
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 5,
+          "time": 147,
+          "totalAttempts": 5
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 13,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "KHUBUS",
+      "affiliation": "Kyung Hee University",
+      "country": "KR",
+      "rank": 45,
+      "solved": 4,
+      "penalty": 804,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 253,
+          "totalAttempts": 2
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 111,
+          "totalAttempts": 2
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 7,
+          "time": 250,
+          "totalAttempts": 7
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 30,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "forced to be dash space dash asterisk",
+      "affiliation": "Chulalongkorn University",
+      "country": "TH",
+      "rank": 46,
+      "solved": 4,
+      "penalty": 818,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 9,
+          "time": null,
+          "totalAttempts": 9
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 93,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 6,
+          "time": 257,
+          "totalAttempts": 6
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 2,
+          "time": 291,
+          "totalAttempts": 2
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 57,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "astra magic",
+      "affiliation": "Kyungpook National University",
+      "country": "KR",
+      "rank": 47,
+      "solved": 4,
+      "penalty": 871,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 2,
+          "time": null,
+          "totalAttempts": 3
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 10,
+          "time": 194,
+          "totalAttempts": 10
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 3,
+          "time": 261,
+          "totalAttempts": 3
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 3,
+          "time": 137,
+          "totalAttempts": 3
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 19,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "SHANDY IS GOD",
+      "affiliation": "Sogang University",
+      "country": "KR",
+      "rank": 48,
+      "solved": 3,
+      "penalty": 194,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 4,
+          "time": null,
+          "totalAttempts": 4
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 107,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 3,
+          "time": null,
+          "totalAttempts": 3
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 64,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 23,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "stoi",
+      "affiliation": "Gachon University",
+      "country": "KR",
+      "rank": 49,
+      "solved": 3,
+      "penalty": 317,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 10,
+          "time": null,
+          "totalAttempts": 10
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 113,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 147,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 57,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "carpe diem",
+      "affiliation": "KAIST",
+      "country": "KR",
+      "rank": 50,
+      "solved": 3,
+      "penalty": 343,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 2,
+          "time": null,
+          "totalAttempts": 2
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 79,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": true,
+          "attempts": 1,
+          "time": 218,
+          "totalAttempts": 1
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 4,
+          "time": null,
+          "totalAttempts": 4
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 3,
+          "time": null,
+          "totalAttempts": 3
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 2,
+          "time": 26,
+          "totalAttempts": 2
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 6,
+          "time": null,
+          "totalAttempts": 6
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "fish3",
+      "affiliation": "KAIST",
+      "country": "KR",
+      "rank": 51,
+      "solved": 3,
+      "penalty": 355,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 2,
+          "time": null,
+          "totalAttempts": 2
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 202,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 137,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 16,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "Cow Is Also Cute",
+      "affiliation": "Hongik University",
+      "country": "KR",
+      "rank": 52,
+      "solved": 3,
+      "penalty": 411,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 2,
+          "time": null,
+          "totalAttempts": 2
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 3,
+          "time": 183,
+          "totalAttempts": 3
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 104,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 84,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "Old Carol",
+      "affiliation": "Jeju National University",
+      "country": "KR",
+      "rank": 53,
+      "solved": 3,
+      "penalty": 566,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 104,
+          "totalAttempts": 2
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 6,
+          "time": 272,
+          "totalAttempts": 6
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 70,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "Junior's dream",
+      "affiliation": "Konkuk University",
+      "country": "KR",
+      "rank": 54,
+      "solved": 3,
+      "penalty": 614,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 181,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 7,
+          "time": 266,
+          "totalAttempts": 7
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 5,
+          "time": null,
+          "totalAttempts": 5
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 47,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "MSG",
+      "affiliation": "Sangmyung University",
+      "country": "KR",
+      "rank": 55,
+      "solved": 3,
+      "penalty": 722,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 5,
+          "time": 299,
+          "totalAttempts": 5
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 5,
+          "time": 231,
+          "totalAttempts": 5
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 32,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "ACHieve",
+      "affiliation": "Soongsil University",
+      "country": "KR",
+      "rank": 56,
+      "solved": 2,
+      "penalty": 205,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 2,
+          "time": null,
+          "totalAttempts": 2
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 176,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 6,
+          "time": null,
+          "totalAttempts": 6
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 8,
+          "time": null,
+          "totalAttempts": 8
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 29,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "World reCoder",
+      "affiliation": "Chosun University",
+      "country": "KR",
+      "rank": 57,
+      "solved": 2,
+      "penalty": 226,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 2,
+          "time": null,
+          "totalAttempts": 2
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 2,
+          "time": null,
+          "totalAttempts": 2
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 162,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 64,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "Get Nya Go",
+      "affiliation": "KAIST",
+      "country": "KR",
+      "rank": 58,
+      "solved": 2,
+      "penalty": 259,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 4,
+          "time": 116,
+          "totalAttempts": 4
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 2,
+          "time": null,
+          "totalAttempts": 2
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 3,
+          "time": null,
+          "totalAttempts": 3
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 83,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "the last leaf",
+      "affiliation": "Chungnam National University",
+      "country": "KR",
+      "rank": 59,
+      "solved": 2,
+      "penalty": 272,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 176,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 96,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "ColdSeoul",
+      "affiliation": "University of Seoul",
+      "country": "KR",
+      "rank": 60,
+      "solved": 2,
+      "penalty": 549,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 2,
+          "time": null,
+          "totalAttempts": 2
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 6,
+          "time": 178,
+          "totalAttempts": 6
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 2,
+          "time": null,
+          "totalAttempts": 2
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 2,
+          "time": 251,
+          "totalAttempts": 2
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "kaicooked",
+      "affiliation": "KAIST",
+      "country": "KR",
+      "rank": 61,
+      "solved": 1,
+      "penalty": 16,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 6,
+          "time": null,
+          "totalAttempts": 6
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 2,
+          "time": null,
+          "totalAttempts": 2
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 3,
+          "time": null,
+          "totalAttempts": 3
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 16,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "Time Gambit",
+      "affiliation": "SungKyunKwan University",
+      "country": "KR",
+      "rank": 62,
+      "solved": 1,
+      "penalty": 20,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 4,
+          "time": null,
+          "totalAttempts": 4
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 20,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "Blunder",
+      "affiliation": "HanShin University",
+      "country": "KR",
+      "rank": 63,
+      "solved": 1,
+      "penalty": 23,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 5,
+          "time": null,
+          "totalAttempts": 5
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 4,
+          "time": null,
+          "totalAttempts": 4
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 23,
+          "totalAttempts": 2
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "ThreeMinuteSearch",
+      "affiliation": "Dankook University",
+      "country": "KR",
+      "rank": 64,
+      "solved": 1,
+      "penalty": 24,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 11,
+          "time": null,
+          "totalAttempts": 11
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 7,
+          "time": null,
+          "totalAttempts": 7
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 4,
+          "time": null,
+          "totalAttempts": 4
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 24,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "Odysseus",
+      "affiliation": "Korea National University of Education",
+      "country": "KR",
+      "rank": 65,
+      "solved": 1,
+      "penalty": 27,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 12,
+          "time": null,
+          "totalAttempts": 12
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 4,
+          "time": null,
+          "totalAttempts": 4
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 27,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "Quant JID",
+      "affiliation": "Jeonbuk National University",
+      "country": "KR",
+      "rank": 66,
+      "solved": 1,
+      "penalty": 31,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 8,
+          "time": null,
+          "totalAttempts": 8
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 31,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "dlepan",
+      "affiliation": "Hanbat National University",
+      "country": "KR",
+      "rank": 67,
+      "solved": 1,
+      "penalty": 38,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 2,
+          "time": null,
+          "totalAttempts": 2
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 38,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "KD Union",
+      "affiliation": "Keimyung University",
+      "country": "KR",
+      "rank": 68,
+      "solved": 1,
+      "penalty": 49,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 7,
+          "time": null,
+          "totalAttempts": 7
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 49,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "Informa",
+      "affiliation": "Sookmyung Women's University",
+      "country": "KR",
+      "rank": 69,
+      "solved": 1,
+      "penalty": 64,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 2,
+          "time": null,
+          "totalAttempts": 2
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 5,
+          "time": null,
+          "totalAttempts": 5
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 64,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "GPT 11 Aster",
+      "affiliation": "Inha University",
+      "country": "KR",
+      "rank": 70,
+      "solved": 1,
+      "penalty": 67,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 2,
+          "time": null,
+          "totalAttempts": 2
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 6,
+          "time": null,
+          "totalAttempts": 6
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 10,
+          "time": null,
+          "totalAttempts": 10
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 5,
+          "time": null,
+          "totalAttempts": 5
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 67,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "innerGigaChad",
+      "affiliation": "Chungbuk National University",
+      "country": "KR",
+      "rank": 71,
+      "solved": 1,
+      "penalty": 81,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 3,
+          "time": null,
+          "totalAttempts": 3
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 81,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "Jeungbaram?",
+      "affiliation": "Hankuk University of Foreign Studies",
+      "country": "KR",
+      "rank": 72,
+      "solved": 1,
+      "penalty": 135,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 3,
+          "time": null,
+          "totalAttempts": 3
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 135,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "GINKA",
+      "affiliation": "MyongJi University",
+      "country": "KR",
+      "rank": 73,
+      "solved": 1,
+      "penalty": 144,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 5,
+          "time": null,
+          "totalAttempts": 5
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 5,
+          "time": null,
+          "totalAttempts": 5
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 7,
+          "time": null,
+          "totalAttempts": 7
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 144,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "Sendy2026",
+      "affiliation": "Senshu University",
+      "country": "JP",
+      "rank": 74,
+      "solved": 1,
+      "penalty": 201,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 201,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "SungsimdangSungsimjeom",
+      "affiliation": "The Catholic University of Korea",
+      "country": "KR",
+      "rank": 75,
+      "solved": 1,
+      "penalty": 232,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 2,
+          "time": 212,
+          "totalAttempts": 2
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "Solutio",
+      "affiliation": "Kyonggi University",
+      "country": "KR",
+      "rank": 76,
+      "solved": 1,
+      "penalty": 235,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 235,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "megi",
+      "affiliation": "The University of Suwon",
+      "country": "KR",
+      "rank": 77,
+      "solved": 1,
+      "penalty": 247,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 247,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "Offset",
+      "affiliation": "Dongguk University",
+      "country": "KR",
+      "rank": 78,
+      "solved": 1,
+      "penalty": 269,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 3,
+          "time": null,
+          "totalAttempts": 3
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 11,
+          "time": null,
+          "totalAttempts": 13
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 269,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "Dont Die Yet",
+      "affiliation": "Sogang University",
+      "country": "KR",
+      "rank": 79,
+      "solved": 0,
+      "penalty": 0,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "Jwejweiya",
+      "affiliation": "Soonchunhyang University",
+      "country": "KR",
+      "rank": 79,
+      "solved": 0,
+      "penalty": 0,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 5,
+          "time": null,
+          "totalAttempts": 5
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 0,
+          "time": null,
+          "totalAttempts": 0
+        }
+      ]
+    },
+    {
+      "team": "GOD_JY",
+      "affiliation": "Kyungsung University",
+      "country": "KR",
+      "rank": 79,
+      "solved": 0,
+      "penalty": 0,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 2,
+          "time": null,
+          "totalAttempts": 2
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        },
+        {
+          "label": "M",
+          "solved": false,
+          "attempts": 1,
+          "time": null,
+          "totalAttempts": 1
+        }
+      ]
+    }
+  ]
+}
