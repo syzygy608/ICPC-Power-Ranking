@@ -373,6 +373,48 @@ test("invalid settings and dates fail before replacing data", () => {
 });
 describe("published data integrity", () => {
   const d = validateDataset(seed);
+  test("Indonesia preliminary imports every General team and only Supplementary top five", () => {
+    const matches = d.contests.filter(
+      (c) => c.id === "indonesia-preliminary-2026",
+    );
+    expect(matches).toHaveLength(1);
+    const c = matches[0];
+    expect(c.date).toBe("2026-10-25");
+    expect(c.status).toBe("final");
+    expect(c.difficulty).toBe(1);
+    expect(c.problemCount).toBe(12);
+    expect(c.results).toHaveLength(90);
+    expect(new Set(c.results.map((r) => r.affiliation)).size).toBe(22);
+    expect(c.results.every((r) => r.country === "ID")).toBe(true);
+    expect(c.results.filter((r) => r.sourceGroup === "General")).toHaveLength(
+      85,
+    );
+    const supplementary = c.results.filter(
+      (r) => r.sourceGroup === "Supplementary",
+    );
+    expect(supplementary.map((r) => [r.rank, r.team])).toEqual([
+      [1, "pejuang travel hari rabu"],
+      [2, "Anchovy"],
+      [3, "Hopeless"],
+      [4, "sehari dihidup"],
+      [5, "Bersama Michael membangun negeri"],
+    ]);
+    expect(c.results.some((r) => r.team === "fsociety")).toBe(false);
+    expect(c.results.reduce((sum, r) => sum + r.solved, 0)).toBe(368);
+    expect(
+      Array.from(
+        { length: 12 },
+        (_, i) => c.results.filter((r) => r.problems[i].solved).length,
+      ),
+    ).toEqual([88, 65, 0, 56, 10, 10, 35, 0, 23, 1, 17, 63]);
+    expect(c.results.filter((r) => r.solved === 0)).toHaveLength(2);
+    expect(c.results[0]).toMatchObject({
+      team: "lembut is gonna win the game",
+      rank: 1,
+      solved: 10,
+      penalty: 1050,
+    });
+  });
   test("Seoul regional retains all 81 teams, countries and official problem totals", () => {
     const matches = d.contests.filter((c) => c.id === "seoul-regional-2026");
     expect(matches).toHaveLength(1);

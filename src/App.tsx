@@ -649,6 +649,9 @@ export default function App() {
                                     >
                                       {r.team}
                                     </button>
+                                    {r.sourceGroup && (
+                                      <small>{r.sourceGroup}</small>
+                                    )}
                                   </td>
                                   <td>{r.solved}</td>
                                   <td>{r.penalty}</td>

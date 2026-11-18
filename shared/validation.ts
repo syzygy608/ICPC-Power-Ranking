@@ -122,6 +122,7 @@ export function validateDataset(input: unknown): Dataset {
     for (const r of c.results) {
       if (
         !text(r.team) ||
+        (r.sourceGroup !== undefined && !text(r.sourceGroup)) ||
         r.team !== teamKey(r.team) ||
         typeof r.affiliation !== "string" ||
         !isKnownCountry(r.country)

@@ -13,7 +13,9 @@
     "未來光中": "no job",
     "天靈靈地靈靈 蘇警員來顯靈": "CCU_CSeeU",
     "DSking666": "DSking",
-    "Pytree的李想選哲": "che can win with two dog"
+    "Pytree的李想選哲": "che can win with two dog",
+    "超超超超超喜歡你的100個TLE": "stack underflow super ultra generator",
+    "======= baseline =======": "Gugachad Lemma"
   },
   "countries": {},
   "settings": {
@@ -26,6 +28,7 @@
     "contests/korea-preliminary-2026.json",
     "contests/japan-preliminary-2026.json",
     "contests/vietnam-preliminary-2026.json",
-    "contests/seoul-regional-2026.json"
+    "contests/seoul-regional-2026.json",
+    "contests/indonesia-preliminary-2026.json"
   ]
 }

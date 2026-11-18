@@ -1,0 +1,7482 @@
+{
+  "id": "indonesia-preliminary-2026",
+  "name": "2026 ICPC 印尼預賽（INC）",
+  "date": "2026-10-25",
+  "site": "印尼 · 國內預賽",
+  "difficulty": 1.0,
+  "problemCount": 12,
+  "source": "https://competition.binus.ac.id/inc/2026/",
+  "status": "final",
+  "results": [
+    {
+      "team": "lembut is gonna win the game",
+      "affiliation": "BINUS University",
+      "country": "ID",
+      "rank": 1,
+      "solved": 10,
+      "penalty": 1050,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 2
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 23
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 56
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 1,
+          "time": 203
+        },
+        {
+          "label": "F",
+          "solved": true,
+          "attempts": 1,
+          "time": 155
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 42
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 1,
+          "time": 85
+        },
+        {
+          "label": "J",
+          "solved": true,
+          "attempts": 1,
+          "time": 298
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 2,
+          "time": 139
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 7
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "MamaCoco",
+      "affiliation": "Universitas Indonesia",
+      "country": "ID",
+      "rank": 2,
+      "solved": 9,
+      "penalty": 615,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 3
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 18
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 97
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 1,
+          "time": 83
+        },
+        {
+          "label": "F",
+          "solved": true,
+          "attempts": 3,
+          "time": 103
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 72
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 3,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 1,
+          "time": 51
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 4,
+          "time": 53
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 15
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "day 1 masuk icc",
+      "affiliation": "Universitas Hasanuddin",
+      "country": "ID",
+      "rank": 3,
+      "solved": 9,
+      "penalty": 794,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 5
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 11
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 56
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 2,
+          "time": 65
+        },
+        {
+          "label": "F",
+          "solved": true,
+          "attempts": 3,
+          "time": 113
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 2,
+          "time": 139
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 4,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 2,
+          "time": 26
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 2,
+          "time": 204
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 35
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Absolute Cinema.mkv",
+      "affiliation": "BINUS University",
+      "country": "ID",
+      "rank": 4,
+      "solved": 9,
+      "penalty": 927,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 1
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 16
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 86
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 6,
+          "time": 252
+        },
+        {
+          "label": "F",
+          "solved": true,
+          "attempts": 1,
+          "time": 181
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 2,
+          "time": 72
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 1,
+          "time": 58
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 4,
+          "time": 69
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 12
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "DoaAyahRestuIbu",
+      "affiliation": "Institut Teknologi Bandung",
+      "country": "ID",
+      "rank": 5,
+      "solved": 9,
+      "penalty": 1038,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 3
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 12
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 51
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 3,
+          "time": 283
+        },
+        {
+          "label": "F",
+          "solved": true,
+          "attempts": 4,
+          "time": 201
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 106
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 1,
+          "time": 84
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 4,
+          "time": 108
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 30
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "when yh bisa wf",
+      "affiliation": "Universitas Indonesia",
+      "country": "ID",
+      "rank": 6,
+      "solved": 8,
+      "penalty": 619,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 3
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 24
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 100
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 3,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": true,
+          "attempts": 1,
+          "time": 47
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 169
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 1,
+          "time": 69
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 2,
+          "time": 101
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 2,
+          "time": 46
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "New CP Leak",
+      "affiliation": "BINUS University",
+      "country": "ID",
+      "rank": 7,
+      "solved": 8,
+      "penalty": 791,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 3
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 14
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 83
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": true,
+          "attempts": 4,
+          "time": 252
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 3,
+          "time": 61
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 1,
+          "time": 128
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 132
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 18
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "pingin sejago GPT",
+      "affiliation": "Universitas Indonesia",
+      "country": "ID",
+      "rank": 8,
+      "solved": 8,
+      "penalty": 878,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 4
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 32
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 132
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 6,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": true,
+          "attempts": 4,
+          "time": 225
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 96
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 3,
+          "time": 75
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 171
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 2,
+          "time": 23
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "mamaa, pengen masuk APAC",
+      "affiliation": "BINUS University",
+      "country": "ID",
+      "rank": 9,
+      "solved": 8,
+      "penalty": 1104,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 1
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 20
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 102
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 6,
+          "time": 254
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 12,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 2,
+          "time": 110
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 2,
+          "time": 265
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 158
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 2,
+          "time": 34
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "AVG RAREFISH SPEAKER",
+      "affiliation": "Universitas Indonesia",
+      "country": "ID",
+      "rank": 10,
+      "solved": 8,
+      "penalty": 1186,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 2
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 37
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 189
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": true,
+          "attempts": 1,
+          "time": 251
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 4,
+          "time": 179
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 2,
+          "time": 143
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 208
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 3,
+          "time": 37
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "WAduh TLEdor, high coRTEsol, MLEdak",
+      "affiliation": "Universitas Indonesia",
+      "country": "ID",
+      "rank": 11,
+      "solved": 7,
+      "penalty": 876,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 3
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 29
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 136
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 3,
+          "time": 89
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 1,
+          "time": 184
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 4,
+          "time": 216
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 4,
+          "time": 39
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "TriTrieTree",
+      "affiliation": "Institut Teknologi Bandung",
+      "country": "ID",
+      "rank": 12,
+      "solved": 6,
+      "penalty": 374,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 4
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 30
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 105
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": true,
+          "attempts": 2,
+          "time": 125
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 64
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 4,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 26
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "saya akan lawan",
+      "affiliation": "Institut Teknologi Sepuluh Nopember",
+      "country": "ID",
+      "rank": 13,
+      "solved": 6,
+      "penalty": 400,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 1
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 20
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 49
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 90
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 1,
+          "time": 165
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 5,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 75
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "where the party at? (tribute to bg Vanes btw)",
+      "affiliation": "Universitas Tanjungpura",
+      "country": "ID",
+      "rank": 14,
+      "solved": 6,
+      "penalty": 415,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 8
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 25
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 87
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 4,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 2,
+          "time": 162
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 101
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 12
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "bismillah aja dulu",
+      "affiliation": "Institut Teknologi Bandung",
+      "country": "ID",
+      "rank": 15,
+      "solved": 6,
+      "penalty": 433,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 4
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 29
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 50
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 141
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 1,
+          "time": 162
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 47
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "67",
+      "affiliation": "Institut Teknologi Bandung",
+      "country": "ID",
+      "rank": 16,
+      "solved": 6,
+      "penalty": 449,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 3
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 44
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 128
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 4,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 3,
+          "time": 156
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 1,
+          "time": 60
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 2,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 18
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Crispy MSG",
+      "affiliation": "Institut Teknologi Bandung",
+      "country": "ID",
+      "rank": 17,
+      "solved": 6,
+      "penalty": 474,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 3
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 13
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 82
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 3,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 3,
+          "time": 158
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 2,
+          "time": 49
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 5,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 2,
+          "time": 69
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "El When Yh",
+      "affiliation": "Universitas Indonesia",
+      "country": "ID",
+      "rank": 18,
+      "solved": 6,
+      "penalty": 623,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 3
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 40
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 3,
+          "time": 86
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 6,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 1,
+          "time": 239
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 140
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 2,
+          "time": 35
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Ah Papoy Lah",
+      "affiliation": "Universitas Indonesia",
+      "country": "ID",
+      "rank": 19,
+      "solved": 6,
+      "penalty": 671,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 3
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 36
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 119
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 8,
+          "time": 188
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 4,
+          "time": 67
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 3,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 38
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "fortinaiti ila babaji",
+      "affiliation": "BINUS University",
+      "country": "ID",
+      "rank": 20,
+      "solved": 6,
+      "penalty": 752,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 2
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 33
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 140
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 3,
+          "time": 118
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 4,
+          "time": 298
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 41
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "diajak kak zaky ikut inc icpc",
+      "affiliation": "Institut Teknologi Bandung",
+      "country": "ID",
+      "rank": 21,
+      "solved": 6,
+      "penalty": 836,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 3
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 31
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 128
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 2,
+          "time": 234
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 4,
+          "time": 282
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 78
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Cap(e)ybara",
+      "affiliation": "Parahyangan University",
+      "country": "ID",
+      "rank": 22,
+      "solved": 5,
+      "penalty": 416,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 2
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 37
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 125
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 3,
+          "time": 183
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 29
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "aku sih yes",
+      "affiliation": "Universitas Indonesia",
+      "country": "ID",
+      "rank": 23,
+      "solved": 5,
+      "penalty": 478,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 6
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 44
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 74
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 6,
+          "time": 176
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 3,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 58
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "MEOWing",
+      "affiliation": "Brawijaya University",
+      "country": "ID",
+      "rank": 24,
+      "solved": 5,
+      "penalty": 597,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 4
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 3,
+          "time": 74
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 4,
+          "time": 130
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 4,
+          "time": 192
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 37
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "GK",
+      "affiliation": "Institut Teknologi Bandung",
+      "country": "ID",
+      "rank": 25,
+      "solved": 5,
+      "penalty": 609,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 8
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 62
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 3,
+          "time": 180
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 7,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 1,
+          "time": 243
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 2,
+          "time": 36
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "KAPAL KARGO BANYUWANGI",
+      "affiliation": "BINUS University",
+      "country": "ID",
+      "rank": 26,
+      "solved": 5,
+      "penalty": 655,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 3
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 208
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 53
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 7,
+          "time": 238
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 13
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Automemoir",
+      "affiliation": "Institut Teknologi Bandung",
+      "country": "ID",
+      "rank": 27,
+      "solved": 5,
+      "penalty": 655,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 2
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 51
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 290
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 4,
+          "time": 230
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 22
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "javACisKEY",
+      "affiliation": "Universitas Indonesia",
+      "country": "ID",
+      "rank": 28,
+      "solved": 5,
+      "penalty": 661,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 3
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 3,
+          "time": 126
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 3,
+          "time": 205
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 2,
+          "time": 203
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 3,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 24
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "paha babi",
+      "affiliation": "BINUS University",
+      "country": "ID",
+      "rank": 29,
+      "solved": 5,
+      "penalty": 756,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 1
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 39
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 5,
+          "time": 182
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 7,
+          "time": 298
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 12,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 36
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "DFS",
+      "affiliation": "Institut Teknologi Sepuluh Nopember",
+      "country": "ID",
+      "rank": 30,
+      "solved": 5,
+      "penalty": 769,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 8
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 25
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 10,
+          "time": 272
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 173
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 3,
+          "time": 51
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "while (!accepted) { cry(); submit(); blame(teammate); }",
+      "affiliation": "Universitas Mikroskil",
+      "country": "ID",
+      "rank": 31,
+      "solved": 5,
+      "penalty": 809,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 2
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 56
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 5,
+          "time": 221
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 2,
+          "time": 282
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 4,
+          "time": 88
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Nasi cumi hitam madura pak kris",
+      "affiliation": "BINUS University",
+      "country": "ID",
+      "rank": 32,
+      "solved": 5,
+      "penalty": 872,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 10
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 60
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 4,
+          "time": 229
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 7,
+          "time": 155
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 5,
+          "time": 138
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "trieHard",
+      "affiliation": "Institut Teknologi Bandung",
+      "country": "ID",
+      "rank": 33,
+      "solved": 5,
+      "penalty": 1083,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 1
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 183
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 271
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 2,
+          "time": 255
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 6,
+          "time": 233
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Universitas IPB (UI)",
+      "affiliation": "Institut Pertanian Bogor",
+      "country": "ID",
+      "rank": 34,
+      "solved": 4,
+      "penalty": 289,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 2
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 55
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 179
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 3,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 33
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Kami Takut Sama Penghuni Leaderboard",
+      "affiliation": "Universitas Indonesia",
+      "country": "ID",
+      "rank": 35,
+      "solved": 4,
+      "penalty": 297,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 12
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 51
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 3,
+          "time": 137
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 37
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "2peak1larp",
+      "affiliation": "Universitas Tanjungpura",
+      "country": "ID",
+      "rank": 36,
+      "solved": 4,
+      "penalty": 316,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 3
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 3,
+          "time": 42
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 181
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 2,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 6,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 30
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Git Gud",
+      "affiliation": "University of Padjadjaran",
+      "country": "ID",
+      "rank": 37,
+      "solved": 4,
+      "penalty": 365,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 18
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 42
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 3,
+          "time": 173
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 92
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Eagle 2",
+      "affiliation": "Universitas Pelita Harapan",
+      "country": "ID",
+      "rank": 38,
+      "solved": 4,
+      "penalty": 394,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 2
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 92
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 182
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 9,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 98
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "ShockCode",
+      "affiliation": "Parahyangan University",
+      "country": "ID",
+      "rank": 39,
+      "solved": 4,
+      "penalty": 396,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 5
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 94
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 2,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 2,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 2,
+          "time": 168
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 2,
+          "time": 69
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Mie Ayam Euler",
+      "affiliation": "BINUS University",
+      "country": "ID",
+      "rank": 40,
+      "solved": 4,
+      "penalty": 412,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 3
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 107
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 3,
+          "time": 174
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 2,
+          "time": 68
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "1e6+7",
+      "affiliation": "Politeknik Negeri Bandung",
+      "country": "ID",
+      "rank": 41,
+      "solved": 4,
+      "penalty": 416,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 1
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 68
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 6,
+          "time": 218
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 7,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 29
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Looking for FS",
+      "affiliation": "Universitas Gadjah Mada",
+      "country": "ID",
+      "rank": 42,
+      "solved": 4,
+      "penalty": 467,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 2
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 86
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 3,
+          "time": 165
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 3,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 4,
+          "time": 114
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Miku, Teto and that yellow one to ICPC",
+      "affiliation": "BINUS University",
+      "country": "ID",
+      "rank": 43,
+      "solved": 4,
+      "penalty": 559,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 2
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 8,
+          "time": 109
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 5,
+          "time": 212
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 5,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 12,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 16
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Nasi Padang Lauk Rendang",
+      "affiliation": "Universitas Diponegoro",
+      "country": "ID",
+      "rank": 44,
+      "solved": 4,
+      "penalty": 580,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 6
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 120
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 8,
+          "time": 203
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 3,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 2,
+          "time": 71
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "r2sv",
+      "affiliation": "Institut Teknologi Bandung",
+      "country": "ID",
+      "rank": 45,
+      "solved": 4,
+      "penalty": 606,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 7
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 5,
+          "time": 183
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 3,
+          "time": 259
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 2,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 37
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Biji Satu",
+      "affiliation": "University of Padjadjaran",
+      "country": "ID",
+      "rank": 46,
+      "solved": 4,
+      "penalty": 665,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 22
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 148
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 37,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 2,
+          "time": 257
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 2,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 198
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "nasi ayam gratis aku",
+      "affiliation": "Sam Ratulangi University",
+      "country": "ID",
+      "rank": 47,
+      "solved": 4,
+      "penalty": 688,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 2
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 193
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 5,
+          "time": 294
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 99
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Jawaban Anda",
+      "affiliation": "University of Padjadjaran",
+      "country": "ID",
+      "rank": 48,
+      "solved": 4,
+      "penalty": 729,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 7,
+          "time": 65
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 90
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 3,
+          "time": 268
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 4,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 3,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 146
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Pemula (pemain udah lama)",
+      "affiliation": "Universitas Pendidikan Indonesia",
+      "country": "ID",
+      "rank": 49,
+      "solved": 4,
+      "penalty": 997,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 7
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 164
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 3,
+          "time": 269
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 12,
+          "time": 297
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "itcompor",
+      "affiliation": "University of Padjadjaran",
+      "country": "ID",
+      "rank": 50,
+      "solved": 3,
+      "penalty": 275,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 7
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 2,
+          "time": null
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 3,
+          "time": 161
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 5,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 67
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Timmy",
+      "affiliation": "Universitas Gadjah Mada",
+      "country": "ID",
+      "rank": 51,
+      "solved": 3,
+      "penalty": 294,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 68
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 3,
+          "time": 105
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 81
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Wibu Try Hard : enjoyer of CP",
+      "affiliation": "Calvin Institute of Technology",
+      "country": "ID",
+      "rank": 52,
+      "solved": 3,
+      "penalty": 316,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 6
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 173
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 2,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 2,
+          "time": 117
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "bismillah menang icpc",
+      "affiliation": "Universitas Diponegoro",
+      "country": "ID",
+      "rank": 53,
+      "solved": 3,
+      "penalty": 391,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 5
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 76
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 6,
+          "time": 210
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 3,
+          "time": null
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "gaffa cp gacor",
+      "affiliation": "Brawijaya University",
+      "country": "ID",
+      "rank": 54,
+      "solved": 3,
+      "penalty": 398,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 5
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 7,
+          "time": 187
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 86
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "ZenPad",
+      "affiliation": "University of Padjadjaran",
+      "country": "ID",
+      "rank": 55,
+      "solved": 3,
+      "penalty": 505,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 2,
+          "time": 21
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 4,
+          "time": 242
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 4,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 8,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 3,
+          "time": 122
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "marbisuk team",
+      "affiliation": "Institut Teknologi Del",
+      "country": "ID",
+      "rank": 56,
+      "solved": 3,
+      "penalty": 530,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 53
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 158
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 299
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "BtBC | Unwithered Dreams",
+      "affiliation": "Politeknik Negeri Bandung",
+      "country": "ID",
+      "rank": 57,
+      "solved": 2,
+      "penalty": 46,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 6
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 14,
+          "time": null
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 40
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "telat daftar",
+      "affiliation": "Institut Teknologi Sepuluh Nopember",
+      "country": "ID",
+      "rank": 58,
+      "solved": 2,
+      "penalty": 65,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 6
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 59
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 2,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 2,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 5,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Suki Lucu 2026",
+      "affiliation": "Universitas Tanjungpura",
+      "country": "ID",
+      "rank": 59,
+      "solved": 2,
+      "penalty": 184,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 4
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 2,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 4,
+          "time": 120
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Bisalah",
+      "affiliation": "Telkom University",
+      "country": "ID",
+      "rank": 60,
+      "solved": 2,
+      "penalty": 210,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 11
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 199
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Make jadi org tuh harus agak nd tau malu dikit",
+      "affiliation": "Universitas Tanjungpura",
+      "country": "ID",
+      "rank": 61,
+      "solved": 2,
+      "penalty": 216,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 5
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 2,
+          "time": 191
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 3,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Intermezzo",
+      "affiliation": "Universitas Tanjungpura",
+      "country": "ID",
+      "rank": 62,
+      "solved": 2,
+      "penalty": 247,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 4
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 9,
+          "time": null
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 3,
+          "time": 203
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "CITCode tapi ada Jason",
+      "affiliation": "Calvin Institute of Technology",
+      "country": "ID",
+      "rank": 63,
+      "solved": 2,
+      "penalty": 306,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 33
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 273
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 4,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "O(1) dream",
+      "affiliation": "Universitas Diponegoro",
+      "country": "ID",
+      "rank": 64,
+      "solved": 2,
+      "penalty": 356,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 7
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 2,
+          "time": null
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 7,
+          "time": 229
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 7,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 4,
+          "time": null
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Eagle 1",
+      "affiliation": "Universitas Pelita Harapan",
+      "country": "ID",
+      "rank": 65,
+      "solved": 2,
+      "penalty": 397,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 2,
+          "time": 43
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 7,
+          "time": 214
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 3,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 4,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Betelgeuse",
+      "affiliation": "President University",
+      "country": "ID",
+      "rank": 66,
+      "solved": 2,
+      "penalty": 489,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 89
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 7,
+          "time": 280
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "TheSacrifice",
+      "affiliation": "Universitas Tanjungpura",
+      "country": "ID",
+      "rank": 67,
+      "solved": 1,
+      "penalty": 5,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 5
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 2,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 3,
+          "time": null
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "B2T",
+      "affiliation": "Calvin Institute of Technology",
+      "country": "ID",
+      "rank": 68,
+      "solved": 1,
+      "penalty": 6,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 6
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 3,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 2,
+          "time": null
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "ICPC Cnya CIT",
+      "affiliation": "Calvin Institute of Technology",
+      "country": "ID",
+      "rank": 69,
+      "solved": 1,
+      "penalty": 10,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 10
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 6,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 2,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 2,
+          "time": null
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Just three ducks passing by",
+      "affiliation": "Universitas Mikroskil",
+      "country": "ID",
+      "rank": 69,
+      "solved": 1,
+      "penalty": 10,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 10
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 2,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 5,
+          "time": null
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "sprei gratis",
+      "affiliation": "University of Padjadjaran",
+      "country": "ID",
+      "rank": 71,
+      "solved": 1,
+      "penalty": 16,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 16
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 3,
+          "time": null
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 13,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "semoga menang",
+      "affiliation": "University of Padjadjaran",
+      "country": "ID",
+      "rank": 72,
+      "solved": 1,
+      "penalty": 19,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 19
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 3,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 2,
+          "time": null
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Dubai Chocolate",
+      "affiliation": "University of Padjadjaran",
+      "country": "ID",
+      "rank": 73,
+      "solved": 1,
+      "penalty": 24,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 24
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 2,
+          "time": null
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "NaC++",
+      "affiliation": "Calvin Institute of Technology",
+      "country": "ID",
+      "rank": 73,
+      "solved": 1,
+      "penalty": 24,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 24
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Curious Crowd",
+      "affiliation": "Calvin Institute of Technology",
+      "country": "ID",
+      "rank": 75,
+      "solved": 1,
+      "penalty": 25,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 25
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Sering Kesetrum",
+      "affiliation": "Calvin Institute of Technology",
+      "country": "ID",
+      "rank": 76,
+      "solved": 1,
+      "penalty": 31,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 31
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 2,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "kurang lebih",
+      "affiliation": "Sebelas Maret University",
+      "country": "ID",
+      "rank": 76,
+      "solved": 1,
+      "penalty": 31,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 31
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "miracle gen",
+      "affiliation": "Telkom University",
+      "country": "ID",
+      "rank": 78,
+      "solved": 1,
+      "penalty": 33,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 33
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Tim Bubarkan Kelas Pagi",
+      "affiliation": "University of Padjadjaran",
+      "country": "ID",
+      "rank": 79,
+      "solved": 1,
+      "penalty": 38,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 38
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 3,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "tiga beginner mencoba ikut ICePeCe",
+      "affiliation": "University of Padjadjaran",
+      "country": "ID",
+      "rank": 79,
+      "solved": 1,
+      "penalty": 38,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 38
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 3,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Awal Mulanya",
+      "affiliation": "Institut Teknologi Del",
+      "country": "ID",
+      "rank": 81,
+      "solved": 1,
+      "penalty": 49,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 49
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 6,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "All Too Well",
+      "affiliation": "Institut Teknologi Del",
+      "country": "ID",
+      "rank": 82,
+      "solved": 1,
+      "penalty": 65,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 65
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 3,
+          "time": null
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "ADEKTAS",
+      "affiliation": "Institut Teknologi Del",
+      "country": "ID",
+      "rank": 83,
+      "solved": 1,
+      "penalty": 75,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 75
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "Genesis",
+      "affiliation": "Universitas Tanjungpura",
+      "country": "ID",
+      "rank": 84,
+      "solved": 0,
+      "penalty": 0,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 1,
+          "time": null
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "MementoMori",
+      "affiliation": "Institut Teknologi Del",
+      "country": "ID",
+      "rank": 84,
+      "solved": 0,
+      "penalty": 0,
+      "problems": [
+        {
+          "label": "A",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "B",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        }
+      ],
+      "sourceGroup": "General"
+    },
+    {
+      "team": "pejuang travel hari rabu",
+      "affiliation": "Institut Teknologi Bandung",
+      "country": "ID",
+      "rank": 1,
+      "solved": 7,
+      "penalty": 685,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 10
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 50
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 1,
+          "time": 86
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 1,
+          "time": 165
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 246
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 1,
+          "time": 87
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 41
+        }
+      ],
+      "sourceGroup": "Supplementary"
+    },
+    {
+      "team": "Anchovy",
+      "affiliation": "BINUS University",
+      "country": "ID",
+      "rank": 2,
+      "solved": 7,
+      "penalty": 1089,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 33
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 39
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 7,
+          "time": 118
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 2,
+          "time": 214
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 2,
+          "time": 105
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 1,
+          "time": 82
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 3,
+          "time": 298
+        }
+      ],
+      "sourceGroup": "Supplementary"
+    },
+    {
+      "team": "Hopeless",
+      "affiliation": "Institut Teknologi Bandung",
+      "country": "ID",
+      "rank": 3,
+      "solved": 7,
+      "penalty": 1155,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 30
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 67
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 194
+        },
+        {
+          "label": "E",
+          "solved": true,
+          "attempts": 3,
+          "time": 293
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 1,
+          "time": 175
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 2,
+          "time": 146
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 2,
+          "time": 150
+        }
+      ],
+      "sourceGroup": "Supplementary"
+    },
+    {
+      "team": "sehari dihidup",
+      "affiliation": "Institut Teknologi Bandung",
+      "country": "ID",
+      "rank": 4,
+      "solved": 6,
+      "penalty": 625,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 2
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 34
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 191
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 4,
+          "time": 166
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": true,
+          "attempts": 1,
+          "time": 89
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 63
+        }
+      ],
+      "sourceGroup": "Supplementary"
+    },
+    {
+      "team": "Bersama Michael membangun negeri",
+      "affiliation": "Universitas Indonesia",
+      "country": "ID",
+      "rank": 5,
+      "solved": 6,
+      "penalty": 712,
+      "problems": [
+        {
+          "label": "A",
+          "solved": true,
+          "attempts": 1,
+          "time": 2
+        },
+        {
+          "label": "B",
+          "solved": true,
+          "attempts": 1,
+          "time": 40
+        },
+        {
+          "label": "C",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "D",
+          "solved": true,
+          "attempts": 2,
+          "time": 113
+        },
+        {
+          "label": "E",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "F",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "G",
+          "solved": true,
+          "attempts": 3,
+          "time": 148
+        },
+        {
+          "label": "H",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "I",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "J",
+          "solved": false,
+          "attempts": 0,
+          "time": null
+        },
+        {
+          "label": "K",
+          "solved": true,
+          "attempts": 3,
+          "time": 285
+        },
+        {
+          "label": "L",
+          "solved": true,
+          "attempts": 1,
+          "time": 24
+        }
+      ],
+      "sourceGroup": "Supplementary"
+    }
+  ]
+}

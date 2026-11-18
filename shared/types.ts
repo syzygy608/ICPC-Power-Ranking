@@ -8,6 +8,8 @@ export interface Problem {
 }
 export interface Result {
   team: string;
+  /** Original scoreboard division; rank remains the official division rank. */
+  sourceGroup?: string;
   affiliation: string;
   country: Country;
   rank: number;
