@@ -1,4 +1,5 @@
 const paths: Record<string, string> = {
+  temple: "M3 9 12 3l9 6H3Zm1 3h16M5 20h14M3 23h18M6 12v8m4-8v8m4-8v8m4-8v8",
   chart: "M4 19V5m0 14h16M8 15v-4m5 4V7m5 8v-6",
   trophy:
     "M8 3h8v5a4 4 0 0 1-8 0V3Zm0 2H4v2a4 4 0 0 0 4 4m8-6h4v2a4 4 0 0 1-4 4m-4 1v6m-4 3h8m-10 0h12",

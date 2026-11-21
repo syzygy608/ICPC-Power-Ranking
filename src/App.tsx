@@ -10,6 +10,7 @@ import { validateDataset } from "../shared/validation";
 import { download, loadData, persist, published, reset } from "./store";
 import ImportDialog, { CountrySelect, pct } from "./ImportDialog";
 import Icon from "./Icons";
+import Olympus from "./Olympus";
 import Method from "./Method";
 import Schools from "./Schools";
 import Pagination, { usePagination } from "./Pagination";
@@ -148,13 +149,13 @@ export default function App() {
           }}
         >
           <span className="brand-icon">
-            <Icon name="code" size={23} />
+            <Icon name="temple" size={26} />
           </span>
           <span>
-            ICPC<span className="brand-sub">POWER RANKING</span>
+            ICPC<span className="brand-sub">OLYMPUS RANKING</span>
           </span>
         </a>
-        <div className="nav-label">WORKSPACE</div>
+        <div className="nav-label">THE PANTHEON · 萬神殿</div>
         <nav>
           {(
             [
@@ -167,6 +168,9 @@ export default function App() {
             <button
               key={id}
               className={page === id ? "active" : ""}
+              aria-label={label}
+              aria-current={page === id ? "page" : undefined}
+              title={label}
               onClick={() => setPage(id)}
             >
               <Icon name={icon} />
@@ -178,11 +182,11 @@ export default function App() {
           ))}
         </nav>
         <div className="sidebar-note">
-          <span className="live-dot" /> COMPETITIVE PROGRAMMING
+          <span className="live-dot" /> THE PURSUIT OF ARETE
           <p>
-            每一場比賽，
+            以智慧競逐榮耀，
             <br />
-            都是實力的下一個座標。
+            讓每一次挑戰成為傳說。
           </p>
           <span className="version">COMMUNITY RANKING · v1.3</span>
         </div>
@@ -190,7 +194,7 @@ export default function App() {
       <main>
         <div className="topbar">
           <div className="breadcrumb">
-            Workspace <span>/</span>{" "}
+            Olympus <span>/</span>{" "}
             <b>
               {page === "ranking"
                 ? "戰力排行"
@@ -211,10 +215,10 @@ export default function App() {
         <div className="content">
           <header className="page-header">
             <div>
-              <span className="eyebrow">ICPC POWER RANKING</span>
+              <span className="eyebrow">ICPC OLYMPUS RANKING</span>
               <h1>
                 {page === "ranking"
-                  ? "戰力指數排行。"
+                  ? "群英競逐，榮耀登榜。"
                   : page === "schools"
                     ? "從主力，看見學校戰力。"
                     : page === "contests"
@@ -271,22 +275,22 @@ export default function App() {
           {page === "ranking" && (
             <>
               <section className="overview">
-                <img className="hero-trophy" src="/trophy.png" alt="" />
+                <Olympus />
                 <div className="overview-intro">
                   <span className="tag">
-                    <span className="live-dot" /> THE BIG PICTURE
+                    <span className="live-dot" /> THE OLYMPIAN SPIRIT
                   </span>
-                  <h2>實力，不只是一場名次。</h2>
+                  <h2>以雅典娜之智，登奧林帕斯之巔。</h2>
                   <p>
                     以賽場表現、跨站穩定與站點難度，
                     <br />
-                    一起構成你的競賽座標。
+                    刻下屬於你的英雄篇章。
                   </p>
                   <button
                     onClick={() => setPage("method")}
                     className="hero-link"
                   >
-                    了解評分方式 <Icon name="arrow" size={16} />
+                    了解評分方式 <Icon name="info" size={16} />
                   </button>
                 </div>
                 <div className="overview-stats">
@@ -317,8 +321,8 @@ export default function App() {
               </section>
               <div className="section-heading">
                 <div>
-                  <span className="eyebrow">THE FRONT RUNNERS</span>
-                  <h2>領先隊伍</h2>
+                  <span className="eyebrow">THE LAUREL BEARERS</span>
+                  <h2>月桂殿堂</h2>
                 </div>
                 <span className="muted">
                   {region === "TW"
@@ -344,13 +348,13 @@ export default function App() {
                       <span className="leader-label">
                         {
                           [
-                            "LEADING THE WAY",
-                            "THE CHALLENGER",
-                            "ON THE PODIUM",
+                            "THE GOLDEN LAUREL",
+                            "THE SILVER LAUREL",
+                            "THE BRONZE LAUREL",
                           ][i]
                         }
                       </span>
-                      <Icon name="arrow" size={17} />
+                      <Icon name="trophy" size={19} />
                     </div>
                     <h3>{t.team}</h3>
                     <p>{t.affiliation || "未提供學校"}</p>
@@ -514,11 +518,12 @@ export default function App() {
                               </small>
                             </td>
                             <td>
-                              <div className="confidence">
-                                <span
-                                  style={{ width: `${t.confidence * 100}%` }}
-                                />
-                              </div>
+                              <progress
+                                className="confidence"
+                                value={t.confidence}
+                                max={1}
+                                aria-label="資料信心程度"
+                              />
                               <small>
                                 {t.siteCount} 站 · {t.count} 場
                               </small>
@@ -532,7 +537,7 @@ export default function App() {
                                 aria-label={`查看 ${t.team}`}
                                 onClick={() => setSelected(t.id)}
                               >
-                                <Icon name="arrow" size={17} />
+                                <Icon name="info" size={19} />
                               </button>
                             </td>
                           </tr>

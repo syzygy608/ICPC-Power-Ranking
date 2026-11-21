@@ -9,17 +9,17 @@ React + TypeScript + Vite，純靜態部署。沒有 API server、Elysia、資�
 建議 Node.js 22+；使用 Bun 執行測試和選用的匯入腳本。
 
 ```sh
-npm ci
-npm run dev
+bun install --frozen-lockfile
+bun run dev
 ```
 
 ```sh
 bun test
-npm run build
-npm run preview
+bun run build
+bun run preview
 ```
 
-依賴使用 `package-lock.json` 鎖定。也可用 `bun install` 和 `bun run dev` 開發；請避免同時維護互相衝突的 lockfile。
+使用 Bun 管理依賴與執行指令，依賴由 `bun.lock` 鎖定。樣式使用 Tailwind CSS 4.3.5 與官方 Vite 插件，主題設定與 utility 組合集中在 `src/styles.css`；不使用 inline CSS。
 
 ## 已收錄比賽
 
@@ -94,8 +94,8 @@ Supplementary 保留 `pejuang travel hari rabu`、`Anchovy`、`Hopeless`、`seha
 | 設定                  | 值              |
 | --------------------- | --------------- |
 | Framework             | Vite            |
-| Install command       | `npm ci`        |
-| Build command         | `npm run build` |
+| Install command       | `bun install --frozen-lockfile`        |
+| Build command         | `bun run build` |
 | Output directory      | `dist`          |
 | Environment variables | 不需要          |
 
@@ -231,4 +231,4 @@ Difficulty = mean_站(mean_場[Q × difficulty / 2])
 - `scripts/import-scoreboard.ts`：選用的本機 CLI。
 - `tests/`：解析、評分、重複匯入及正式資料一致性測試。
 
-裝飾獎盃由影像生成工具建立，位於 `public/trophy.png`；不承載評分或資料資訊。
+希臘神話視覺採用愛琴海深藍、古金與大理石白。神殿與月桂裝飾由 `src/Olympus.tsx` 的 SVG 繪製，不承載評分或資料資訊。
