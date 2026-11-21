@@ -1,5 +1,5 @@
 import { useMemo, useState, type ReactNode } from "react";
-import { canonicalResult, rankTeams, type RankedTeam } from "../shared/ranking";
+import { rankTeams, type RankedTeam } from "../shared/ranking";
 import {
   countryLabel,
   teamKey,
@@ -11,6 +11,7 @@ import { download, loadData, persist, published, reset } from "./store";
 import ImportDialog, { CountrySelect, pct } from "./ImportDialog";
 import Icon from "./Icons";
 import Olympus from "./Olympus";
+import ContestScoreboard from "./ContestScoreboard";
 import Method from "./Method";
 import Schools from "./Schools";
 import Pagination, { usePagination } from "./Pagination";
@@ -612,96 +613,11 @@ export default function App() {
                         </a>
                       )}
                     </div>
-                    <details className="scoreboard-details">
-                      <summary>展開逐題記分板</summary>
-                      <div className="table-scroll">
-                        <table className="scoreboard">
-                          <thead>
-                            <tr>
-                              <th>#</th>
-                              <th>隊伍</th>
-                              <th>AC</th>
-                              <th>Penalty</th>
-                              {Array.from(
-                                { length: c.problemCount },
-                                (_, i) => (
-                                  <th key={i}>{String.fromCharCode(65 + i)}</th>
-                                ),
-                              )}
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {[...c.results]
-                              .sort(
-                                (a, b) =>
-                                  b.solved - a.solved || a.penalty - b.penalty,
-                              )
-                              .map((r, i) => (
-                                <tr
-                                  key={`${r.team}-${r.affiliation}-${r.country}`}
-                                  className="country-tint"
-                                  data-country={r.country}
-                                >
-                                  <td>{r.rank}</td>
-                                  <td>
-                                    <button
-                                      className="team-button"
-                                      onClick={() =>
-                                        setSelected(
-                                          canonicalResult(r, data.aliases),
-                                        )
-                                      }
-                                    >
-                                      {r.team}
-                                    </button>
-                                    {r.sourceGroup && (
-                                      <small>{r.sourceGroup}</small>
-                                    )}
-                                  </td>
-                                  <td>{r.solved}</td>
-                                  <td>{r.penalty}</td>
-                                  {Array.from(
-                                    { length: c.problemCount },
-                                    (_, j) => {
-                                      const p = r.problems[j];
-                                      return (
-                                        <td
-                                          key={j}
-                                          className={
-                                            p?.solved
-                                              ? "ac"
-                                              : p?.attempts
-                                                ? "wa"
-                                                : ""
-                                          }
-                                          title={
-                                            p?.solved
-                                              ? "Accepted"
-                                              : p?.attempts
-                                                ? "未通過"
-                                                : "未提交"
-                                          }
-                                        >
-                                          {p?.solved
-                                            ? `${p.time ?? "AC"}`
-                                            : p?.attempts
-                                              ? "−"
-                                              : ""}
-                                          <small>
-                                            {p?.attempts
-                                              ? `${p.attempts} tries`
-                                              : ""}
-                                          </small>
-                                        </td>
-                                      );
-                                    },
-                                  )}
-                                </tr>
-                              ))}
-                          </tbody>
-                        </table>
-                      </div>
-                    </details>
+                    <ContestScoreboard
+                      contest={c}
+                      aliases={data.aliases}
+                      onSelect={setSelected}
+                    />
                   </section>
                 ))}
               {!data.contests.length && (
