@@ -2,7 +2,7 @@ import FixedTable from "./FixedTable";
 import * as stylex from "@stylexjs/stylex";
 import { ui } from "./styles/ui";
 import { countryTint, tables } from "./styles/tables";
-import { useMemo } from "react";
+import { useMemo, useRef } from "react";
 import { canonicalResult } from "../shared/ranking";
 import Pagination, { usePagination } from "./Pagination";
 import type { ScoreboardProps } from "./ContestScoreboard";
@@ -20,13 +20,15 @@ export default function Scoreboard({
       ),
     [contest.results],
   );
+  const resultsRef = useRef<HTMLDivElement>(null);
   const pagination = usePagination(results.length);
   const problems = Array.from({ length: contest.problemCount }, (_, i) =>
     String.fromCharCode(65 + i),
   );
   return (
     <div>
-      <div {...stylex.props(tables.scroll)}>
+      <p {...stylex.props(tables.swipeHint)}>左右滑動查看各題</p>
+      <div {...stylex.props(tables.scroll)} ref={resultsRef}>
         <FixedTable
           widths={[56, 222, 58, 84, ...problems.map(() => 68)]}
           flexibleColumn={1}
@@ -155,6 +157,7 @@ export default function Scoreboard({
       )}
       <Pagination
         pagination={pagination}
+        resultsRef={resultsRef}
         label={contest.name + "記分板"}
         unit="隊"
       />

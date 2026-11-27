@@ -1,10 +1,11 @@
+import { mobileCards } from "./styles/mobileCards";
 import FixedTable from "./FixedTable";
 import * as stylex from "@stylexjs/stylex";
 import { ui } from "./styles/ui";
 import { ranking } from "./styles/ranking";
 import { panels } from "./styles/panels";
 import { countryTint, tables } from "./styles/tables";
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { rankSchools } from "../shared/schools";
 import type { RankedTeam } from "../shared/ranking";
 import { countryLabel } from "../shared/types";
@@ -31,6 +32,7 @@ export default function Schools({
             s.country !== "VN"
           : s.country === country)),
   );
+  const resultsRef = useRef<HTMLDivElement>(null);
   const pagination = usePagination(filtered.length);
   return (
     <section {...stylex.props(ui.panel)}>
@@ -86,34 +88,100 @@ export default function Schools({
           清除篩選
         </button>
       </div>
-      <div {...stylex.props(tables.scroll)}>
+      <div {...stylex.props(tables.scroll)} ref={resultsRef}>
         <FixedTable
           widths={[64, 230, 108, 156, 152, 108, 120]}
           flexibleColumn={1}
+          cards
+          label="學校戰力指數排名"
         >
-          <thead>
-            <tr>
-              <th {...stylex.props(tables.head)}>排名</th>
-              <th {...stylex.props(tables.head)}>學校</th>
-              <th {...stylex.props(tables.head)}>學校戰力 ↓</th>
-              <th {...stylex.props(tables.head)}>平均 / 最高 / 最低</th>
-              <th {...stylex.props(tables.head)}>計分明細</th>
-              <th {...stylex.props(tables.head)}>全校隊伍數</th>
-              <th {...stylex.props(tables.head)}>主力參賽站數</th>
+          <thead role="rowgroup" {...stylex.props(mobileCards.head)}>
+            <tr role="row">
+              <th
+                role="columnheader"
+                scope="col"
+                {...stylex.props(tables.head)}
+              >
+                排名
+              </th>
+              <th
+                role="columnheader"
+                scope="col"
+                {...stylex.props(tables.head)}
+              >
+                學校
+              </th>
+              <th
+                role="columnheader"
+                scope="col"
+                {...stylex.props(tables.head)}
+              >
+                學校戰力 ↓
+              </th>
+              <th
+                role="columnheader"
+                scope="col"
+                {...stylex.props(tables.head)}
+              >
+                平均 / 最高 / 最低
+              </th>
+              <th
+                role="columnheader"
+                scope="col"
+                {...stylex.props(tables.head)}
+              >
+                計分明細
+              </th>
+              <th
+                role="columnheader"
+                scope="col"
+                {...stylex.props(tables.head)}
+              >
+                全校隊伍數
+              </th>
+              <th
+                role="columnheader"
+                scope="col"
+                {...stylex.props(tables.head)}
+              >
+                主力參賽站數
+              </th>
             </tr>
           </thead>
-          <tbody>
+          <tbody role="rowgroup" {...stylex.props(mobileCards.list)}>
             {filtered.slice(pagination.start, pagination.end).map((s) => (
               <tr
                 key={`${s.country}-${s.school}`}
-                {...stylex.props(tables.row, countryTint(s.country))}
+                {...stylex.props(
+                  tables.row,
+                  mobileCards.row,
+                  countryTint(s.country),
+                )}
+                role="row"
                 data-country={s.country}
               >
-                <td {...stylex.props(tables.cell, tables.rankNumber)}>
+                <td
+                  role="cell"
+                  {...stylex.props(
+                    tables.cell,
+                    tables.rankNumber,
+                    mobileCards.cell,
+                  )}
+                >
                   {String(s.rank).padStart(2, "0")}
                 </td>
-                <td {...stylex.props(tables.cell)}>
-                  <strong {...stylex.props(tables.ellipsis)} title={s.school}>
+                <td
+                  role="cell"
+                  {...stylex.props(
+                    tables.cell,
+                    mobileCards.cell,
+                    mobileCards.name,
+                  )}
+                >
+                  <strong
+                    {...stylex.props(tables.ellipsis, mobileCards.schoolName)}
+                    title={s.school}
+                  >
                     {s.school}
                   </strong>
                   <small {...stylex.props(tables.cellSmall)}>
@@ -125,18 +193,44 @@ export default function Schools({
                     </small>
                   )}
                 </td>
-                <td {...stylex.props(tables.cell)}>
+                <td
+                  role="cell"
+                  {...stylex.props(
+                    tables.cell,
+                    mobileCards.cell,
+                    mobileCards.score,
+                  )}
+                >
+                  <span {...stylex.props(mobileCards.metricLabel)}>戰力</span>
                   <strong {...stylex.props(tables.rating)}>
                     {s.index.toFixed(1)}
                   </strong>
                 </td>
-                <td {...stylex.props(tables.cell)}>
+                <td
+                  role="cell"
+                  {...stylex.props(
+                    tables.cell,
+                    mobileCards.cell,
+                    mobileCards.metric,
+                    mobileCards.firstMetric,
+                  )}
+                >
+                  <span {...stylex.props(mobileCards.metricLabel)}>
+                    平均戰力
+                  </span>
                   <strong>{s.average.toFixed(1)}</strong>
                   <small {...stylex.props(tables.cellSmall)}>
                     最高 {s.maximum.toFixed(1)} · 最低 {s.minimum.toFixed(1)}
                   </small>
                 </td>
-                <td {...stylex.props(tables.cell)}>
+                <td
+                  role="cell"
+                  {...stylex.props(
+                    tables.cell,
+                    mobileCards.cell,
+                    mobileCards.details,
+                  )}
+                >
                   <details>
                     <summary {...stylex.props(ui.summary)}>
                       查看 {s.scoringTeams.length} 隊
@@ -163,8 +257,34 @@ export default function Schools({
                     </div>
                   </details>
                 </td>
-                <td {...stylex.props(tables.cell)}>{s.teams.length} 隊</td>
-                <td {...stylex.props(tables.cell)}>{s.siteCount} 站</td>
+                <td
+                  role="cell"
+                  {...stylex.props(
+                    tables.cell,
+                    mobileCards.cell,
+                    mobileCards.metric,
+                    mobileCards.secondMetric,
+                  )}
+                >
+                  <span {...stylex.props(mobileCards.metricLabel)}>
+                    全校隊伍
+                  </span>
+                  {s.teams.length} 隊
+                </td>
+                <td
+                  role="cell"
+                  {...stylex.props(
+                    tables.cell,
+                    mobileCards.cell,
+                    mobileCards.metric,
+                    mobileCards.thirdMetric,
+                  )}
+                >
+                  <span {...stylex.props(mobileCards.metricLabel)}>
+                    主力站數
+                  </span>
+                  {s.siteCount} 站
+                </td>
               </tr>
             ))}
           </tbody>
@@ -192,7 +312,12 @@ export default function Schools({
           </div>
         )}
       </div>
-      <Pagination pagination={pagination} label="學校戰力榜" unit="所學校" />
+      <Pagination
+        pagination={pagination}
+        resultsRef={resultsRef}
+        label="學校戰力榜"
+        unit="所學校"
+      />
     </section>
   );
 }

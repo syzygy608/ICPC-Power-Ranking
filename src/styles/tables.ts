@@ -14,7 +14,7 @@ export const tables = stylex.create({
     display: "flex",
     alignItems: "center",
     gap: 9,
-    flex: "1 1 240px",
+    flex: { default: "1 1 240px", [mobile]: "1 1 100%" },
     maxWidth: { default: 340, [mobile]: "none" },
     paddingInline: 11,
     borderWidth: 1,
@@ -36,10 +36,11 @@ export const tables = stylex.create({
   filter: {
     maxWidth: { default: 205, [mobile]: "100%" },
     flexGrow: { default: 0, [mobile]: 1 },
+    flexBasis: { default: null, [mobile]: "calc(50% - 5px)" },
   },
   clearFilters: {
     whiteSpace: "nowrap",
-    width: { default: "auto", [mobile]: "100%" },
+    display: { default: "inline-flex", [mobile]: { ":disabled": "none" } },
   },
   scroll: { overflow: "auto" },
   table: {
@@ -130,6 +131,12 @@ export const tables = stylex.create({
     height: 8,
     accentColor: theme.accent,
   },
+  swipeHint: {
+    display: { default: "none", [mobile]: "block" },
+    color: theme.muted,
+    fontSize: 12,
+    marginBlock: "0 8px",
+  },
   scoreboardCell: { padding: "9px 10px", textAlign: "center" },
   scoreboardTeam: { textAlign: "left" },
   preview: {
@@ -156,6 +163,7 @@ export const tables = stylex.create({
     alignItems: "center",
     gap: 4,
   },
+  desktopPage: { display: { default: "inline-flex", [mobile]: "none" } },
   pageButton: {
     minWidth: { default: 44, [mobile]: 36 },
     paddingInline: { default: 12, [mobile]: 8 },

@@ -1,3 +1,4 @@
+import { mobileCards } from "./styles/mobileCards";
 import FixedTable from "./FixedTable";
 import * as stylex from "@stylexjs/stylex";
 import { ui } from "./styles/ui";
@@ -5,7 +6,7 @@ import { layout } from "./styles/layout";
 import { ranking } from "./styles/ranking";
 import { panels } from "./styles/panels";
 import { countryTint, tables } from "./styles/tables";
-import { useMemo, useState, type ReactNode } from "react";
+import { useMemo, useRef, useState, type ReactNode } from "react";
 import { rankTeams, type RankedTeam } from "../shared/ranking";
 import {
   countryLabel,
@@ -24,10 +25,10 @@ import Pagination, { usePagination } from "./Pagination";
 import { selectTaiwanHighlights } from "../shared/highlights";
 import { useDialogFocus } from "./useDialogFocus";
 const pages = [
-  ["ranking", "chart", "戰力排行"],
-  ["schools", "users", "學校戰力榜"],
-  ["contests", "globe", "比賽記分板"],
-  ["method", "settings", "評分與隊伍設定"],
+  ["ranking", "chart", "戰力排行", "排行"],
+  ["schools", "users", "學校戰力榜", "學校"],
+  ["contests", "globe", "比賽記分板", "賽事"],
+  ["method", "settings", "評分與隊伍設定", "設定"],
 ] as const;
 
 const initial = loadData();
@@ -116,6 +117,7 @@ export default function App() {
       (!school || t.affiliation === school) &&
       `${t.team} ${t.affiliation}`.toLowerCase().includes(query.toLowerCase()),
   );
+  const resultsRef = useRef<HTMLDivElement>(null);
   const pagination = usePagination(filtered.length);
   const team = ranked.find((t) => t.id === selected);
   const totalTW = ranked.filter((t) => t.country === "TW").length;
@@ -140,6 +142,11 @@ export default function App() {
       );
     }
   }
+  function navigate(next: (typeof pages)[number][0]) {
+    if (next === page) return;
+    setPage(next);
+    window.scrollTo(0, 0);
+  }
   function addAlias() {
     act(() => {
       const from = teamKey(aliasFrom),
@@ -163,7 +170,7 @@ export default function App() {
           aria-label="Olympus · 戰力排行"
           onClick={(e) => {
             e.preventDefault();
-            setPage("ranking");
+            navigate("ranking");
           }}
         >
           <span {...stylex.props(layout.brandIcon)}>
@@ -172,7 +179,7 @@ export default function App() {
           <span {...stylex.props(layout.brandText)}>Olympus</span>
         </a>
         <nav {...stylex.props(layout.nav)} aria-label="主選單">
-          {pages.map(([id, icon, label]) => (
+          {pages.map(([id, icon, label, shortLabel]) => (
             <button
               key={id}
               {...stylex.props(
@@ -183,10 +190,13 @@ export default function App() {
               aria-label={label}
               aria-current={page === id ? "page" : undefined}
               title={label}
-              onClick={() => setPage(id)}
+              onClick={() => navigate(id)}
             >
               <Icon name={icon} />
               <span {...stylex.props(layout.navText)}>{label}</span>
+              <span {...stylex.props(layout.mobileNavText)} aria-hidden="true">
+                {shortLabel}
+              </span>
               {id === "contests" && (
                 <span {...stylex.props(layout.navCount)}>
                   {data.contests.length}
@@ -287,7 +297,7 @@ export default function App() {
                   </div>
                 </div>
                 <button
-                  onClick={() => setPage("method")}
+                  onClick={() => navigate("method")}
                   {...stylex.props(
                     ui.button,
                     ui.textButton,
@@ -325,7 +335,9 @@ export default function App() {
                   >
                     <div {...stylex.props(ranking.leaderTop)}>
                       <span {...stylex.props(ranking.medal)}>0{i + 1}</span>
-                      <Icon name="trophy" size={19} />
+                      <span {...stylex.props(ranking.leaderTrophy)}>
+                        <Icon name="trophy" size={19} />
+                      </span>
                     </div>
                     <h3
                       {...stylex.props(ui.subheading, ranking.leaderName)}
@@ -336,8 +348,8 @@ export default function App() {
                     <p
                       {...stylex.props(
                         ui.paragraph,
-                        ranking.leaderSchool,
                         ui.muted,
+                        ranking.leaderSchool,
                       )}
                       title={t.affiliation || undefined}
                     >
@@ -351,7 +363,12 @@ export default function App() {
                           分
                         </small>
                       </strong>
-                      <span {...stylex.props(ranking.leaderLabel)}>
+                      <span
+                        {...stylex.props(
+                          ranking.leaderLabel,
+                          ranking.leaderRecord,
+                        )}
+                      >
                         {t.count} 場紀錄
                       </span>
                     </div>
@@ -458,23 +475,65 @@ export default function App() {
                     清除篩選
                   </button>
                 </div>
-                <div {...stylex.props(tables.scroll)}>
+                <div {...stylex.props(tables.scroll)} ref={resultsRef}>
                   <FixedTable
                     widths={[64, 280, 110, 100, 128, 144, 64]}
                     flexibleColumn={1}
+                    cards
+                    label="隊伍戰力排行榜"
                   >
-                    <thead>
-                      <tr>
-                        <th {...stylex.props(tables.head)}>排名</th>
-                        <th {...stylex.props(tables.head)}>隊伍 / 學校</th>
-                        <th {...stylex.props(tables.head)}>綜合戰力 ↓</th>
-                        <th {...stylex.props(tables.head)}>Dirty 比率</th>
-                        <th {...stylex.props(tables.head)}>跨站穩定度</th>
-                        <th {...stylex.props(tables.head)}>參賽資料</th>
-                        <th {...stylex.props(tables.head)} />
+                    <thead role="rowgroup" {...stylex.props(mobileCards.head)}>
+                      <tr role="row">
+                        <th
+                          role="columnheader"
+                          scope="col"
+                          {...stylex.props(tables.head)}
+                        >
+                          排名
+                        </th>
+                        <th
+                          role="columnheader"
+                          scope="col"
+                          {...stylex.props(tables.head)}
+                        >
+                          隊伍 / 學校
+                        </th>
+                        <th
+                          role="columnheader"
+                          scope="col"
+                          {...stylex.props(tables.head)}
+                        >
+                          綜合戰力 ↓
+                        </th>
+                        <th
+                          role="columnheader"
+                          scope="col"
+                          {...stylex.props(tables.head)}
+                        >
+                          Dirty 比率
+                        </th>
+                        <th
+                          role="columnheader"
+                          scope="col"
+                          {...stylex.props(tables.head)}
+                        >
+                          跨站穩定度
+                        </th>
+                        <th
+                          role="columnheader"
+                          scope="col"
+                          {...stylex.props(tables.head)}
+                        >
+                          參賽資料
+                        </th>
+                        <th
+                          role="columnheader"
+                          scope="col"
+                          {...stylex.props(tables.head)}
+                        />
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody role="rowgroup" {...stylex.props(mobileCards.list)}>
                       {filtered
                         .slice(pagination.start, pagination.end)
                         .map((t) => (
@@ -482,23 +541,43 @@ export default function App() {
                             key={t.id}
                             {...stylex.props(
                               tables.row,
+                              mobileCards.row,
                               countryTint(t.country),
                               highlightOrder.has(t.id) && tables.highlighted,
                             )}
+                            role="row"
                             data-country={t.country}
                           >
                             <td
-                              {...stylex.props(tables.cell, tables.rankNumber)}
+                              role="cell"
+                              {...stylex.props(
+                                tables.cell,
+                                tables.rankNumber,
+                                mobileCards.cell,
+                              )}
                             >
                               {String(t.rank).padStart(2, "0")}
                             </td>
-                            <td {...stylex.props(tables.cell)}>
-                              <div {...stylex.props(tables.teamHeading)}>
+                            <td
+                              role="cell"
+                              {...stylex.props(
+                                tables.cell,
+                                mobileCards.cell,
+                                mobileCards.name,
+                              )}
+                            >
+                              <div
+                                {...stylex.props(
+                                  tables.teamHeading,
+                                  mobileCards.identity,
+                                )}
+                              >
                                 <button
                                   {...stylex.props(
                                     ui.button,
                                     ui.textButton,
                                     tables.teamButton,
+                                    mobileCards.teamButton,
                                   )}
                                   onClick={() => setSelected(t.id)}
                                   title={t.team}
@@ -507,7 +586,10 @@ export default function App() {
                                 </button>
                                 {highlightOrder.has(t.id) && (
                                   <span
-                                    {...stylex.props(ranking.highlightBadge)}
+                                    {...stylex.props(
+                                      ranking.highlightBadge,
+                                      ranking.mobileHighlightBadge,
+                                    )}
                                   >
                                     高機率晉級 #{highlightOrder.get(t.id)}
                                   </span>
@@ -524,12 +606,33 @@ export default function App() {
                                 {countryLabel(t.country)}
                               </small>
                             </td>
-                            <td {...stylex.props(tables.cell)}>
+                            <td
+                              role="cell"
+                              {...stylex.props(
+                                tables.cell,
+                                mobileCards.cell,
+                                mobileCards.score,
+                              )}
+                            >
+                              <span {...stylex.props(mobileCards.metricLabel)}>
+                                戰力
+                              </span>
                               <b {...stylex.props(tables.rating)}>
                                 {fmt(t.rating)}
                               </b>
                             </td>
-                            <td {...stylex.props(tables.cell)}>
+                            <td
+                              role="cell"
+                              {...stylex.props(
+                                tables.cell,
+                                mobileCards.cell,
+                                mobileCards.metric,
+                                mobileCards.firstMetric,
+                              )}
+                            >
+                              <span {...stylex.props(mobileCards.metricLabel)}>
+                                Dirty 比率
+                              </span>
                               <span
                                 {...stylex.props(
                                   tables.dirtyPill,
@@ -541,7 +644,19 @@ export default function App() {
                                 {pct(t.dirty)}
                               </span>
                             </td>
-                            <td {...stylex.props(tables.cell, tables.numeric)}>
+                            <td
+                              role="cell"
+                              {...stylex.props(
+                                tables.cell,
+                                tables.numeric,
+                                mobileCards.cell,
+                                mobileCards.metric,
+                                mobileCards.secondMetric,
+                              )}
+                            >
+                              <span {...stylex.props(mobileCards.metricLabel)}>
+                                跨站穩定度
+                              </span>
                               {t.siteCount < 2 ? "待驗證" : pct(t.stability)}
                               <small {...stylex.props(tables.cellSmall)}>
                                 {t.siteCount < 2
@@ -549,7 +664,18 @@ export default function App() {
                                   : `站間波動 ${pct(t.spread)}`}
                               </small>
                             </td>
-                            <td {...stylex.props(tables.cell)}>
+                            <td
+                              role="cell"
+                              {...stylex.props(
+                                tables.cell,
+                                mobileCards.cell,
+                                mobileCards.metric,
+                                mobileCards.thirdMetric,
+                              )}
+                            >
+                              <span {...stylex.props(mobileCards.metricLabel)}>
+                                參賽資料
+                              </span>
                               <progress
                                 {...stylex.props(tables.confidence)}
                                 value={t.confidence}
@@ -563,7 +689,14 @@ export default function App() {
                                 Dirty 資料 {t.knownDirtyCount}/{t.count} 場
                               </small>
                             </td>
-                            <td {...stylex.props(tables.cell)}>
+                            <td
+                              role="cell"
+                              {...stylex.props(
+                                tables.cell,
+                                mobileCards.cell,
+                                mobileCards.desktopOnly,
+                              )}
+                            >
                               <button
                                 {...stylex.props(ui.button, ui.iconButton)}
                                 aria-label={`查看 ${t.team}`}
@@ -598,6 +731,7 @@ export default function App() {
                 </div>
                 <Pagination
                   pagination={pagination}
+                  resultsRef={resultsRef}
                   label="隊伍戰力榜"
                   unit="隊"
                 />

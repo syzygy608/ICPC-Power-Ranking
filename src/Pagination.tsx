@@ -1,7 +1,7 @@
 import * as stylex from "@stylexjs/stylex";
 import { ui } from "./styles/ui";
 import { tables } from "./styles/tables";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type RefObject } from "react";
 import { paginate } from "../shared/pagination";
 
 export function usePagination(total: number) {
@@ -17,12 +17,21 @@ export default function Pagination({
   pagination,
   label,
   unit,
+  resultsRef,
 }: {
   pagination: ReturnType<typeof usePagination>;
   label: string;
   unit: string;
+  resultsRef?: RefObject<HTMLDivElement | null>;
 }) {
   const { page, totalPages, start, end, total, pages, setPage } = pagination;
+  function goToPage(next: number) {
+    if (next === page) return;
+    setPage(next);
+    if (window.matchMedia("(max-width: 649px)").matches) {
+      resultsRef?.current?.scrollIntoView({ block: "start" });
+    }
+  }
   return (
     <div {...stylex.props(tables.footer)}>
       <span role="status">
@@ -34,13 +43,17 @@ export default function Pagination({
           type="button"
           aria-label="上一頁"
           disabled={page <= 1}
-          onClick={() => setPage(page - 1)}
+          onClick={() => goToPage(page - 1)}
         >
           上一頁
         </button>
         {pages.map((n, i) =>
           n === "gap" ? (
-            <span key={`gap-${i}`} aria-hidden="true">
+            <span
+              key={`gap-${i}`}
+              {...stylex.props(tables.desktopPage)}
+              aria-hidden="true"
+            >
               …
             </span>
           ) : (
@@ -49,12 +62,13 @@ export default function Pagination({
                 ui.button,
                 tables.pageButton,
                 n === page && ui.primary,
+                n !== page && n !== 1 && n !== totalPages && tables.desktopPage,
               )}
               type="button"
               key={n}
               aria-label={`第 ${n} 頁`}
               aria-current={n === page ? "page" : undefined}
-              onClick={() => setPage(n)}
+              onClick={() => goToPage(n)}
             >
               {n}
             </button>
@@ -65,7 +79,7 @@ export default function Pagination({
           type="button"
           aria-label="下一頁"
           disabled={page >= totalPages}
-          onClick={() => setPage(page + 1)}
+          onClick={() => goToPage(page + 1)}
         >
           下一頁
         </button>
