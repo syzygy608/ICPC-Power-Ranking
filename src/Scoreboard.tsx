@@ -1,3 +1,7 @@
+import FixedTable from "./FixedTable";
+import * as stylex from "@stylexjs/stylex";
+import { ui } from "./styles/ui";
+import { countryTint, tables } from "./styles/tables";
 import { useMemo } from "react";
 import { canonicalResult } from "../shared/ranking";
 import Pagination, { usePagination } from "./Pagination";
@@ -10,68 +14,150 @@ export default function Scoreboard({
 }: ScoreboardProps) {
   // Sort only the expanded contest, and create cells only for its current page.
   const results = useMemo(
-    () => [...contest.results].sort(
-      (a, b) => b.solved - a.solved || a.penalty - b.penalty,
-    ),
+    () =>
+      [...contest.results].sort(
+        (a, b) => b.solved - a.solved || a.penalty - b.penalty,
+      ),
     [contest.results],
   );
   const pagination = usePagination(results.length);
-  const problems = Array.from(
-    { length: contest.problemCount },
-    (_, i) => String.fromCharCode(65 + i),
+  const problems = Array.from({ length: contest.problemCount }, (_, i) =>
+    String.fromCharCode(65 + i),
   );
   return (
     <div>
-      <div className="table-scroll">
-        <table className="scoreboard" aria-label={`${contest.name}逐題記分板`}>
+      <div {...stylex.props(tables.scroll)}>
+        <FixedTable
+          widths={[56, 222, 58, 84, ...problems.map(() => 68)]}
+          flexibleColumn={1}
+          label={`${contest.name}逐題記分板`}
+        >
           <thead>
             <tr>
-              <th scope="col">#</th>
-              <th scope="col">隊伍</th>
-              <th scope="col">AC</th>
-              <th scope="col">Penalty</th>
-              {problems.map((label) => <th scope="col" key={label}>{label}</th>)}
+              <th
+                {...stylex.props(tables.head, tables.scoreboardCell)}
+                scope="col"
+              >
+                #
+              </th>
+              <th
+                {...stylex.props(
+                  tables.head,
+                  tables.scoreboardCell,
+                  tables.scoreboardTeam,
+                )}
+                scope="col"
+              >
+                隊伍
+              </th>
+              <th
+                {...stylex.props(tables.head, tables.scoreboardCell)}
+                scope="col"
+              >
+                AC
+              </th>
+              <th
+                {...stylex.props(tables.head, tables.scoreboardCell)}
+                scope="col"
+              >
+                Penalty
+              </th>
+              {problems.map((label) => (
+                <th
+                  {...stylex.props(tables.head, tables.scoreboardCell)}
+                  scope="col"
+                  key={label}
+                >
+                  {label}
+                </th>
+              ))}
             </tr>
           </thead>
           <tbody>
             {results.slice(pagination.start, pagination.end).map((r) => (
               <tr
                 key={`${r.team}-${r.affiliation}-${r.country}`}
-                className="country-tint"
+                {...stylex.props(tables.row, countryTint(r.country))}
                 data-country={r.country}
               >
-                <td>{r.rank}</td>
-                <td>
+                <td {...stylex.props(tables.cell, tables.scoreboardCell)}>
+                  {r.rank}
+                </td>
+                <td
+                  {...stylex.props(
+                    tables.cell,
+                    tables.scoreboardCell,
+                    tables.scoreboardTeam,
+                  )}
+                >
                   <button
-                    className="team-button"
+                    {...stylex.props(
+                      ui.button,
+                      ui.textButton,
+                      tables.teamButton,
+                    )}
                     onClick={() => onSelect(canonicalResult(r, aliases))}
+                    title={r.team}
                   >
                     {r.team}
                   </button>
-                  {r.sourceGroup && <small>{r.sourceGroup}</small>}
+                  {r.sourceGroup && (
+                    <small
+                      {...stylex.props(tables.cellSmall, tables.ellipsis)}
+                      title={r.sourceGroup}
+                    >
+                      {r.sourceGroup}
+                    </small>
+                  )}
                 </td>
-                <td>{r.solved}</td>
-                <td>{r.penalty}</td>
+                <td {...stylex.props(tables.cell, tables.scoreboardCell)}>
+                  {r.solved}
+                </td>
+                <td {...stylex.props(tables.cell, tables.scoreboardCell)}>
+                  {r.penalty}
+                </td>
                 {problems.map((label, j) => {
                   const p = r.problems[j];
                   return (
                     <td
                       key={label}
-                      className={p?.solved ? "ac" : p?.attempts ? "wa" : ""}
-                      title={p?.solved ? "Accepted" : p?.attempts ? "未通過" : "未提交"}
+                      {...stylex.props(
+                        tables.cell,
+                        tables.scoreboardCell,
+                        p?.solved
+                          ? tables.positive
+                          : p?.attempts
+                            ? tables.negative
+                            : null,
+                      )}
+                      title={
+                        p?.solved
+                          ? "Accepted"
+                          : p?.attempts
+                            ? "未通過"
+                            : "未提交"
+                      }
                     >
                       {p?.solved ? `${p.time ?? "AC"}` : p?.attempts ? "−" : ""}
-                      <small>{p?.attempts ? `${p.attempts} tries` : ""}</small>
+                      <small {...stylex.props(tables.cellSmall)}>
+                        {p?.attempts ? `${p.attempts} tries` : ""}
+                      </small>
                     </td>
                   );
                 })}
               </tr>
             ))}
           </tbody>
-        </table>
+        </FixedTable>
       </div>
-      {!results.length && <p className="empty">此場比賽尚無隊伍成績。</p>}
-      <Pagination pagination={pagination} label={contest.name + "記分板"} unit="隊" />
+      {!results.length && (
+        <p {...stylex.props(ui.paragraph, ui.empty)}>此場比賽尚無隊伍成績。</p>
+      )}
+      <Pagination
+        pagination={pagination}
+        label={contest.name + "記分板"}
+        unit="隊"
+      />
     </div>
   );
 }

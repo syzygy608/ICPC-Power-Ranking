@@ -1,3 +1,6 @@
+import * as stylex from "@stylexjs/stylex";
+import { ui } from "./styles/ui";
+import { panels } from "./styles/panels";
 import { lazy, Suspense, useState } from "react";
 import type { Contest, Dataset } from "../shared/types";
 
@@ -13,22 +16,21 @@ export default function ContestScoreboard(props: ScoreboardProps) {
   const [open, setOpen] = useState(false);
   return (
     <details
-      className="scoreboard-details"
+      {...stylex.props(panels.scoreboardDetails)}
       onToggle={(event) => setOpen(event.currentTarget.open)}
     >
-      <summary>{open ? "收合逐題記分板" : "展開逐題記分板"}</summary>
+      <summary {...stylex.props(ui.summary, panels.scoreboardSummary)}>
+        {open ? "收合逐題記分板" : "展開逐題記分板"}
+      </summary>
       {open && (
         <Suspense
           fallback={
             <div
               role="status"
               aria-live="polite"
-              className="flex min-h-28 items-center justify-center gap-3 text-sm text-muted"
+              {...stylex.props(panels.loading)}
             >
-              <span
-                aria-hidden="true"
-                className="size-5 animate-spin rounded-full border-2 border-gold-200 border-t-gold-700 motion-reduce:animate-none"
-              />
+              <span aria-hidden="true" {...stylex.props(panels.spinner)} />
               正在載入記分板…
             </div>
           }

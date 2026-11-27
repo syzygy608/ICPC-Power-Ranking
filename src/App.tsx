@@ -1,3 +1,10 @@
+import FixedTable from "./FixedTable";
+import * as stylex from "@stylexjs/stylex";
+import { ui } from "./styles/ui";
+import { layout } from "./styles/layout";
+import { ranking } from "./styles/ranking";
+import { panels } from "./styles/panels";
+import { countryTint, tables } from "./styles/tables";
 import { useMemo, useState, type ReactNode } from "react";
 import { rankTeams, type RankedTeam } from "../shared/ranking";
 import {
@@ -10,13 +17,19 @@ import { validateDataset } from "../shared/validation";
 import { download, loadData, persist, published, reset } from "./store";
 import ImportDialog, { CountrySelect, pct } from "./ImportDialog";
 import Icon from "./Icons";
-import Olympus from "./Olympus";
 import ContestScoreboard from "./ContestScoreboard";
 import Method from "./Method";
 import Schools from "./Schools";
 import Pagination, { usePagination } from "./Pagination";
 import { selectTaiwanHighlights } from "../shared/highlights";
 import { useDialogFocus } from "./useDialogFocus";
+const pages = [
+  ["ranking", "chart", "戰力排行"],
+  ["schools", "users", "學校戰力榜"],
+  ["contests", "globe", "比賽記分板"],
+  ["method", "settings", "評分與隊伍設定"],
+] as const;
+
 const initial = loadData();
 const fmt = (n: number) =>
   n.toLocaleString("en-US", {
@@ -35,18 +48,22 @@ function Modal({
 }) {
   const ref = useDialogFocus(onClose);
   return (
-    <div className="overlay">
+    <div {...stylex.props(panels.overlay)}>
       <section
         ref={ref}
         tabIndex={-1}
-        className="modal"
+        {...stylex.props(panels.modal)}
         role="dialog"
         aria-modal="true"
         aria-label={title}
       >
-        <header>
-          <h2>{title}</h2>
-          <button className="icon-button" aria-label="關閉" onClick={onClose}>
+        <header {...stylex.props(panels.modalHeader)}>
+          <h2 {...stylex.props(ui.heading)}>{title}</h2>
+          <button
+            {...stylex.props(ui.button, ui.iconButton)}
+            aria-label="關閉"
+            onClick={onClose}
+          >
             <Icon name="close" />
           </button>
         </header>
@@ -60,9 +77,8 @@ export default function App() {
   const [draft, setDraft] = useState(initial.draft);
   const [error, setError] = useState(initial.error);
   const [stale, setStale] = useState(initial.stale);
-  const [page, setPage] = useState<
-    "ranking" | "schools" | "contests" | "method"
-  >("ranking");
+  const [page, setPage] = useState<(typeof pages)[number][0]>("ranking");
+  const pageTitle = pages.find(([id]) => id === page)![2];
   const [importing, setImporting] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
   const [editing, setEditing] = useState<Contest | null>(null);
@@ -139,126 +155,89 @@ export default function App() {
     });
   }
   return (
-    <div className="app-shell">
-      <aside className="sidebar">
+    <div {...stylex.props(layout.shell)}>
+      <aside {...stylex.props(layout.sidebar)}>
         <a
-          className="brand"
+          {...stylex.props(ui.link, layout.brand)}
           href="#"
+          aria-label="Olympus · 戰力排行"
           onClick={(e) => {
             e.preventDefault();
             setPage("ranking");
           }}
         >
-          <span className="brand-icon">
+          <span {...stylex.props(layout.brandIcon)}>
             <Icon name="temple" size={26} />
           </span>
-          <span>
-            ICPC<span className="brand-sub">OLYMPUS RANKING</span>
-          </span>
+          <span {...stylex.props(layout.brandText)}>Olympus</span>
         </a>
-        <div className="nav-label">THE PANTHEON · 萬神殿</div>
-        <nav>
-          {(
-            [
-              ["ranking", "chart", "戰力排行"],
-              ["schools", "users", "學校戰力榜"],
-              ["contests", "globe", "比賽記分板"],
-              ["method", "settings", "評分與隊伍設定"],
-            ] as const
-          ).map(([id, icon, label]) => (
+        <nav {...stylex.props(layout.nav)} aria-label="主選單">
+          {pages.map(([id, icon, label]) => (
             <button
               key={id}
-              className={page === id ? "active" : ""}
+              {...stylex.props(
+                ui.button,
+                layout.navButton,
+                page === id && layout.navActive,
+              )}
               aria-label={label}
               aria-current={page === id ? "page" : undefined}
               title={label}
               onClick={() => setPage(id)}
             >
               <Icon name={icon} />
-              {label}
+              <span {...stylex.props(layout.navText)}>{label}</span>
               {id === "contests" && (
-                <span className="nav-count">{data.contests.length}</span>
+                <span {...stylex.props(layout.navCount)}>
+                  {data.contests.length}
+                </span>
               )}
             </button>
           ))}
         </nav>
-        <div className="sidebar-note">
-          <span className="live-dot" /> THE PURSUIT OF ARETE
-          <p>
-            以智慧競逐榮耀，
-            <br />
-            讓每一次挑戰成為傳說。
-          </p>
-          <span className="version">COMMUNITY RANKING · v1.3</span>
-        </div>
       </aside>
       <main>
-        <div className="topbar">
-          <div className="breadcrumb">
-            Olympus <span>/</span>{" "}
-            <b>
-              {page === "ranking"
-                ? "戰力排行"
-                : page === "schools"
-                  ? "學校戰力榜"
-                  : page === "contests"
-                    ? "比賽記分板"
-                    : "評分與隊伍設定"}
-            </b>
-          </div>
-          <div className="top-status">
-            <span className="live-dot" />
-            {draft ? "本機草稿" : "正式資料"}
-            <span className="divider" />
-            TW / 2026
-          </div>
-        </div>
-        <div className="content">
-          <header className="page-header">
-            <div>
-              <span className="eyebrow">ICPC OLYMPUS RANKING</span>
-              <h1>
-                {page === "ranking"
-                  ? "群英競逐，榮耀登榜。"
-                  : page === "schools"
-                    ? "從主力，看見學校戰力。"
-                    : page === "contests"
-                      ? "每一場，都留下紀錄。"
-                      : "讓每一分，都有依據。"}
-              </h1>
-              <p className="muted">
-                {page === "ranking"
-                  ? "串起每場競賽的表現，看見累積實力。"
-                  : page === "schools"
-                    ? "各校最強六隊，綜合平均、最高與最低戰力，與隊伍排行同步更新。"
-                    : page === "contests"
-                      ? "匯入、校準與追蹤，持續建立跨賽站的成績資料。"
-                      : "公開的評分規則，可調整的參數，以及你掌握的隊伍身分。"}
-              </p>
+        <div {...stylex.props(layout.content)}>
+          <header {...stylex.props(layout.pageHeader)}>
+            <div {...stylex.props(layout.headingGroup)}>
+              <h1 {...stylex.props(layout.title)}>{pageTitle}</h1>
+              <span {...stylex.props(layout.status)}>
+                <span {...stylex.props(layout.liveDot)} />
+                {draft ? "本機草稿" : "正式資料"}
+              </span>
             </div>
-            <div className="actions">
-              <button onClick={() => download(data)}>
+            <div {...stylex.props(layout.actions)}>
+              <button
+                {...stylex.props(ui.button, layout.headerButton)}
+                onClick={() => download(data)}
+              >
                 <Icon name="download" size={17} />
                 匯出資料
               </button>
-              <button className="primary" onClick={() => setImporting(true)}>
+              <button
+                {...stylex.props(ui.button, ui.primary, layout.headerButton)}
+                onClick={() => setImporting(true)}
+              >
                 <Icon name="upload" size={17} />
                 匯入記分板
               </button>
             </div>
           </header>
           {error && (
-            <div className="error" role="alert">
+            <div {...stylex.props(ui.error)} role="alert">
               {error}
-              <button className="text-button" onClick={() => setError("")}>
+              <button
+                {...stylex.props(ui.button, ui.textButton)}
+                onClick={() => setError("")}
+              >
                 關閉
               </button>
             </div>
           )}
           {draft && (
-            <div className="draft-notice">
+            <div {...stylex.props(ui.notice, layout.draftNotice)}>
               <Icon name="info" size={17} />
-              <span>
+              <span {...stylex.props(layout.draftText)}>
                 {stale
                   ? "正式資料已更新；目前仍顯示你保存的舊草稿。"
                   : "目前為本機草稿，僅此瀏覽器可見。"}{" "}
@@ -266,7 +245,7 @@ export default function App() {
                 指令後部署，即可更新公開排行。
               </span>
               <button
-                className="text-button"
+                {...stylex.props(ui.button, ui.textButton, layout.draftButton)}
                 onClick={() => setResetting(true)}
               >
                 回到正式資料
@@ -275,57 +254,52 @@ export default function App() {
           )}
           {page === "ranking" && (
             <>
-              <section className="overview">
-                <Olympus />
-                <div className="overview-intro">
-                  <span className="tag">
-                    <span className="live-dot" /> THE OLYMPIAN SPIRIT
-                  </span>
-                  <h2>以雅典娜之智，登奧林帕斯之巔。</h2>
-                  <p>
-                    以賽場表現、跨站穩定與站點難度，
-                    <br />
-                    刻下屬於你的英雄篇章。
-                  </p>
-                  <button
-                    onClick={() => setPage("method")}
-                    className="hero-link"
-                  >
-                    了解評分方式 <Icon name="info" size={16} />
-                  </button>
-                </div>
-                <div className="overview-stats">
-                  <div>
-                    <Icon name="users" />
-                    <strong>
+              <section
+                {...stylex.props(ranking.overview)}
+                aria-label="賽事總覽"
+              >
+                <div {...stylex.props(ranking.stats)}>
+                  <div {...stylex.props(ranking.stat)}>
+                    <strong {...stylex.props(ranking.statValue)}>
                       {totalTW}
-                      <span>隊</span>
+                      <span {...stylex.props(ranking.statUnit)}>隊</span>
                     </strong>
-                    <small>台灣參賽隊伍</small>
+                    <small {...stylex.props(ranking.statLabel)}>
+                      台灣參賽隊伍
+                    </small>
                   </div>
-                  <div>
-                    <Icon name="globe" />
-                    <strong>
+                  <div {...stylex.props(ranking.stat)}>
+                    <strong {...stylex.props(ranking.statValue)}>
                       {data.contests.length}
-                      <span>場</span>
+                      <span {...stylex.props(ranking.statUnit)}>場</span>
                     </strong>
-                    <small>已收錄比賽</small>
+                    <small {...stylex.props(ranking.statLabel)}>
+                      已收錄比賽
+                    </small>
                   </div>
-                  <div>
-                    <Icon name="calendar" />
-                    <strong className="date-stat">
+                  <div {...stylex.props(ranking.stat)}>
+                    <strong {...stylex.props(ranking.statValue)}>
                       {latest ? latest.slice(5).replace("-", " / ") : "—"}
                     </strong>
-                    <small>最近比賽 · {latest?.slice(0, 4) ?? "—"}</small>
+                    <small {...stylex.props(ranking.statLabel)}>
+                      最近比賽 · {latest?.slice(0, 4) ?? "—"}
+                    </small>
                   </div>
                 </div>
+                <button
+                  onClick={() => setPage("method")}
+                  {...stylex.props(
+                    ui.button,
+                    ui.textButton,
+                    ranking.methodLink,
+                  )}
+                >
+                  了解評分方式 <Icon name="arrow" size={16} />
+                </button>
               </section>
-              <div className="section-heading">
-                <div>
-                  <span className="eyebrow">THE LAUREL BEARERS</span>
-                  <h2>月桂殿堂</h2>
-                </div>
-                <span className="muted">
+              <div {...stylex.props(ui.sectionHeading)}>
+                <h2 {...stylex.props(ui.heading)}>月桂殿堂</h2>
+                <span {...stylex.props(ui.muted)}>
                   {region === "TW"
                     ? "台灣隊伍"
                     : region === "ALL"
@@ -336,78 +310,106 @@ export default function App() {
                   · 綜合戰力
                 </span>
               </div>
-              <div className="leaders">
+              <div {...stylex.props(ranking.leaders)}>
                 {regional.slice(0, 3).map((t, i) => (
                   <button
                     key={t.id}
-                    className={`leader leader-${i} country-tint`}
+                    {...stylex.props(
+                      ui.button,
+                      ranking.leader,
+                      i === 0 && ranking.first,
+                      i === 2 && ranking.third,
+                    )}
                     data-country={t.country}
                     onClick={() => setSelected(t.id)}
                   >
-                    <div className="leader-top">
-                      <span className="medal">0{i + 1}</span>
-                      <span className="leader-label">
-                        {
-                          [
-                            "THE GOLDEN LAUREL",
-                            "THE SILVER LAUREL",
-                            "THE BRONZE LAUREL",
-                          ][i]
-                        }
-                      </span>
+                    <div {...stylex.props(ranking.leaderTop)}>
+                      <span {...stylex.props(ranking.medal)}>0{i + 1}</span>
                       <Icon name="trophy" size={19} />
                     </div>
-                    <h3>{t.team}</h3>
-                    <p>{t.affiliation || "未提供學校"}</p>
-                    <div className="leader-bottom">
-                      <strong>
+                    <h3
+                      {...stylex.props(ui.subheading, ranking.leaderName)}
+                      title={t.team}
+                    >
+                      {t.team}
+                    </h3>
+                    <p
+                      {...stylex.props(
+                        ui.paragraph,
+                        ranking.leaderSchool,
+                        ui.muted,
+                      )}
+                      title={t.affiliation || undefined}
+                    >
+                      {t.affiliation || "未提供學校"}
+                    </p>
+                    <div {...stylex.props(ranking.leaderBottom)}>
+                      <strong {...stylex.props(ranking.leaderValue)}>
                         {fmt(t.rating)}
-                        <small> POWER</small>
+                        <small {...stylex.props(ranking.leaderLabel)}>
+                          {" "}
+                          分
+                        </small>
                       </strong>
-                      <span>{t.count} 場紀錄</span>
+                      <span {...stylex.props(ranking.leaderLabel)}>
+                        {t.count} 場紀錄
+                      </span>
                     </div>
                   </button>
                 ))}
               </div>
-              <section className="panel rankings">
-                <div className="panel-heading">
+              <section {...stylex.props(ui.panel)}>
+                <div {...stylex.props(ui.panelHeading)}>
                   <div>
-                    <h2>
+                    <h2 {...stylex.props(ui.heading)}>
                       戰力排行榜{" "}
-                      <span className="count">{regional.length}</span>
+                      <span {...stylex.props(ui.count)}>{regional.length}</span>
                     </h2>
-                    <p className="muted">點選隊伍，查看逐場表現與評分明細。</p>
                   </div>
-                  <span className="model-label">
-                    MODEL v1.3 <Icon name="info" size={14} />
-                  </span>
                 </div>
-                <details className="highlight-list">
-                  <summary>
+                <details {...stylex.props(ranking.highlights)}>
+                  <summary {...stylex.props(ui.summary)}>
                     晉級亞太決賽看好名單 {highlights.length} / 10 隊 · 每校最多
                     2 隊
                   </summary>
-                  <p className="muted">
+                  <p
+                    {...stylex.props(
+                      ui.paragraph,
+                      ui.muted,
+                      ranking.highlightHint,
+                    )}
+                  >
                     依完整台灣戰力榜順序選取，超過校額就遞補下一隊；搜尋與篩選不改變名單。此為模型看好的晉級名單，非官方資格判定或經校準的機率。缺少學校者待確認後納入。
                   </p>
-                  <ol>
+                  <ol {...stylex.props(ranking.highlightList)}>
                     {highlights.map((t) => (
-                      <li key={t.id}>
+                      <li {...stylex.props(ranking.highlightItem)} key={t.id}>
                         <button
-                          className="team-button"
+                          {...stylex.props(
+                            ui.button,
+                            ui.textButton,
+                            tables.teamButton,
+                          )}
                           onClick={() => setSelected(t.id)}
+                          title={t.team}
                         >
                           {t.team}
                         </button>
-                        <small>{t.affiliation}</small>
+                        <small
+                          {...stylex.props(tables.cellSmall, tables.ellipsis)}
+                          title={t.affiliation}
+                        >
+                          {t.affiliation}
+                        </small>
                       </li>
                     ))}
                   </ol>
                 </details>
-                <div className="toolbar">
-                  <label className="search">
+                <div {...stylex.props(tables.toolbar)}>
+                  <label {...stylex.props(tables.search)}>
                     <Icon name="search" size={18} />
                     <input
+                      {...stylex.props(ui.field, tables.searchInput)}
                       aria-label="搜尋隊伍或學校"
                       placeholder="搜尋隊伍或學校…"
                       value={query}
@@ -418,6 +420,7 @@ export default function App() {
                     />
                   </label>
                   <select
+                    {...stylex.props(ui.field, ui.select, tables.filter)}
                     aria-label="篩選國別"
                     value={region}
                     onChange={(e) => {
@@ -432,6 +435,7 @@ export default function App() {
                     <option value="UNKNOWN">國別待確認</option>
                   </select>
                   <select
+                    {...stylex.props(ui.field, ui.select, tables.filter)}
                     aria-label="篩選學校"
                     value={school}
                     onChange={(e) => {
@@ -445,7 +449,7 @@ export default function App() {
                     ))}
                   </select>
                   <button
-                    className="clear-filters"
+                    {...stylex.props(ui.button, tables.clearFilters)}
                     onClick={clearFilters}
                     disabled={!hasFilters}
                     title="清空搜尋與學校條件，還原為台灣隊伍"
@@ -454,17 +458,20 @@ export default function App() {
                     清除篩選
                   </button>
                 </div>
-                <div className="table-scroll">
-                  <table>
+                <div {...stylex.props(tables.scroll)}>
+                  <FixedTable
+                    widths={[64, 280, 110, 100, 128, 144, 64]}
+                    flexibleColumn={1}
+                  >
                     <thead>
                       <tr>
-                        <th className="rank-col">排名</th>
-                        <th>隊伍 / 學校</th>
-                        <th>綜合戰力 ↓</th>
-                        <th>Dirty 比率</th>
-                        <th>跨站穩定度</th>
-                        <th>參賽資料</th>
-                        <th />
+                        <th {...stylex.props(tables.head)}>排名</th>
+                        <th {...stylex.props(tables.head)}>隊伍 / 學校</th>
+                        <th {...stylex.props(tables.head)}>綜合戰力 ↓</th>
+                        <th {...stylex.props(tables.head)}>Dirty 比率</th>
+                        <th {...stylex.props(tables.head)}>跨站穩定度</th>
+                        <th {...stylex.props(tables.head)}>參賽資料</th>
+                        <th {...stylex.props(tables.head)} />
                       </tr>
                     </thead>
                     <tbody>
@@ -473,68 +480,92 @@ export default function App() {
                         .map((t) => (
                           <tr
                             key={t.id}
-                            className={
-                              highlightOrder.has(t.id)
-                                ? "highlighted-team country-tint"
-                                : "country-tint"
-                            }
+                            {...stylex.props(
+                              tables.row,
+                              countryTint(t.country),
+                              highlightOrder.has(t.id) && tables.highlighted,
+                            )}
                             data-country={t.country}
                           >
-                            <td className="rank-number">
+                            <td
+                              {...stylex.props(tables.cell, tables.rankNumber)}
+                            >
                               {String(t.rank).padStart(2, "0")}
                             </td>
-                            <td>
-                              <button
-                                className="team-button"
-                                onClick={() => setSelected(t.id)}
+                            <td {...stylex.props(tables.cell)}>
+                              <div {...stylex.props(tables.teamHeading)}>
+                                <button
+                                  {...stylex.props(
+                                    ui.button,
+                                    ui.textButton,
+                                    tables.teamButton,
+                                  )}
+                                  onClick={() => setSelected(t.id)}
+                                  title={t.team}
+                                >
+                                  {t.team}
+                                </button>
+                                {highlightOrder.has(t.id) && (
+                                  <span
+                                    {...stylex.props(ranking.highlightBadge)}
+                                  >
+                                    高機率晉級 #{highlightOrder.get(t.id)}
+                                  </span>
+                                )}
+                              </div>
+                              <small
+                                {...stylex.props(
+                                  tables.cellSmall,
+                                  tables.ellipsis,
+                                )}
+                                title={t.affiliation || "未提供學校"}
                               >
-                                {t.team}
-                              </button>
-                              {highlightOrder.has(t.id) && (
-                                <span className="highlight-badge">
-                                  高機率晉級 #{highlightOrder.get(t.id)}
-                                </span>
-                              )}
-                              <small>
                                 {t.affiliation || "未提供學校"} ·{" "}
                                 {countryLabel(t.country)}
                               </small>
                             </td>
-                            <td>
-                              <b className="rating">{fmt(t.rating)}</b>
+                            <td {...stylex.props(tables.cell)}>
+                              <b {...stylex.props(tables.rating)}>
+                                {fmt(t.rating)}
+                              </b>
                             </td>
-                            <td>
+                            <td {...stylex.props(tables.cell)}>
                               <span
-                                className={`dirty-pill ${t.dirty !== null && t.dirty < 0.3 ? "clean" : ""}`}
+                                {...stylex.props(
+                                  tables.dirtyPill,
+                                  t.dirty !== null &&
+                                    t.dirty < 0.3 &&
+                                    tables.positive,
+                                )}
                               >
                                 {pct(t.dirty)}
                               </span>
                             </td>
-                            <td className="numeric">
+                            <td {...stylex.props(tables.cell, tables.numeric)}>
                               {t.siteCount < 2 ? "待驗證" : pct(t.stability)}
-                              <small>
+                              <small {...stylex.props(tables.cellSmall)}>
                                 {t.siteCount < 2
                                   ? "僅單站資料"
                                   : `站間波動 ${pct(t.spread)}`}
                               </small>
                             </td>
-                            <td>
+                            <td {...stylex.props(tables.cell)}>
                               <progress
-                                className="confidence"
+                                {...stylex.props(tables.confidence)}
                                 value={t.confidence}
                                 max={1}
                                 aria-label="資料信心程度"
                               />
-                              <small>
+                              <small {...stylex.props(tables.cellSmall)}>
                                 {t.siteCount} 站 · {t.count} 場
                               </small>
-                              <small>
+                              <small {...stylex.props(tables.cellSmall)}>
                                 Dirty 資料 {t.knownDirtyCount}/{t.count} 場
                               </small>
                             </td>
-                            <td>
+                            <td {...stylex.props(tables.cell)}>
                               <button
-                                className="icon-button"
+                                {...stylex.props(ui.button, ui.iconButton)}
                                 aria-label={`查看 ${t.team}`}
                                 onClick={() => setSelected(t.id)}
                               >
@@ -544,14 +575,23 @@ export default function App() {
                           </tr>
                         ))}
                     </tbody>
-                  </table>
+                  </FixedTable>
                   {!filtered.length && (
-                    <div className="empty">
+                    <div {...stylex.props(ui.empty)}>
                       <Icon name="search" size={30} />
-                      <h3>沒有符合條件的隊伍</h3>
-                      <p>試試其他隊名、學校或國別。</p>
+                      <h3 {...stylex.props(ui.subheading)}>
+                        沒有符合條件的隊伍
+                      </h3>
+                      <p {...stylex.props(ui.paragraph)}>
+                        試試其他隊名、學校或國別。
+                      </p>
                       {hasFilters && (
-                        <button onClick={clearFilters}>清除所有篩選</button>
+                        <button
+                          {...stylex.props(ui.button)}
+                          onClick={clearFilters}
+                        >
+                          清除所有篩選
+                        </button>
                       )}
                     </div>
                   )}
@@ -568,38 +608,44 @@ export default function App() {
             <Schools teams={ranked} onSelect={setSelected} />
           )}
           {page === "contests" && (
-            <div className="contest-list">
+            <div {...stylex.props(panels.contestList)}>
               {[...data.contests]
                 .sort((a, b) => b.date.localeCompare(a.date))
                 .map((c) => (
-                  <section className="panel contest-card" key={c.id}>
-                    <div className="contest-header">
-                      <div className="contest-icon">
+                  <section
+                    {...stylex.props(ui.panel, ui.paddedPanel)}
+                    key={c.id}
+                  >
+                    <div {...stylex.props(panels.contestHeader)}>
+                      <div {...stylex.props(panels.contestIcon)}>
                         <Icon name="trophy" size={26} />
                       </div>
-                      <div>
-                        <span className="eyebrow">
+                      <div {...stylex.props(panels.contestTitle)}>
+                        <span {...stylex.props(ui.meta)}>
                           {c.date} · {c.site}
                         </span>
-                        <h2>{c.name}</h2>
-                        <p className="muted">
+                        <h2 {...stylex.props(ui.heading)}>{c.name}</h2>
+                        <p {...stylex.props(ui.paragraph, ui.muted)}>
                           {c.results.length} 隊 · {c.problemCount} 題 ·{" "}
                           {c.status === "preliminary" ? "暫定成績" : "最終成績"}
                         </p>
                       </div>
-                      <div className="contest-actions">
-                        <button onClick={() => setEditing(structuredClone(c))}>
+                      <div {...stylex.props(panels.contestActions)}>
+                        <button
+                          {...stylex.props(ui.button)}
+                          onClick={() => setEditing(structuredClone(c))}
+                        >
                           編輯參數
                         </button>
                         <button
-                          className="text-button danger"
+                          {...stylex.props(ui.button, ui.textButton, ui.danger)}
                           onClick={() => setDeleting(c.id)}
                         >
                           移除
                         </button>
                       </div>
                     </div>
-                    <div className="contest-meta">
+                    <div {...stylex.props(panels.contestMeta)}>
                       <span>
                         難度係數{" "}
                         <b>
@@ -608,7 +654,12 @@ export default function App() {
                         </b>
                       </span>
                       {safeUrl(c.source) && (
-                        <a href={c.source} target="_blank" rel="noreferrer">
+                        <a
+                          {...stylex.props(ui.link)}
+                          href={c.source}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           查看原始榜單 ↗
                         </a>
                       )}
@@ -621,10 +672,10 @@ export default function App() {
                   </section>
                 ))}
               {!data.contests.length && (
-                <div className="empty">
-                  <h2>開始累積第一場比賽</h2>
+                <div {...stylex.props(ui.empty)}>
+                  <h2 {...stylex.props(ui.heading)}>開始累積第一場比賽</h2>
                   <button
-                    className="primary"
+                    {...stylex.props(ui.button, ui.primary)}
                     onClick={() => setImporting(true)}
                   >
                     匯入記分板
@@ -634,15 +685,16 @@ export default function App() {
             </div>
           )}
           {page === "method" && (
-            <div className="settings-layout">
+            <div {...stylex.props(panels.settingsLayout)}>
               <Method data={data} onChange={(next) => act(() => save(next))} />
-              <section className="panel aliases">
-                <h2>隊名別名對應</h2>
-                <p className="muted">
+              <section {...stylex.props(ui.panel, ui.paddedPanel)}>
+                <h2 {...stylex.props(ui.heading)}>隊名別名對應</h2>
+                <p {...stylex.props(ui.paragraph, ui.muted)}>
                   只有確認是相同隊伍時才合併；同場中兩隊不可合併為同一個 key。
                 </p>
-                <div className="alias-form">
+                <div {...stylex.props(panels.aliasForm)}>
                   <input
+                    {...stylex.props(ui.field, panels.aliasField)}
                     aria-label="原隊名"
                     placeholder="原隊名"
                     value={aliasFrom}
@@ -650,22 +702,26 @@ export default function App() {
                   />
                   <Icon name="arrow" />
                   <input
+                    {...stylex.props(ui.field, panels.aliasField)}
                     aria-label="統一隊名"
                     placeholder="統一隊名"
                     value={aliasTo}
                     onChange={(e) => setAliasTo(e.target.value)}
                   />
-                  <button className="primary" onClick={addAlias}>
+                  <button
+                    {...stylex.props(ui.button, ui.primary)}
+                    onClick={addAlias}
+                  >
                     新增對應
                   </button>
                 </div>
                 {Object.entries(data.aliases).map(([a, b]) => (
-                  <div className="alias-row" key={a}>
+                  <div {...stylex.props(panels.aliasRow)} key={a}>
                     <span>
                       {a} → {b}
                     </span>
                     <button
-                      className="text-button"
+                      {...stylex.props(ui.button, ui.textButton)}
                       onClick={() =>
                         act(() => {
                           const aliases = { ...data.aliases };
@@ -679,28 +735,32 @@ export default function App() {
                   </div>
                 ))}
               </section>
-              <section className="panel publish-help">
-                <h2>持續更新到 Vercel</h2>
-                <ol>
+              <section
+                {...stylex.props(ui.panel, ui.paddedPanel, panels.publishHelp)}
+              >
+                <h2 {...stylex.props(ui.heading)}>持續更新到 Vercel</h2>
+                <ol {...stylex.props(panels.publishList)}>
                   <li>匯入新榜單，確認隊名、國別、日期與賽站名稱。</li>
                   <li>
-                    匯出 <code>rankings.json</code>，在專案執行{" "}
-                    <code>bun run publish-data ./rankings.json</code>。
+                    匯出{" "}
+                    <code {...stylex.props(panels.code)}>rankings.json</code>
+                    ，在專案執行{" "}
+                    <code {...stylex.props(panels.code)}>
+                      bun run publish-data ./rankings.json
+                    </code>
+                    。
                   </li>
                   <li>
                     推送專案至 Git；Vercel 重新部署後，所有訪客都能看到更新。
                   </li>
                 </ol>
-                <p className="muted">
+                <p {...stylex.props(ui.paragraph, ui.muted)}>
                   瀏覽器草稿不會自動公開；清除瀏覽器資料前請匯出備份。
                 </p>
               </section>
             </div>
           )}
-          <footer className="site-footer">
-            <span>
-              <Icon name="code" size={15} /> Built for the next contest.
-            </span>
+          <footer {...stylex.props(layout.footer)}>
             <span>ICPC POWER RANKING · 非官方社群專案</span>
           </footer>
         </div>
@@ -737,10 +797,11 @@ export default function App() {
               });
             }}
           >
-            <div className="form-grid">
-              <label>
+            <div {...stylex.props(panels.formGrid)}>
+              <label {...stylex.props(ui.label)}>
                 比賽名稱
                 <input
+                  {...stylex.props(ui.field, ui.formField)}
                   required
                   value={editing.name}
                   onChange={(e) =>
@@ -748,9 +809,10 @@ export default function App() {
                   }
                 />
               </label>
-              <label>
+              <label {...stylex.props(ui.label)}>
                 日期
                 <input
+                  {...stylex.props(ui.field, ui.formField)}
                   required
                   type="date"
                   value={editing.date}
@@ -759,9 +821,10 @@ export default function App() {
                   }
                 />
               </label>
-              <label>
+              <label {...stylex.props(ui.label)}>
                 賽站
                 <input
+                  {...stylex.props(ui.field, ui.formField)}
                   required
                   value={editing.site}
                   onChange={(e) =>
@@ -769,9 +832,10 @@ export default function App() {
                   }
                 />
               </label>
-              <label>
+              <label {...stylex.props(ui.label)}>
                 站點難度（0.5–2，留空為未校準）
                 <input
+                  {...stylex.props(ui.field, ui.formField)}
                   aria-label="編輯站點難度"
                   type="number"
                   min="0.5"
@@ -788,9 +852,10 @@ export default function App() {
                   }
                 />
               </label>
-              <label>
+              <label {...stylex.props(ui.label)}>
                 成績狀態
                 <select
+                  {...stylex.props(ui.field, ui.select, ui.formField)}
                   value={editing.status ?? "final"}
                   onChange={(e) =>
                     setEditing({
@@ -805,12 +870,12 @@ export default function App() {
               </label>
             </div>
             {error && (
-              <p className="error" role="alert">
+              <p {...stylex.props(ui.paragraph, ui.error)} role="alert">
                 {error}
               </p>
             )}
-            <footer>
-              <button className="primary" type="submit">
+            <footer {...stylex.props(panels.modalFooter)}>
+              <button {...stylex.props(ui.button, ui.primary)} type="submit">
                 儲存並重新計算
               </button>
             </footer>
@@ -819,11 +884,18 @@ export default function App() {
       )}
       {deleting && (
         <Modal title="移除此場比賽？" onClose={() => setDeleting(null)}>
-          <p>此場的成績將從草稿排行中移除。建議先匯出資料備份。</p>
-          <footer>
-            <button onClick={() => setDeleting(null)}>取消</button>
+          <p {...stylex.props(ui.paragraph)}>
+            此場的成績將從草稿排行中移除。建議先匯出資料備份。
+          </p>
+          <footer {...stylex.props(panels.modalFooter)}>
             <button
-              className="primary"
+              {...stylex.props(ui.button)}
+              onClick={() => setDeleting(null)}
+            >
+              取消
+            </button>
+            <button
+              {...stylex.props(ui.button, ui.primary)}
               onClick={() =>
                 act(() => {
                   save({
@@ -841,13 +913,15 @@ export default function App() {
       )}
       {resetting && (
         <Modal title="回到正式資料？" onClose={() => setResetting(false)}>
-          <p>
+          <p {...stylex.props(ui.paragraph)}>
             目前草稿的修改將被清除，恢復至專案發布的資料。請先匯出需要保留的紀錄。
           </p>
-          <footer>
-            <button onClick={() => download(data)}>先匯出草稿</button>
+          <footer {...stylex.props(panels.modalFooter)}>
+            <button {...stylex.props(ui.button)} onClick={() => download(data)}>
+              先匯出草稿
+            </button>
             <button
-              className="primary"
+              {...stylex.props(ui.button, ui.primary)}
               onClick={() =>
                 act(() => {
                   reset();
@@ -877,54 +951,63 @@ function TeamDetail({
 }) {
   return (
     <>
-      <div className="team-detail-title">
-        <span className="eyebrow">TEAM PROFILE · MODEL v1.3</span>
-        <h2>{team.team}</h2>
-        <p className="muted">{team.affiliation}</p>
-        <div className="detail-stats">
+      <div {...stylex.props(panels.teamTitle)}>
+        <h2 {...stylex.props(ui.heading)}>{team.team}</h2>
+        <p {...stylex.props(ui.paragraph, ui.muted)}>{team.affiliation}</p>
+        <div {...stylex.props(panels.detailStats)}>
           <div>
-            <strong>{fmt(team.rating)}</strong>
-            <small>戰力 / 100</small>
+            <strong {...stylex.props(panels.detailValue)}>
+              {fmt(team.rating)}
+            </strong>
+            <small {...stylex.props(panels.detailLabel)}>戰力 / 100</small>
           </div>
           <div>
-            <strong>{team.siteCount} 站</strong>
-            <small>{team.count} 場紀錄</small>
+            <strong {...stylex.props(panels.detailValue)}>
+              {team.siteCount} 站
+            </strong>
+            <small {...stylex.props(panels.detailLabel)}>
+              {team.count} 場紀錄
+            </small>
           </div>
           <div>
-            <strong>{pct(team.dirty)}</strong>
-            <small>Dirty 比率</small>
+            <strong {...stylex.props(panels.detailValue)}>
+              {pct(team.dirty)}
+            </strong>
+            <small {...stylex.props(panels.detailLabel)}>Dirty 比率</small>
           </div>
         </div>
-        <div className="breakdown">
-          <span>
+        <div {...stylex.props(panels.breakdown)}>
+          <span {...stylex.props(panels.breakdownItem)}>
             賽場表現：{team.performanceContribution.toFixed(2)} 分 /{" "}
             {team.performanceWeightApplied}
           </span>
           {data.settings.stabilityWeight > 0 ? (
-            <span>
+            <span {...stylex.props(panels.breakdownItem)}>
               {team.siteCount < 2
                 ? "穩定度權重已移回賽場表現"
                 : `跨站穩定：${team.stabilityContribution.toFixed(2)} 分 / ${team.stabilityWeightApplied}`}
             </span>
           ) : (
-            <span>穩定度僅供參考，不計入戰力</span>
+            <span {...stylex.props(panels.breakdownItem)}>
+              穩定度僅供參考，不計入戰力
+            </span>
           )}
         </div>
-        <p className="muted">
+        <p {...stylex.props(ui.paragraph, ui.muted)}>
           站點難度貢獻：{team.difficultyContribution.toFixed(2)} /{" "}
           {100 -
             data.settings.performanceWeight -
             data.settings.stabilityWeight}{" "}
           分。
         </p>
-        <p className="muted">
+        <p {...stylex.props(ui.paragraph, ui.muted)}>
           {team.siteCount < 2
             ? "只有一站資料，尚不計跨站穩定分。"
             : `各站水準平均 ${pct(team.level)}，站間標準差 ${pct(team.spread)}。`}{" "}
           Dirty 資料完整 {team.knownDirtyCount} / {team.count} 場。難度已校準{" "}
           {team.knownDifficultyCount} / {team.count} 場。
         </p>
-        <label className="inline-label">
+        <label {...stylex.props(panels.inlineLabel, ui.label)}>
           國別{" "}
           <CountrySelect
             value={team.country}
@@ -937,69 +1020,89 @@ function TeamDetail({
           />
         </label>
       </div>
-      <section className="history">
-        <h3>賽站平均表現</h3>
-        <p className="muted">相同賽站先取平均，再讓各站等權。</p>
-        <div className="table-scroll">
-          <table>
+      <section {...stylex.props(panels.history)}>
+        <h3 {...stylex.props(ui.subheading)}>賽站平均表現</h3>
+        <div {...stylex.props(tables.scroll, panels.historyTable)}>
+          <FixedTable widths={[180, 66, 120, 94]} flexibleColumn={0}>
             <thead>
               <tr>
-                <th>賽站</th>
-                <th>場次</th>
-                <th>競爭水準 Q</th>
-                <th>難度表現</th>
+                <th {...stylex.props(tables.head)}>賽站</th>
+                <th {...stylex.props(tables.head)}>場次</th>
+                <th {...stylex.props(tables.head)}>競爭水準 Q</th>
+                <th {...stylex.props(tables.head)}>難度表現</th>
               </tr>
             </thead>
             <tbody>
               {team.stations.map((s) => (
-                <tr key={s.key}>
-                  <td>{s.name}</td>
-                  <td>{s.count}</td>
-                  <td>{pct(s.level)}</td>
-                  <td>{pct(s.difficulty)}</td>
+                <tr {...stylex.props(tables.row)} key={s.key}>
+                  <td {...stylex.props(tables.cell)}>
+                    <span {...stylex.props(tables.ellipsis)} title={s.name}>
+                      {s.name}
+                    </span>
+                  </td>
+                  <td {...stylex.props(tables.cell)}>{s.count}</td>
+                  <td {...stylex.props(tables.cell)}>{pct(s.level)}</td>
+                  <td {...stylex.props(tables.cell)}>{pct(s.difficulty)}</td>
                 </tr>
               ))}
             </tbody>
-          </table>
+          </FixedTable>
         </div>
       </section>
       {team.history.map((h) => (
-        <article className="history" key={h.contest.id}>
-          <div className="section-heading">
+        <article {...stylex.props(panels.history)} key={h.contest.id}>
+          <div {...stylex.props(ui.sectionHeading)}>
             <div>
-              <span className="eyebrow">
+              <span {...stylex.props(ui.meta)}>
                 {h.contest.date} · {h.contest.site}
               </span>
-              <h3>{h.contest.name}</h3>
-              <p className="muted">
+              <h3 {...stylex.props(ui.subheading)}>{h.contest.name}</h3>
+              <p {...stylex.props(ui.paragraph, ui.muted)}>
                 原隊名：{h.result.team} · {h.result.solved} AC ·{" "}
                 {h.result.penalty} penalty
               </p>
             </div>
           </div>
-          <div className="breakdown">
-            <span>全場名次百分位 {pct(h.score.placementPercentile)}</span>
-            <span>同題數微調後 {pct(h.score.percentile)}</span>
-            <span>競爭水準 Q {pct(h.score.level)}</span>
-            <span>
+          <div {...stylex.props(panels.breakdown)}>
+            <span {...stylex.props(panels.breakdownItem)}>
+              全場名次百分位 {pct(h.score.placementPercentile)}
+            </span>
+            <span {...stylex.props(panels.breakdownItem)}>
+              同題數微調後 {pct(h.score.percentile)}
+            </span>
+            <span {...stylex.props(panels.breakdownItem)}>
+              競爭水準 Q {pct(h.score.level)}
+            </span>
+            <span {...stylex.props(panels.breakdownItem)}>
               Dirty {pct(h.score.dirty)}
               {h.score.dirty === null ? "（計分暫用 50%）" : ""}
             </span>
-            <span>
+            <span {...stylex.props(panels.breakdownItem)}>
               難度係數 {h.score.difficulty.toFixed(2)}
               {h.contest.difficulty === null ? "（未校準）" : ""}
             </span>
-            <span>難度表現 {pct(h.score.difficultyLevel)}</span>
+            <span {...stylex.props(panels.breakdownItem)}>
+              難度表現 {pct(h.score.difficultyLevel)}
+            </span>
           </div>
-          <div className="problem-strip">
+          <div {...stylex.props(panels.problemStrip)}>
             {h.result.problems.map((p) => (
               <div
-                className={p.solved ? "ac" : p.attempts ? "wa" : ""}
+                {...stylex.props(
+                  panels.problem,
+                  p.solved
+                    ? tables.positive
+                    : p.attempts
+                      ? tables.negative
+                      : null,
+                )}
                 key={p.label}
               >
                 <b>{p.label}</b>
                 <span>{p.solved ? `${p.time ?? "AC"}` : "—"}</span>
-                <small>{p.attempts ?? "?"} tries</small>
+                <small {...stylex.props(panels.detailLabel)}>
+                  {p.attempts ?? "?"} tries
+                </small>
               </div>
             ))}
           </div>

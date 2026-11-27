@@ -1,0 +1,28 @@
+import * as stylex from "@stylexjs/stylex";
+
+export const theme = stylex.defineVars({
+  canvas: "#24191f",
+  sidebar: "#2d1e25",
+  surface: "#34252d",
+  raised: "#412d37",
+  field: "#2d2027",
+  line: "#654551",
+  controlLine: "#986675",
+  text: "#ffeef0",
+  muted: "#dac2ca",
+  accent: "#ff8997",
+  accentBorder: "#ee5265",
+  accentWash: "#54232d",
+  accentWashHover: "#622b37",
+  action: "#c91d36",
+  actionHover: "#d82740",
+  actionText: "#fff7f8",
+  hover: "#4c333f",
+  success: "#a7e1bb",
+  successWash: "#29413a",
+  danger: "#ffb9b7",
+  dangerWash: "#552b31",
+  sans: '"Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif',
+  display: 'Georgia, "Noto Serif TC", "Songti TC", "PMingLiU", serif',
+  mono: 'ui-monospace, "SFMono-Regular", Consolas, monospace',
+});

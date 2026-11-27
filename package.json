@@ -12,15 +12,15 @@
     "publish-data": "bun scripts/publish-data.ts"
   },
   "dependencies": {
+    "@stylexjs/stylex": "0.19.2",
+    "parse5": "7.3.0",
     "react": "19.2.7",
-    "react-dom": "19.2.7",
-    "parse5": "7.3.0"
+    "react-dom": "19.2.7"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "4.3.5",
+    "@stylexjs/unplugin": "0.19.2",
     "@types/react": "19.2.16",
     "@types/react-dom": "19.2.3",
-    "tailwindcss": "4.3.5",
     "typescript": "5.9.3",
     "vite": "6.0.11"
   },

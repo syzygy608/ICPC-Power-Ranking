@@ -35,19 +35,22 @@ test("collapsed scoreboards do not read results or render any table cells", () =
 
 test("expanded scoreboards render only one page, retaining standings and problem details", () => {
   const c = contest();
+  const longName = "Team-000 with a really long name ".repeat(4).trim();
+  c.results[0].team = longName;
   c.results.reverse();
   const original = [...c.results];
   const html = renderToStaticMarkup(
     <Scoreboard contest={c} aliases={{}} onSelect={() => {}} />,
   );
   expect(html.match(/<tr/g)?.length).toBe(26); // Header + 25 teams.
-  expect(html).toContain("Team-000");
+  expect(html.match(/<col(?:\s|\/?>)/g)?.length).toBe(4 + c.problemCount);
+  expect(html).toContain(`title="${longName}">${longName}</button>`);
   expect(html).toContain("Team-024");
   expect(html).not.toContain("Team-025");
   expect(html).toContain("1–25 / 60 隊");
   expect(html).toContain("University");
-  expect(html).toContain('class="ac" title="Accepted"');
-  expect(html).toContain('class="wa" title="未通過"');
+  expect(html).toMatch(/<td[^>]*title="Accepted">0<small/);
+  expect(html).toMatch(/<td[^>]*title="未通過">−<small/);
   expect(html).toContain("2 tries");
   expect(c.results).toEqual(original);
 });

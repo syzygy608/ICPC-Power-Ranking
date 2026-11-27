@@ -1,3 +1,6 @@
+import * as stylex from "@stylexjs/stylex";
+import { ui } from "./styles/ui";
+import { tables } from "./styles/tables";
 import { useEffect, useState } from "react";
 import { paginate } from "../shared/pagination";
 
@@ -21,12 +24,13 @@ export default function Pagination({
 }) {
   const { page, totalPages, start, end, total, pages, setPage } = pagination;
   return (
-    <div className="table-footer pagination-footer">
+    <div {...stylex.props(tables.footer)}>
       <span role="status">
         顯示 {total ? start + 1 : 0}–{end} / {total} {unit}
       </span>
-      <nav className="pagination" aria-label={`${label}分頁`}>
+      <nav {...stylex.props(tables.pagination)} aria-label={`${label}分頁`}>
         <button
+          {...stylex.props(ui.button, tables.pageButton)}
           type="button"
           aria-label="上一頁"
           disabled={page <= 1}
@@ -41,6 +45,11 @@ export default function Pagination({
             </span>
           ) : (
             <button
+              {...stylex.props(
+                ui.button,
+                tables.pageButton,
+                n === page && ui.primary,
+              )}
               type="button"
               key={n}
               aria-label={`第 ${n} 頁`}
@@ -52,6 +61,7 @@ export default function Pagination({
           ),
         )}
         <button
+          {...stylex.props(ui.button, tables.pageButton)}
           type="button"
           aria-label="下一頁"
           disabled={page >= totalPages}

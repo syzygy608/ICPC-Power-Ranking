@@ -1,3 +1,8 @@
+import FixedTable from "./FixedTable";
+import * as stylex from "@stylexjs/stylex";
+import { ui } from "./styles/ui";
+import { panels } from "./styles/panels";
+import { tables } from "./styles/tables";
 import { useState, type FormEvent } from "react";
 import { validateDataset } from "../shared/validation";
 import {
@@ -21,6 +26,7 @@ export function CountrySelect({
 }) {
   return (
     <input
+      {...stylex.props(ui.field)}
       aria-label="國別"
       list="country-codes"
       title="輸入 ISO 兩碼國別，例如 DE、FR；也可選待確認"
@@ -130,11 +136,11 @@ export default function ImportDialog({
   }
   const replacing = data.contests.some((c) => c.id === id);
   return (
-    <div className="overlay">
+    <div {...stylex.props(panels.overlay)}>
       <section
         ref={dialogRef}
         tabIndex={-1}
-        className="modal import-modal"
+        {...stylex.props(panels.modal)}
         role="dialog"
         aria-modal="true"
         aria-labelledby="import-title"
@@ -150,26 +156,32 @@ export default function ImportDialog({
           <option value="OTHER">其他國家</option>
           <option value="UNKNOWN">待確認</option>
         </datalist>
-        <header>
+        <header {...stylex.props(panels.modalHeader)}>
           <div>
-            <span className="eyebrow">ADD A SCOREBOARD</span>
-            <h2 id="import-title">匯入比賽成績</h2>
+            <h2 {...stylex.props(ui.heading)} id="import-title">
+              匯入比賽成績
+            </h2>
           </div>
-          <button className="icon-button" onClick={onClose} aria-label="關閉">
+          <button
+            {...stylex.props(ui.button, ui.iconButton)}
+            onClick={onClose}
+            aria-label="關閉"
+          >
             <Icon name="close" />
           </button>
         </header>
-        <p className="muted">
+        <p {...stylex.props(ui.paragraph, ui.muted, panels.modalCopy)}>
           上傳 DOMjudge HTML、單場 JSON，或完整
           rankings.json。所有變更先保存為本機草稿。
         </p>
         {!(contest || backup) ? (
           <>
-            <label className="dropzone">
+            <label {...stylex.props(panels.dropzone)}>
               <Icon name="upload" size={30} />
               <strong>選擇記分板檔案</strong>
               <span>HTML 或 JSON · 最大 5 MB</span>
               <input
+                {...stylex.props(ui.field)}
                 type="file"
                 accept=".html,.htm,.json,text/html,application/json"
                 onChange={async (e) => {
@@ -189,9 +201,12 @@ export default function ImportDialog({
                 }}
               />
             </label>
-            <details>
-              <summary>或直接貼上原始 HTML / JSON</summary>
+            <details {...stylex.props(panels.pasteDetails)}>
+              <summary {...stylex.props(ui.summary)}>
+                或直接貼上原始 HTML / JSON
+              </summary>
               <textarea
+                {...stylex.props(ui.field, panels.textarea)}
                 aria-label="原始榜單內容"
                 value={raw}
                 onChange={(e) => setRaw(e.target.value)}
@@ -199,14 +214,17 @@ export default function ImportDialog({
                 rows={6}
               />
             </details>
-            <button className="primary" onClick={() => inspect()}>
+            <button
+              {...stylex.props(ui.button, ui.primary)}
+              onClick={() => inspect()}
+            >
               解析並預覽 <Icon name="arrow" size={16} />
             </button>
           </>
         ) : (
           <form onSubmit={submit}>
             {backup ? (
-              <div className="notice">
+              <div {...stylex.props(ui.notice)}>
                 完整資料將取代目前的 {data.contests.length}{" "}
                 場比賽、隊名設定與評分參數。即將載入{" "}
                 <b>{backup.contests.length} 場比賽</b>。請先匯出舊資料備份。
@@ -214,36 +232,40 @@ export default function ImportDialog({
             ) : (
               contest && (
                 <>
-                  <div className="form-grid">
-                    <label>
+                  <div {...stylex.props(panels.formGrid)}>
+                    <label {...stylex.props(ui.label)}>
                       比賽名稱
                       <input
+                        {...stylex.props(ui.field, ui.formField)}
                         required
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                       />
                     </label>
-                    <label>
+                    <label {...stylex.props(ui.label)}>
                       比賽 ID（相同 ID 會取代更新）
                       <input
+                        {...stylex.props(ui.field, ui.formField)}
                         required
                         placeholder="例如 topc-2026"
                         value={id}
                         onChange={(e) => setId(e.target.value)}
                       />
                     </label>
-                    <label>
+                    <label {...stylex.props(ui.label)}>
                       比賽日期
                       <input
+                        {...stylex.props(ui.field, ui.formField)}
                         type="date"
                         required
                         value={date}
                         onChange={(e) => setDate(e.target.value)}
                       />
                     </label>
-                    <label>
+                    <label {...stylex.props(ui.label)}>
                       賽站（同站跨屆使用相同名稱）
                       <input
+                        {...stylex.props(ui.field, ui.formField)}
                         required
                         list="known-stations"
                         placeholder="選擇既有賽站或輸入新站名"
@@ -260,9 +282,10 @@ export default function ImportDialog({
                         )}
                       </datalist>
                     </label>
-                    <label>
+                    <label {...stylex.props(ui.label)}>
                       站點難度（0.5–2，留空為未校準）
                       <input
+                        {...stylex.props(ui.field, ui.formField)}
                         aria-label="匯入站點難度"
                         type="number"
                         min="0.5"
@@ -281,9 +304,10 @@ export default function ImportDialog({
                         }
                       />
                     </label>
-                    <label>
+                    <label {...stylex.props(ui.label)}>
                       資料狀態
                       <select
+                        {...stylex.props(ui.field, ui.select, ui.formField)}
                         value={contest.status ?? "final"}
                         onChange={(e) =>
                           setContest({
@@ -296,9 +320,10 @@ export default function ImportDialog({
                         <option value="preliminary">暫定成績</option>
                       </select>
                     </label>
-                    <label>
+                    <label {...stylex.props(ui.label)}>
                       來源網址
                       <input
+                        {...stylex.props(ui.field, ui.formField)}
                         type="url"
                         value={contest.source}
                         onChange={(e) =>
@@ -308,35 +333,71 @@ export default function ImportDialog({
                     </label>
                   </div>
                   {warnings.map((w) => (
-                    <p key={w} className="notice">
+                    <p key={w} {...stylex.props(ui.paragraph, ui.notice)}>
                       {w}
                     </p>
                   ))}
-                  <div className="section-heading">
-                    <h3>匯入預覽</h3>
+                  <div {...stylex.props(ui.sectionHeading)}>
+                    <h3 {...stylex.props(ui.subheading)}>匯入預覽</h3>
                     <span>
                       {contest.results.length} 隊 · {contest.problemCount} 題
                     </span>
                   </div>
-                  <div className="preview-table table-scroll">
-                    <table>
+                  <div {...stylex.props(tables.preview, tables.scroll)}>
+                    <FixedTable
+                      widths={[235, 158, 58, 92, 74]}
+                      flexibleColumn={0}
+                    >
                       <thead>
                         <tr>
-                          <th>隊名</th>
-                          <th>國別</th>
-                          <th>AC</th>
-                          <th>Penalty</th>
-                          <th>Dirty</th>
+                          <th
+                            {...stylex.props(tables.head, tables.previewHead)}
+                          >
+                            隊名
+                          </th>
+                          <th
+                            {...stylex.props(tables.head, tables.previewHead)}
+                          >
+                            國別
+                          </th>
+                          <th
+                            {...stylex.props(tables.head, tables.previewHead)}
+                          >
+                            AC
+                          </th>
+                          <th
+                            {...stylex.props(tables.head, tables.previewHead)}
+                          >
+                            Penalty
+                          </th>
+                          <th
+                            {...stylex.props(tables.head, tables.previewHead)}
+                          >
+                            Dirty
+                          </th>
                         </tr>
                       </thead>
                       <tbody>
                         {contest.results.map((r, i) => (
-                          <tr key={i}>
-                            <td>
-                              <strong>{r.team}</strong>
-                              <small>{r.affiliation}</small>
+                          <tr {...stylex.props(tables.row)} key={i}>
+                            <td {...stylex.props(tables.cell)}>
+                              <strong
+                                {...stylex.props(tables.ellipsis)}
+                                title={r.team}
+                              >
+                                {r.team}
+                              </strong>
+                              <small
+                                {...stylex.props(
+                                  tables.cellSmall,
+                                  tables.ellipsis,
+                                )}
+                                title={r.affiliation}
+                              >
+                                {r.affiliation}
+                              </small>
                             </td>
-                            <td>
+                            <td {...stylex.props(tables.cell)}>
                               <CountrySelect
                                 value={r.country}
                                 onChange={(country) =>
@@ -349,19 +410,22 @@ export default function ImportDialog({
                                 }
                               />
                             </td>
-                            <td>{r.solved}</td>
-                            <td>{r.penalty}</td>
-                            <td>{pct(dirtyRatio(r))}</td>
+                            <td {...stylex.props(tables.cell)}>{r.solved}</td>
+                            <td {...stylex.props(tables.cell)}>{r.penalty}</td>
+                            <td {...stylex.props(tables.cell)}>
+                              {pct(dirtyRatio(r))}
+                            </td>
                           </tr>
                         ))}
                       </tbody>
-                    </table>
+                    </FixedTable>
                   </div>
                 </>
               )
             )}
-            <footer>
+            <footer {...stylex.props(panels.modalFooter)}>
               <button
+                {...stylex.props(ui.button)}
                 type="button"
                 onClick={() => {
                   setContest(null);
@@ -370,7 +434,7 @@ export default function ImportDialog({
               >
                 返回
               </button>
-              <button className="primary" type="submit">
+              <button {...stylex.props(ui.button, ui.primary)} type="submit">
                 {backup
                   ? "確認取代全部資料"
                   : replacing
@@ -382,7 +446,7 @@ export default function ImportDialog({
           </form>
         )}
         {error && (
-          <p role="alert" className="error">
+          <p role="alert" {...stylex.props(ui.paragraph, ui.error)}>
             {error}
           </p>
         )}

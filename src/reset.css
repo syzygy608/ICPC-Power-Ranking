@@ -1,0 +1,32 @@
+@layer reset {
+  :root {
+    color-scheme: dark;
+    scrollbar-gutter: stable;
+    font-synthesis: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+
+  button,
+  a,
+  input,
+  select,
+  summary {
+    touch-action: manipulation;
+  }
+}

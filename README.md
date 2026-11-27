@@ -19,7 +19,7 @@ bun run build
 bun run preview
 ```
 
-使用 Bun 管理依賴與執行指令，依賴由 `bun.lock` 鎖定。樣式使用 Tailwind CSS 4.3.5 與官方 Vite 插件，主題設定與 utility 組合集中在 `src/styles.css`；不使用 inline CSS。
+使用 Bun 管理依賴與執行指令，依賴由 `bun.lock` 鎖定。介面樣式透過 StyleX 編譯，主題與共用樣式位於 `src/styles/`。`src/reset.css` 提供全域瀏覽器重設與 Vite 的 CSS 輸出入口。
 
 ## 已收錄比賽
 
@@ -231,7 +231,7 @@ Difficulty = mean_站(mean_場[Q × difficulty / 2])
 - `scripts/import-scoreboard.ts`：選用的本機 CLI。
 - `tests/`：解析、評分、重複匯入及正式資料一致性測試。
 
-希臘神話視覺採用愛琴海深藍、古金與大理石白。神殿與月桂裝飾由 `src/Olympus.tsx` 的 SVG 繪製，不承載評分或資料資訊。
+黑暗希臘神話主題採用深莓灰底色與鮮血紅重點色。共用色彩和字體定義於 `src/styles/theme.stylex.ts`，排行首頁的日蝕神殿背景位於 `public/olympus-eclipse-crimson.webp`。
 
 ### 記分板按需展開
 

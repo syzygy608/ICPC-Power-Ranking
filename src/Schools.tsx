@@ -1,3 +1,9 @@
+import FixedTable from "./FixedTable";
+import * as stylex from "@stylexjs/stylex";
+import { ui } from "./styles/ui";
+import { ranking } from "./styles/ranking";
+import { panels } from "./styles/panels";
+import { countryTint, tables } from "./styles/tables";
 import { useMemo, useState } from "react";
 import { rankSchools } from "../shared/schools";
 import type { RankedTeam } from "../shared/ranking";
@@ -19,28 +25,29 @@ export default function Schools({
       s.school.toLowerCase().includes(query.toLowerCase()) &&
       (country === "ALL" ||
         (country === "OTHER"
-          ? s.country !== "TW" && s.country !== "JP" && s.country !== "KR" && s.country !== "VN"
+          ? s.country !== "TW" &&
+            s.country !== "JP" &&
+            s.country !== "KR" &&
+            s.country !== "VN"
           : s.country === country)),
   );
   const pagination = usePagination(filtered.length);
   return (
-    <section className="panel school-ranking">
-      <div className="panel-heading">
+    <section {...stylex.props(ui.panel)}>
+      <div {...stylex.props(ui.panelHeading)}>
         <div>
-          <h2>
-            學校戰力指數排名 <span className="count">{schools.length}</span>
+          <h2 {...stylex.props(ui.heading)}>
+            學校戰力指數排名{" "}
+            <span {...stylex.props(ui.count)}>{schools.length}</span>
           </h2>
-          <p className="muted">
-            各國學校分開計算；各校最強六隊 · 平均 70% + 最高 20% + 最低 10% ·
-            0–100 分
-          </p>
         </div>
         <Icon name="users" />
       </div>
-      <div className="toolbar">
-        <label className="search">
+      <div {...stylex.props(tables.toolbar)}>
+        <label {...stylex.props(tables.search)}>
           <Icon name="search" size={18} />
           <input
+            {...stylex.props(ui.field, tables.searchInput)}
             aria-label="搜尋學校戰力榜"
             placeholder="搜尋學校…"
             value={query}
@@ -51,6 +58,7 @@ export default function Schools({
           />
         </label>
         <select
+          {...stylex.props(ui.field, ui.select, tables.filter)}
           aria-label="篩選學校國別"
           value={country}
           onChange={(e) => {
@@ -67,7 +75,7 @@ export default function Schools({
           {/*<option value="UNKNOWN">待確認</option>*/}
         </select>
         <button
-          className="clear-filters"
+          {...stylex.props(ui.button, tables.clearFilters)}
           disabled={!query && country === "ALL"}
           onClick={() => {
             setQuery("");
@@ -78,60 +86,76 @@ export default function Schools({
           清除篩選
         </button>
       </div>
-      <div className="table-scroll">
-        <table>
+      <div {...stylex.props(tables.scroll)}>
+        <FixedTable
+          widths={[64, 230, 108, 156, 152, 108, 120]}
+          flexibleColumn={1}
+        >
           <thead>
             <tr>
-              <th>排名</th>
-              <th>學校</th>
-              <th>學校戰力 ↓</th>
-              <th>平均 / 最高 / 最低</th>
-              <th>計分明細</th>
-              <th>全校隊伍數</th>
-              <th>主力參賽站數</th>
+              <th {...stylex.props(tables.head)}>排名</th>
+              <th {...stylex.props(tables.head)}>學校</th>
+              <th {...stylex.props(tables.head)}>學校戰力 ↓</th>
+              <th {...stylex.props(tables.head)}>平均 / 最高 / 最低</th>
+              <th {...stylex.props(tables.head)}>計分明細</th>
+              <th {...stylex.props(tables.head)}>全校隊伍數</th>
+              <th {...stylex.props(tables.head)}>主力參賽站數</th>
             </tr>
           </thead>
           <tbody>
             {filtered.slice(pagination.start, pagination.end).map((s) => (
               <tr
                 key={`${s.country}-${s.school}`}
-                className="country-tint"
+                {...stylex.props(tables.row, countryTint(s.country))}
                 data-country={s.country}
               >
-                <td className="rank-number">
+                <td {...stylex.props(tables.cell, tables.rankNumber)}>
                   {String(s.rank).padStart(2, "0")}
                 </td>
-                <td>
-                  <strong>{s.school}</strong>
-                  <small>{countryLabel(s.country)}</small>
+                <td {...stylex.props(tables.cell)}>
+                  <strong {...stylex.props(tables.ellipsis)} title={s.school}>
+                    {s.school}
+                  </strong>
+                  <small {...stylex.props(tables.cellSmall)}>
+                    {countryLabel(s.country)}
+                  </small>
                   {s.scoringTeams.length < 6 && (
-                    <small>
+                    <small {...stylex.props(tables.cellSmall)}>
                       計分 {s.scoringTeams.length} / 6 隊，資料未滿六隊
                     </small>
                   )}
                 </td>
-                <td>
-                  <strong className="rating">{s.index.toFixed(1)}</strong>
+                <td {...stylex.props(tables.cell)}>
+                  <strong {...stylex.props(tables.rating)}>
+                    {s.index.toFixed(1)}
+                  </strong>
                 </td>
-                <td>
+                <td {...stylex.props(tables.cell)}>
                   <strong>{s.average.toFixed(1)}</strong>
-                  <small>
+                  <small {...stylex.props(tables.cellSmall)}>
                     最高 {s.maximum.toFixed(1)} · 最低 {s.minimum.toFixed(1)}
                   </small>
                 </td>
-                <td>
-                  <details className="school-team-details">
-                    <summary>查看 {s.scoringTeams.length} 隊</summary>
-                    <div className="school-teams">
+                <td {...stylex.props(tables.cell)}>
+                  <details>
+                    <summary {...stylex.props(ui.summary)}>
+                      查看 {s.scoringTeams.length} 隊
+                    </summary>
+                    <div {...stylex.props(ranking.schoolTeams)}>
                       {s.scoringTeams.map((t) => (
-                        <div key={t.id}>
+                        <div {...stylex.props(ranking.schoolTeam)} key={t.id}>
                           <button
-                            className="team-button"
+                            {...stylex.props(
+                              ui.button,
+                              ui.textButton,
+                              tables.teamButton,
+                            )}
                             onClick={() => onSelect(t.id)}
+                            title={t.team}
                           >
                             {t.team}
                           </button>
-                          <span>
+                          <span {...stylex.props(panels.detailLabel)}>
                             {t.rating.toFixed(1)} 分 · {t.siteCount} 站
                           </span>
                         </div>
@@ -139,20 +163,23 @@ export default function Schools({
                     </div>
                   </details>
                 </td>
-                <td>{s.teams.length} 隊</td>
-                <td>{s.siteCount} 站</td>
+                <td {...stylex.props(tables.cell)}>{s.teams.length} 隊</td>
+                <td {...stylex.props(tables.cell)}>{s.siteCount} 站</td>
               </tr>
             ))}
           </tbody>
-        </table>
+        </FixedTable>
         {!filtered.length && (
-          <div className="empty">
-            <h3>
+          <div {...stylex.props(ui.empty)}>
+            <h3 {...stylex.props(ui.subheading)}>
               {schools.length ? "沒有符合條件的學校" : "尚無可排名的學校"}
             </h3>
-            <p>需要學校資料，才會納入學校戰力榜。</p>
+            <p {...stylex.props(ui.paragraph)}>
+              需要學校資料，才會納入學校戰力榜。
+            </p>
             {(query || country !== "ALL") && (
               <button
+                {...stylex.props(ui.button)}
                 onClick={() => {
                   setQuery("");
                   setCountry("ALL");
